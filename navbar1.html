@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Leather & Quill | Handcrafted Journals</title>
+
+<!-- Website Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236a2c3e'/%3E%3Cstop offset='100%25' stop-color='%23471825'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 6 L78 6 A16 16 0 0 1 94 22 L94 50 A44 44 0 0 1 50 94 L22 94 A16 16 0 0 1 6 78 L6 50 A44 44 0 0 1 50 6 Z' fill='url(%23g)' stroke='%23d4a373' stroke-width='6'/%3E%3Cpath d='M68 28 C68 28 56 32 46 44 C36 56 30 70 28 72 C26 74 28 70 32 64 C38 54 50 42 62 34 C68 28 68 28 68 28 Z' fill='%23fdf0e3'/%3E%3Cpath d='M29 71 L20 80' stroke='%23fdf0e3' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 40 L59 47 M44 48 L51 55 M36 56 L42 62' stroke='%23fdf0e3' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fbf6f9;
+    transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-break: break-word;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+    background: #1a111a;
+    color: #e8dfe8;
+}
+
+body.dark-mode .navbar {
+    background: rgba(26, 26, 26, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .footer {
+    background: rgba(26, 26, 26, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-link {
+    color: #d8ccce;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #d4a373;
+}
+
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .footer-logo-main {
+    color: #d4a373;
+}
+
+body.dark-mode .logo-text .logo-sub,
+body.dark-mode .footer-logo-sub {
+    color: #bda4aa;
+}
+
+body.dark-mode .icon-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #d8ccce;
+}
+
+body.dark-mode .icon-btn:hover {
+    background: #d4a373;
+    color: #1a111a;
+}
+
+body.dark-mode .mobile-menu-btn {
+    color: #d4a373;
+}
+
+body.dark-mode .mobile-nav {
+    background: #1a111a;
+}
+
+body.dark-mode .mobile-nav .nav-link {
+    color: #d8ccce;
+    border-bottom-color: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .login-btn {
+    background: linear-gradient(135deg, #d4a373, #6a2c3e);
+}
+
+body.dark-mode .footer-link {
+    color: #d8ccce;
+}
+
+body.dark-mode .footer-link:hover {
+    color: #d4a373;
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+body.dark-mode .social-icon {
+    background: rgba(255,255,255,0.05);
+    color: #d8ccce;
+}
+
+body.dark-mode .social-icon:hover {
+    background: #d4a373;
+    color: #1a111a;
+}
+
+/* RTL Layout */
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .navbar {
+    padding: 16px 20px 16px 40px;
+}
+
+body.rtl .nav-actions {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body.rtl .mobile-menu-btn {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body.rtl .logo {
+    margin-right: 0;
+}
+
+body.rtl .footer-content {
+    direction: rtl;
+}
+
+body.rtl .footer-section h3::after {
+    left: auto;
+    right: 0;
+}
+
+body.rtl .social-links {
+    justify-content: flex-start;
+}
+
+/* Navbar Container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Section - Reduced Size & Moved Left */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: -10px;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid #d4a373;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.logo-icon i {
+    font-size: 20px;
+    color: #fdf0e3;
+    z-index: 1;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.logo:hover .logo-icon::before {
+    transform: translateX(100%);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 800;
+    color: #381420;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.logo-sub {
+    font-size: clamp(7px, 1.8vw, 9px);
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Navigation Menu - Desktop Only (Hidden on Tablet/Mobile) */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Dropdown Menu for Home */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 8px 0;
+}
+
+body.dark-mode .dropdown-menu {
+    background: #2a2a2a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #381420;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+body.dark-mode .dropdown-menu a {
+    color: #d8ccce;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(106, 44, 62, 0.1);
+    color: #6a2c3e;
+    padding-left: 25px;
+}
+
+.dropdown-menu a i {
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+/* Nav Link - NO ICONS, Reduced Font Size */
+.nav-link {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #2d101a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6a2c3e, #d4a373);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 70%;
+}
+
+.nav-link:hover {
+    color: #6a2c3e;
+}
+
+/* Right Side Actions - Desktop Only */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #381420;
+}
+
+.icon-btn:hover {
+    background: #6a2c3e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Login Button */
+.login-btn {
+    padding: 8px 22px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    color: white !important;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3);
+}
+
+/* Mobile Menu Button - Visible on Tablet & Mobile */
+.mobile-menu-btn {
+    display: none;
+    width: 38px;
+    height: 38px;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #381420;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.mobile-menu-btn:hover {
+    background: #6a2c3e;
+    color: white;
+}
+
+/* Mobile Navigation Menu - Opens from Right */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    padding: 85px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+body.rtl .mobile-nav {
+    right: auto;
+    left: -100%;
+}
+
+body.rtl .mobile-nav.open {
+    right: auto;
+    left: 0;
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    white-space: normal;
+}
+
+/* Mobile Dropdown in Hamburger */
+.mobile-dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.mobile-dropdown-header span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #2d101a;
+}
+
+body.dark-mode .mobile-dropdown-header span {
+    color: #d8ccce;
+}
+
+.mobile-dropdown-header i:first-child {
+    width: 28px;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    padding-left: 44px;
+    background: rgba(106, 44, 62, 0.05);
+}
+
+.mobile-dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #7a5260;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+body.dark-mode .mobile-dropdown-content a {
+    color: #b0b0b0;
+}
+
+.mobile-dropdown-content a:hover {
+    color: #6a2c3e;
+    background: rgba(106, 44, 62, 0.1);
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+    display: block;
+}
+
+.mobile-dropdown.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Mobile Action Buttons */
+.mobile-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobile-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(106, 44, 62, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #381420;
+}
+
+body.dark-mode .mobile-action-btn {
+    color: #d8ccce;
+    background: rgba(255,255,255,0.05);
+}
+
+.mobile-action-btn i {
+    width: 24px;
+    font-size: 18px;
+}
+
+.mobile-login {
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    color: white !important;
+    justify-content: center;
+}
+
+.mobile-login i {
+    color: white;
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+    display: none;
+}
+
+.mobile-overlay.open {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 5% 60px;
+    background: linear-gradient(135deg, rgba(106, 44, 62, 0.05), rgba(71, 24, 37, 0.02));
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 8vw, 64px);
+    font-weight: 700;
+    color: #381420;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+body.dark-mode .hero h1 {
+    color: #d4a373;
+}
+
+.hero p {
+    font-size: clamp(14px, 4vw, 18px);
+    color: #7a5260;
+    max-width: 600px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+body.dark-mode .hero p {
+    color: #b0b0b0;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #6a2c3e;
+    color: white;
+    border-radius: 40px;
+    font-size: clamp(12px, 3vw, 14px);
+    font-weight: 500;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* ========== FOOTER SECTION ========== */
+.footer {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 50px 5% 20px;
+    transition: all 0.3s ease;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Footer Logo Section - Same as Navbar */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid #d4a373;
+    transition: all 0.4s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+    transform: rotate(-15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.icon-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #381420;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.icon-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -30px;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <!-- LOGO - LEFT -->
+    <a href="#" class="logo">
+        <div class="logo-icon">
+            <i class="fas fa-feather-alt"></i>
+        </div>
+        <div class="logo-text">
+            <span class="logo-main">LEATHER & QUILL</span>
+            <span class="logo-sub">HANDCRAFTED JOURNALS</span>
+        </div>
+    </a>
+
+    <!-- DESKTOP NAVIGATION MENU - CENTERED (Visible only on large screens) -->
+    <div class="nav-menu" id="navMenu">
+        <div class="dropdown">
+            <a href="#" class="nav-link" data-page="home">Home <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+            <div class="dropdown-menu">
+                <a href="#" id="home1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+                <a href="#" id="home2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+            </div>
+        </div>
+        <a href="#" class="nav-link" data-page="collections">Collections</a>
+        <a href="#" class="nav-link" data-page="customization">Customization</a>
+        <a href="#" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+        <a href="#" class="nav-link" data-page="workshops">Workshops</a>
+        <a href="#" class="nav-link" data-page="gallery">Gallery</a>
+        <a href="#" class="nav-link" data-page="reviews">Reviews</a>
+        <a href="#" class="nav-link" data-page="about">About</a>
+        <a href="#" class="nav-link" data-page="contact">Contact</a>
+    </div>
+
+    <!-- DESKTOP RIGHT ACTIONS (Visible only on large screens) -->
+    <div class="nav-actions">
+        <button class="icon-btn" id="darkModeToggle" data-tooltip="Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" data-tooltip="RTL Mode">
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+        <button class="login-btn" id="loginBtnDesktop">Login</button>
+    </div>
+
+    <!-- HAMBURGER MENU BUTTON (Visible on Tablet & Mobile) -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- MOBILE NAVIGATION MENU -->
+<div class="mobile-nav" id="mobileNav">
+    <div class="mobile-dropdown" id="mobileHomeDropdown">
+        <div class="mobile-dropdown-header">
+            <span>Home</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="mobile-dropdown-content">
+            <a href="#" id="mobileHome1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+            <a href="#" id="mobileHome2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+        </div>
+    </div>
+    
+    <a href="#" class="nav-link" data-page="collections">Collections</a>
+    <a href="#" class="nav-link" data-page="customization">Customization</a>
+    <a href="#" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+    <a href="#" class="nav-link" data-page="workshops">Workshops</a>
+    <a href="#" class="nav-link" data-page="gallery">Gallery</a>
+    <a href="#" class="nav-link" data-page="reviews">Reviews</a>
+    <a href="#" class="nav-link" data-page="about">About</a>
+    <a href="#" class="nav-link" data-page="contact">Contact</a>
+    
+    <div class="mobile-actions">
+        <button class="mobile-action-btn" id="mobileDarkModeToggle">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+        <button class="mobile-action-btn" id="mobileRtlToggle">
+            <i class="fa-solid fa-right-left"></i> RTL Mode
+        </button>
+        <button class="mobile-action-btn mobile-login" id="mobileLoginBtn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </div>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- Hero Section -->
+<section class="hero">
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <a href="#" class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <div class="footer-logo-text">
+                    <span class="footer-logo-main">LEATHER & QUILL</span>
+                    <span class="footer-logo-sub">HANDCRAFTED JOURNALS</span>
+                </div>
+            </a>
+            <p class="footer-description">Handcrafted leather journals and notebooks made with premium materials and traditional binding techniques. Each piece tells a unique story.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link" data-page="home">Home</a></li>
+                <li><a href="#" class="footer-link" data-page="collections">Collections</a></li>
+                <li><a href="#" class="footer-link" data-page="customization">Customization</a></li>
+                <li><a href="#" class="footer-link" data-page="craftsmanship">Craftsmanship</a></li>
+                <li><a href="#" class="footer-link" data-page="workshops">Workshops</a></li>
+                <li><a href="#" class="footer-link" data-page="gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">Help Center</a></li>
+                <li><a href="#" class="footer-link">Returns & Exchanges</a></li>
+                <li><a href="#" class="footer-link">Shipping Info</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Leather Lane, Artisan District</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@leatherandquill.com</p>
+            </div>
+            <h3 style="margin-top: 20px;">Newsletter</h3>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Leather & Quill Studio. All rights reserved. | <a href="#">Crafted with ❤️</a></p>
+    </div>
+</footer>
+
+<script>
+// DOM Elements
+const darkModeToggle = document.getElementById('darkModeToggle');
+const rtlToggle = document.getElementById('rtlToggle');
+const loginBtnDesktop = document.getElementById('loginBtnDesktop');
+const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+const body = document.body;
+const navbar = document.getElementById('navbar');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileNav = document.getElementById('mobileNav');
+const mobileOverlay = document.getElementById('mobileOverlay');
+const heroTitle = document.getElementById('heroTitle');
+const heroText = document.getElementById('heroText');
+
+// Home Dropdown Items
+const home1 = document.getElementById('home1');
+const home2 = document.getElementById('home2');
+const mobileHome1 = document.getElementById('mobileHome1');
+const mobileHome2 = document.getElementById('mobileHome2');
+
+// Footer Links
+const footerLinks = document.querySelectorAll('.footer-link');
+
+// Dark Mode Toggle
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+    const icon = darkModeToggle?.querySelector('i');
+    const mobileIcon = mobileDarkModeToggle?.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+        if (icon) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+        if (mobileIcon) {
+            mobileIcon.classList.remove('fa-moon');
+            mobileIcon.classList.add('fa-sun');
+        }
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        if (icon) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+        if (mobileIcon) {
+            mobileIcon.classList.remove('fa-sun');
+            mobileIcon.classList.add('fa-moon');
+        }
+        localStorage.setItem('darkMode', 'disabled');
+    }
+}
+
+darkModeToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDarkMode();
+});
+
+mobileDarkModeToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDarkMode();
+});
+
+// RTL Toggle
+function toggleRTL() {
+    body.classList.toggle('rtl');
+    const icon = rtlToggle?.querySelector('i');
+    const mobileIcon = mobileRtlToggle?.querySelector('i');
+    if (body.classList.contains('rtl')) {
+        if (icon) {
+            icon.classList.remove('fa-arrow-right');
+            icon.classList.add('fa-arrow-left');
+        }
+        if (mobileIcon) {
+            mobileIcon.classList.remove('fa-arrow-right');
+            mobileIcon.classList.add('fa-arrow-left');
+        }
+        localStorage.setItem('rtlMode', 'enabled');
+    } else {
+        if (icon) {
+            icon.classList.remove('fa-arrow-left');
+            icon.classList.add('fa-arrow-right');
+        }
+        if (mobileIcon) {
+            mobileIcon.classList.remove('fa-arrow-left');
+            mobileIcon.classList.add('fa-arrow-right');
+        }
+        localStorage.setItem('rtlMode', 'disabled');
+    }
+}
+
+rtlToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleRTL();
+});
+
+mobileRtlToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleRTL();
+});
+
+// Login Function
+function handleLogin() {
+    alert('Login Successful!\n\nWelcome to Leather & Quill Studio.');
+    localStorage.setItem('isLoggedIn', 'true');
+}
+
+loginBtnDesktop?.addEventListener('click', handleLogin);
+mobileLoginBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    handleLogin();
+});
+
+// Load Preferences
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    if (darkModeToggle) {
+        darkModeToggle.querySelector('i').classList.remove('fa-moon');
+        darkModeToggle.querySelector('i').classList.add('fa-sun');
+    }
+}
+
+if (localStorage.getItem('rtlMode') === 'enabled') {
+    body.classList.add('rtl');
+    if (rtlToggle) {
+        rtlToggle.querySelector('i').classList.remove('fa-arrow-right');
+        rtlToggle.querySelector('i').classList.add('fa-arrow-left');
+    }
+}
+
+// Home Dropdown Functions
+function showHome1() {
+    heroTitle.textContent = 'Classic Collection';
+    heroText.textContent = 'Discover our timeless classic leather journals, handcrafted with traditional binding methods and premium materials. Perfect for everyday journaling and special memories.';
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showHome2() {
+    heroTitle.textContent = 'Premium Series';
+    heroText.textContent = 'Experience luxury with our Premium Series - featuring exotic leathers, hand-embossed covers, and archival-quality paper. Made for discerning writers and collectors.';
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+home1?.addEventListener('click', (e) => {
+    e.preventDefault();
+    showHome1();
+});
+
+home2?.addEventListener('click', (e) => {
+    e.preventDefault();
+    showHome2();
+});
+
+mobileHome1?.addEventListener('click', (e) => {
+    e.preventDefault();
+    showHome1();
+    mobileNav.classList.remove('open');
+    mobileOverlay.classList.remove('open');
+    const icon = mobileMenuBtn.querySelector('i');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+});
+
+mobileHome2?.addEventListener('click', (e) => {
+    e.preventDefault();
+    showHome2();
+    mobileNav.classList.remove('open');
+    mobileOverlay.classList.remove('open');
+    const icon = mobileMenuBtn.querySelector('i');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+});
+
+// Mobile Dropdown Toggle
+const mobileHomeDropdown = document.getElementById('mobileHomeDropdown');
+mobileHomeDropdown?.addEventListener('click', (e) => {
+    if (!e.target.closest('.mobile-dropdown-content')) {
+        mobileHomeDropdown.classList.toggle('active');
+    }
+});
+
+// Navbar Scroll Effect
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+    mobileOverlay.classList.toggle('open');
+    const icon = mobileMenuBtn.querySelector('i');
+    if (mobileNav.classList.contains('open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+        mobileHomeDropdown?.classList.remove('active');
+    }
+});
+
+mobileOverlay.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    mobileOverlay.classList.remove('open');
+    const icon = mobileMenuBtn.querySelector('i');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+    mobileHomeDropdown?.classList.remove('active');
+});
+
+// Regular nav links
+document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = link.getAttribute('data-page');
+        const titles = {
+            collections: 'Our Premium Collections',
+            customization: 'Customize Your Journal',
+            craftsmanship: 'Artisanal Craftsmanship',
+            workshops: 'Upcoming Workshops',
+            gallery: 'Our Gallery',
+            reviews: 'Customer Reviews',
+            about: 'About Our Studio',
+            contact: 'Contact Us'
+        };
+        const texts = {
+            collections: 'Explore our curated collection of handcrafted journals, notebooks, and writing accessories.',
+            customization: 'Personalize your journal with custom embossing, paper selection, and leather finishes.',
+            craftsmanship: 'Discover the meticulous process behind each handcrafted journal.',
+            workshops: 'Join our hands-on workshops and learn the art of bookbinding.',
+            gallery: 'Browse through our portfolio of custom creations.',
+            reviews: 'Read what our customers say about their Leather & Quill experience.',
+            about: 'Learn about our heritage and commitment to quality craftsmanship.',
+            contact: 'Get in touch with us for custom orders or inquiries.'
+        };
+        heroTitle.textContent = titles[page] || 'Handcrafted Leather Journals';
+        heroText.textContent = texts[page] || 'Each journal tells a story — from our hands to yours.';
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        mobileNav.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    });
+});
+
+// Footer Links Navigation
+footerLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = link.getAttribute('data-page');
+        if (page) {
+            const titles = {
+                home: 'Handcrafted Leather Journals',
+                collections: 'Our Premium Collections',
+                customization: 'Customize Your Journal',
+                craftsmanship: 'Artisanal Craftsmanship',
+                workshops: 'Upcoming Workshops',
+                gallery: 'Our Gallery',
+                reviews: 'Customer Reviews',
+                about: 'About Our Studio',
+                contact: 'Contact Us'
+            };
+            const texts = {
+                home: 'Each journal tells a story — from our hands to yours. Premium full-grain leather, acid-free paper, and artisanal binding techniques.',
+                collections: 'Explore our curated collection of handcrafted journals, notebooks, and writing accessories.',
+                customization: 'Personalize your journal with custom embossing, paper selection, and leather finishes.',
+                craftsmanship: 'Discover the meticulous process behind each handcrafted journal.',
+                workshops: 'Join our hands-on workshops and learn the art of bookbinding.',
+                gallery: 'Browse through our portfolio of custom creations.',
+                reviews: 'Read what our customers say about their Leather & Quill experience.',
+                about: 'Learn about our heritage and commitment to quality craftsmanship.',
+                contact: 'Get in touch with us for custom orders or inquiries.'
+            };
+            heroTitle.textContent = titles[page] || 'Handcrafted Leather Journals';
+            heroText.textContent = texts[page] || 'Each journal tells a story — from our hands to yours.';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+});
+
+// Newsletter Subscribe
+const newsletterBtn = document.querySelector('.newsletter-btn');
+const newsletterInput = document.querySelector('.newsletter-input');
+
+newsletterBtn?.addEventListener('click', () => {
+    const email = newsletterInput.value.trim();
+    if (email) {
+        alert(`Thank you for subscribing with ${email}!\nYou'll receive our latest updates.`);
+        newsletterInput.value = '';
+    } else {
+        alert('Please enter a valid email address.');
+    }
+});
+
+// Close mobile menu on resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1280) {
+        mobileNav.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+</script>
+</body>
+</html>

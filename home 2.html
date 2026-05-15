@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Sovereign Study // Leather & Quill Series II</title>
+
+<!-- Website Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236a2c3e'/%3E%3Cstop offset='100%25' stop-color='%23471825'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 6 L78 6 A16 16 0 0 1 94 22 L94 50 A44 44 0 0 1 50 94 L22 94 A16 16 0 0 1 6 78 L6 50 A44 44 0 0 1 50 6 Z' fill='url(%23g)' stroke='%23d4a373' stroke-width='6'/%3E%3Cpath d='M68 28 C68 28 56 32 46 44 C36 56 30 70 28 72 C26 74 28 70 32 64 C38 54 50 42 62 34 C68 28 68 28 68 28 Z' fill='%23fdf0e3'/%3E%3Cpath d='M29 71 L20 80' stroke='%23fdf0e3' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 40 L59 47 M44 48 L51 55 M36 56 L42 62' stroke='%23fdf0e3' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fbf7f4;
+    color: #381420;
+    transition: background 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-break: break-word;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+    background: #140b0e;
+    color: #e8dfe8;
+}
+
+body.dark-mode .navbar {
+    background: rgba(20, 11, 14, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .logo-text .logo-main {
+    color: #d4a373;
+}
+
+body.dark-mode .logo-text .logo-sub {
+    color: #bda4aa;
+}
+
+body.dark-mode .icon-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #d8ccce;
+}
+
+body.dark-mode .icon-btn:hover {
+    background: #d4a373;
+    color: #140b0e;
+}
+
+body.dark-mode .nav-link {
+    color: #d8ccce;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #d4a373;
+}
+
+body.dark-mode .mobile-menu-btn {
+    color: #d4a373;
+}
+
+body.dark-mode .mobile-nav {
+    background: #140b0e;
+}
+
+body.dark-mode .mobile-nav .nav-link {
+    color: #d8ccce;
+    border-bottom-color: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .login-btn {
+    background: linear-gradient(135deg, #d4a373, #6a2c3e);
+    color: #140b0e !important;
+}
+
+/* Series II Specific Dark Overlays */
+body.dark-mode .sovereign-hero {
+    background: linear-gradient(180deg, rgba(20, 11, 14, 0.9) 0%, rgba(36, 20, 25, 0.4) 100%);
+}
+
+body.dark-mode .sovereign-title {
+    color: #fdf0e3;
+}
+
+body.dark-mode .tab-trigger {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #bda4aa;
+}
+
+body.dark-mode .tab-trigger.active {
+    background: #d4a373;
+    color: #140b0e;
+    border-color: #d4a373;
+}
+
+body.dark-mode .tab-pane {
+    background: rgba(36, 20, 25, 0.4);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .matrix-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .matrix-card h4 {
+    color: #d4a373;
+}
+
+body.dark-mode .anatomy-layer-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .anatomy-layer-card h4 {
+    color: #d4a373;
+}
+
+body.dark-mode .curator-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* RTL Layout */
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .navbar {
+    padding: 12px 20px 12px 40px;
+}
+
+body.rtl .nav-actions {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body.rtl .logo {
+    margin-right: 0;
+}
+
+body.rtl .footer-content {
+    direction: rtl;
+}
+
+body.rtl .footer-section h3::after {
+    left: auto;
+    right: 0;
+}
+
+body.rtl .social-links {
+    justify-content: flex-start;
+}
+
+body.rtl .stat-item {
+    border-right: auto;
+    border-left: 1px solid rgba(106, 44, 62, 0.1);
+}
+
+body.dark-mode.rtl .stat-item {
+    border-left-color: rgba(255, 255, 255, 0.1);
+}
+
+body.rtl .stat-item:last-child {
+    border-left: none;
+}
+
+body.rtl .layer-id {
+    left: auto;
+    right: -15px;
+}
+
+/* Navbar Container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid #d4a373;
+    transition: all 0.4s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.logo-icon i {
+    font-size: 20px;
+    color: #fdf0e3;
+    z-index: 1;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 800;
+    color: #381420;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.logo-sub {
+    font-size: clamp(7px, 1.8vw, 9px);
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Desktop Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 8px 0;
+}
+
+body.dark-mode .dropdown-menu {
+    background: #2a2a2a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #381420;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+body.dark-mode .dropdown-menu a {
+    color: #d8ccce;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(106, 44, 62, 0.1);
+    color: #6a2c3e;
+    padding-left: 25px;
+}
+
+.dropdown-menu a.active-sub {
+    color: #d4a373;
+    font-weight: 700;
+}
+
+.dropdown-menu a i {
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #2d101a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6a2c3e, #d4a373);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 70%;
+}
+
+.nav-link:hover {
+    color: #6a2c3e;
+}
+
+.nav-link.active {
+    color: #d4a373 !important;
+    font-weight: 700;
+}
+
+.nav-link.active::before {
+    width: 85%;
+    background: linear-gradient(90deg, #d4a373, #6a2c3e);
+}
+
+/* Right Side Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #381420;
+    position: relative;
+}
+
+.icon-btn:hover {
+    background: #6a2c3e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.login-btn {
+    padding: 8px 22px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    color: white !important;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    width: 38px;
+    height: 38px;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #381420;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.mobile-menu-btn:hover {
+    background: #6a2c3e;
+    color: white;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    padding: 85px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-dropdown-header {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #381420;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark-mode .mobile-dropdown-header {
+    color: #d8ccce;
+    border-bottom-color: rgba(255,255,255,0.05);
+}
+
+.mobile-dropdown-content {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.02);
+    padding: 5px 0;
+}
+
+body.dark-mode .mobile-dropdown-content {
+    background: rgba(255,255,255,0.02);
+}
+
+.mobile-dropdown-content.open {
+    display: flex;
+}
+
+.mobile-dropdown-content a {
+    padding: 10px 30px;
+    color: #63434d;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+body.dark-mode .mobile-dropdown-content a {
+    color: #bda4aa;
+}
+
+.mobile-nav .nav-link {
+    padding: 12px 15px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.mobile-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+body.dark-mode .mobile-actions {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+.mobile-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(106, 44, 62, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #381420;
+    box-sizing: border-box;
+}
+
+.mobile-action-btn:hover {
+    background: rgba(106, 44, 62, 0.15);
+}
+
+.mobile-action-btn i {
+    width: 24px;
+    font-size: 18px;
+    color: #6a2c3e;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .mobile-action-btn {
+    color: #fdf0e3 !important;
+    background: rgba(212, 163, 115, 0.12) !important;
+    border-color: rgba(212, 163, 115, 0.25) !important;
+}
+
+body.dark-mode .mobile-action-btn:hover {
+    background: rgba(212, 163, 115, 0.2) !important;
+}
+
+body.dark-mode .mobile-action-btn i {
+    color: #d4a373 !important;
+}
+
+.mobile-action-btn.mobile-login {
+    background: linear-gradient(135deg, #6a2c3e, #471825) !important;
+    color: white !important;
+    border-color: #d4a373 !important;
+    justify-content: center;
+}
+
+.mobile-action-btn.mobile-login:hover {
+    background: linear-gradient(135deg, #d4a373, #b87333) !important;
+    color: #15060b !important;
+}
+
+.mobile-action-btn.mobile-login i {
+    color: white !important;
+}
+
+.mobile-action-btn.mobile-login:hover i {
+    color: #15060b !important;
+}
+
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    z-index: 998;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-overlay.open {
+    display: block;
+    opacity: 1;
+}
+
+/* Tooltip */
+.icon-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #381420;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.icon-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -30px;
+}
+
+/* =========================================
+   SERIES II: UNIQUE CREATIVE BODY SUITE
+   ========================================= */
+
+/* Sovereign Hero Module */
+.sovereign-hero {
+    padding: 140px 5% 80px;
+    background: radial-gradient(circle at top right, rgba(212, 163, 115, 0.12), transparent 60%),
+                linear-gradient(180deg, #fbf7f4 0%, #f5ece6 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sovereign-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(212, 163, 115, 0.15);
+    border: 1px solid #d4a373;
+    border-radius: 40px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #6a2c3e;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+body.dark-mode .sovereign-badge {
+    color: #d4a373;
+    background: rgba(212, 163, 115, 0.08);
+}
+
+.sovereign-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 800;
+    color: #2d101a;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    line-height: 1.18;
+    letter-spacing: 0.5px;
+}
+
+.sovereign-title em {
+    font-style: italic;
+    color: #d4a373;
+    font-weight: 400;
+}
+
+.sovereign-subtext {
+    font-size: clamp(14px, 2vw, 16px);
+    color: #7a5260;
+    max-width: 680px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+body.dark-mode .sovereign-subtext {
+    color: #c4b3b8;
+}
+
+/* Masterwork Interactive Tab Matrix */
+.interactive-showcase {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.tab-triggers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.tab-trigger {
+    padding: 12px 24px;
+    background: white;
+    border: 1px solid rgba(106, 44, 62, 0.1);
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6a2c3e;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-trigger:hover {
+    background: rgba(106, 44, 62, 0.04);
+    transform: translateY(-2px);
+}
+
+.tab-trigger.active {
+    background: #6a2c3e;
+    color: white;
+    border-color: #6a2c3e;
+    box-shadow: 0 8px 20px rgba(106, 44, 62, 0.25);
+}
+
+.tab-pane {
+    display: none;
+    background: white;
+    border: 1px solid rgba(106, 44, 62, 0.08);
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.tab-pane.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pane-img-box {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.pane-img-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(106, 44, 62, 0.2), transparent);
+    z-index: 1;
+}
+
+.pane-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.pane-img-box:hover img {
+    transform: scale(1.05);
+}
+
+.pane-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #381420;
+    margin-bottom: 12px;
+}
+
+body.dark-mode .pane-info h3 {
+    color: #fdf0e3;
+}
+
+.pane-info p {
+    font-size: 13px;
+    color: #63434d;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+body.dark-mode .pane-info p {
+    color: #c4b3b8;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+body.dark-mode .spec-grid {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+.stat-item {
+    text-align: center;
+    border-right: 1px solid rgba(106, 44, 62, 0.1);
+}
+
+body.dark-mode .stat-item {
+    border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #d4a373;
+    margin-bottom: 4px;
+}
+
+.stat-lbl {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #965b6b;
+}
+
+/* 1. Architecture of the Vault Fold Matrix */
+.anatomy-expansion {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.expansion-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.expansion-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #381420;
+    margin-bottom: 8px;
+}
+
+body.dark-mode .expansion-header h3 {
+    color: #fdf0e3;
+}
+
+.expansion-header p {
+    font-size: 13px;
+    color: #7a5260;
+}
+
+body.dark-mode .expansion-header p {
+    color: #c4b3b8;
+}
+
+.anatomy-layers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+}
+
+.anatomy-layer-card {
+    background: white;
+    border: 1px solid rgba(106, 44, 62, 0.06);
+    border-radius: 20px;
+    padding: 40px 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.anatomy-layer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(106, 44, 62, 0.08);
+}
+
+.layer-id {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 38px;
+    height: 38px;
+    background: #6a2c3e;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 16px;
+    box-shadow: 2px 4px 10px rgba(106, 44, 62, 0.3);
+}
+
+body.dark-mode .layer-id {
+    background: #d4a373;
+    color: #140b0e;
+    box-shadow: 2px 4px 10px rgba(212, 163, 115, 0.2);
+}
+
+.anatomy-layer-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #381420;
+    margin-bottom: 12px;
+    padding-top: 5px;
+}
+
+.anatomy-layer-card p {
+    font-size: 12px;
+    color: #63434d;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+body.dark-mode .anatomy-layer-card p {
+    color: #bda4aa;
+}
+
+.layer-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    color: #d4a373;
+    background: rgba(212, 163, 115, 0.12);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Stamping Matrix Grid */
+.matrix-section {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.matrix-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.matrix-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #381420;
+    margin-bottom: 8px;
+}
+
+body.dark-mode .matrix-header h3 {
+    color: #fdf0e3;
+}
+
+.matrix-header p {
+    font-size: 13px;
+    color: #7a5260;
+}
+
+body.dark-mode .matrix-header p {
+    color: #c4b3b8;
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.matrix-card {
+    background: white;
+    border: 1px solid rgba(106, 44, 62, 0.06);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.matrix-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4a373, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.matrix-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(106, 44, 62, 0.08);
+}
+
+.matrix-card:hover::before {
+    opacity: 1;
+}
+
+.matrix-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(212, 163, 115, 0.15);
+    color: #d4a373;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 auto 20px;
+}
+
+.matrix-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #381420;
+    margin-bottom: 10px;
+}
+
+.matrix-card p {
+    font-size: 12px;
+    color: #63434d;
+    line-height: 1.6;
+}
+
+body.dark-mode .matrix-card p {
+    color: #bda4aa;
+}
+
+/* 2. The Private Apprentice Table (Creative Alternative Hub) */
+.apprentice-suite {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.apprentice-wrapper {
+    background: linear-gradient(135deg, rgba(106, 44, 62, 0.04), rgba(212, 163, 115, 0.05));
+    border: 1px solid rgba(106, 44, 62, 0.08);
+    border-radius: 28px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+body.dark-mode .apprentice-wrapper {
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(212, 163, 115, 0.03));
+    border-color: rgba(255,255,255,0.05);
+}
+
+.apprentice-visual {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    aspect-ratio: 1/1;
+}
+
+.apprentice-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.apprentice-content h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #381420;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+body.dark-mode .apprentice-content h4 {
+    color: #fdf0e3;
+}
+
+.apprentice-content p {
+    font-size: 13px;
+    color: #7a5260;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+body.dark-mode .apprentice-content p {
+    color: #c4b3b8;
+}
+
+.tool-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.tool-item i {
+    color: #d4a373;
+    font-size: 14px;
+}
+
+.btn-apprentice {
+    padding: 12px 28px;
+    background: #6a2c3e;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-apprentice:hover {
+    background: #d4a373;
+    color: #140b0e;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .btn-apprentice {
+    background: #d4a373;
+    color: #140b0e;
+}
+
+body.dark-mode .btn-apprentice:hover {
+    background: white;
+}
+
+/* 3. Global Curator Map & Dispatch Matrix */
+.curator-matrix {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.curator-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.curator-card {
+    background: white;
+    border: 1px solid rgba(106, 44, 62, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.curator-card:hover {
+    border-color: #d4a373;
+}
+
+.curator-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.city-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #381420;
+}
+
+body.dark-mode .city-name {
+    color: #fdf0e3;
+}
+
+.ping-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: #d4a373;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ping-dot {
+    width: 8px;
+    height: 8px;
+    background: #d4a373;
+    border-radius: 50%;
+    animation: pulsePing 1.5s infinite;
+}
+
+@keyframes pulsePing {
+    0% { transform: scale(0.9); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(0.9); opacity: 1; }
+}
+
+.curator-desc {
+    font-size: 12px;
+    color: #7a5260;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .curator-desc {
+    color: #bda4aa;
+}
+
+.curator-seal {
+    font-size: 10px;
+    color: #965b6b;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 12px;
+}
+
+body.dark-mode .curator-seal {
+    border-top-color: rgba(255,255,255,0.05);
+}
+
+/* Scribe Auditory Block */
+.auditory-module {
+    background: linear-gradient(135deg, #381420 0%, #1a080d 100%);
+    border-radius: 24px;
+    padding: 60px 50px;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.auditory-module::after {
+    content: '';
+    position: absolute;
+    right: -5%;
+    bottom: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 163, 115, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.auditory-content {
+    max-width: 550px;
+    position: relative;
+    z-index: 1;
+}
+
+.auditory-tag {
+    font-size: 10px;
+    color: #d4a373;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.auditory-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.auditory-quote {
+    font-size: 13px;
+    color: #d8ccce;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    border-left: 2px solid #d4a373;
+    padding-left: 15px;
+}
+
+body.rtl .auditory-quote {
+    border-left: none;
+    border-right: 2px solid #d4a373;
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.auditory-btn {
+    padding: 12px 24px;
+    background: #d4a373;
+    color: #140b0e;
+    border: none;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.auditory-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.wave-ring {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 2px dashed rgba(212, 163, 115, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    animation: spinRing 25s linear infinite;
+}
+
+@keyframes spinRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.wave-ring::before {
+    content: '';
+    position: absolute;
+    inset: 15px;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 163, 115, 0.6);
+}
+
+.ring-core {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(212, 163, 115, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #d4a373;
+    animation: pulseCore 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseCore {
+    from { transform: scale(0.95); box-shadow: 0 0 10px rgba(212,163,115,0.2); }
+    to { transform: scale(1.05); box-shadow: 0 0 25px rgba(212,163,115,0.4); }
+}
+
+/* =========================================
+   COMPREHENSIVE GLOBAL FOOTER STYLES
+   ========================================= */
+.footer {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 60px 5% 30px;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+body.dark-mode .footer {
+    background: rgba(20, 11, 14, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid #d4a373;
+    transition: all 0.4s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+    transform: rotate(-15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.footer-logo-icon i {
+    font-size: 20px;
+    color: #fdf0e3;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #381420;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+body.dark-mode .footer-logo-main {
+    color: #d4a373;
+}
+
+.footer-logo-sub {
+    font-size: 9px;
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+body.dark-mode .footer-logo-sub {
+    color: #bda4aa;
+}
+
+.footer-description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #7a5260;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .footer-description {
+    color: #c4b3b8;
+}
+
+.footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #381420;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+body.dark-mode .footer-section h3 {
+    color: #d4a373;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #6a2c3e, #d4a373);
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-link {
+    color: #7a5260;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+body.dark-mode .footer-link {
+    color: #c4b3b8;
+}
+
+.footer-link:hover {
+    color: #6a2c3e;
+    transform: translateX(5px);
+}
+
+body.dark-mode .footer-link:hover {
+    color: #d4a373;
+}
+
+body.rtl .footer-link:hover {
+    transform: translateX(-5px);
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #7a5260;
+}
+
+body.dark-mode .contact-info p {
+    color: #c4b3b8;
+}
+
+.contact-info i {
+    width: 20px;
+    color: #d4a373;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(106, 44, 62, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6a2c3e;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+body.dark-mode .social-icon {
+    background: rgba(255,255,255,0.05);
+    color: #d8ccce;
+}
+
+.social-icon:hover {
+    background: #6a2c3e;
+    color: white;
+    transform: translateY(-3px);
+}
+
+body.dark-mode .social-icon:hover {
+    background: #d4a373;
+    color: #140b0e;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background: rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+    color: #381420;
+}
+
+body.dark-mode .newsletter-input {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: #6a2c3e;
+}
+
+body.dark-mode .newsletter-input:focus {
+    border-color: #d4a373;
+}
+
+.newsletter-btn {
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3);
+}
+
+body.dark-mode .newsletter-btn {
+    background: linear-gradient(135deg, #d4a373, #b87333);
+    color: #140b0e;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    font-size: 12px;
+    color: #965b6b;
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: rgba(255,255,255,0.08);
+    color: #bda4aa;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1280px) {
+    .nav-menu, .nav-actions {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: flex;
+    }
+    .tab-pane.active {
+        gap: 25px;
+    }
+    .matrix-grid, .anatomy-layers-grid, .curator-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .apprentice-wrapper {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sovereign-hero {
+        padding: 120px 20px 50px;
+    }
+    .tab-pane.active {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+    .matrix-grid, .anatomy-layers-grid, .curator-grid {
+        grid-template-columns: 1fr;
+    }
+    .apprentice-wrapper {
+        padding: 30px 20px;
+    }
+    .auditory-module {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 25px;
+        border-radius: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .auditory-quote {
+        border-left: none !important;
+        border-right: none !important;
+        padding: 0;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logo, .social-links, .contact-info p {
+        justify-content: center;
+    }
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .sovereign-title {
+        font-size: clamp(26px, 7vw, 32px);
+    }
+    .expansion-header h3, .matrix-header h3 {
+        font-size: clamp(22px, 6vw, 26px);
+    }
+    .apprentice-content h4 {
+        font-size: clamp(22px, 6vw, 26px);
+    }
+    .auditory-content h3 {
+        font-size: clamp(22px, 6vw, 26px);
+    }
+    .logo-icon, .footer-logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+    .logo-icon i, .footer-logo-icon i {
+        font-size: 15px;
+    }
+    .logo-main, .footer-logo-main {
+        font-size: 11px;
+    }
+    .logo-sub, .footer-logo-sub {
+        font-size: 6.5px;
+    }
+    .wave-ring {
+        width: 160px;
+        height: 160px;
+    }
+    .ring-core {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+    <!-- TOP NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="./index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-feather-alt"></i>
+            </div>
+            <div class="logo-text">
+                <span class="logo-main">LEATHER & QUILL</span>
+                <span class="logo-sub">HANDCRAFTED JOURNALS</span>
+            </div>
+        </a>
+
+        <!-- DESKTOP NAVIGATION MENU -->
+        <div class="nav-menu" id="navMenu">
+            <div class="dropdown">
+                <a href="./index.html" class="nav-link active" data-page="home">Home <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+                <div class="dropdown-menu">
+                    <a href="./index.html"><i class="fas fa-house-chimney"></i> Home 1 </a>
+                    <a href="./home 2.html" class="active-sub"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+                </div>
+            </div>
+            <a href="./about.html" class="nav-link" data-page="about">About</a>
+            <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+            <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+            <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+            <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+            <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+            <a href="./reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+            <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+        </div>
+
+        <!-- RIGHT SIDE ACTIONS -->
+        <div class="nav-actions">
+            <button class="icon-btn" id="darkModeToggle" data-tooltip="Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" id="rtlToggle" data-tooltip="RTL Mode">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+            <button class="login-btn" id="loginBtnDesktop">Login</button>
+        </div>
+
+        <!-- HAMBURGER BUTTON -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- MOBILE NAVIGATION MENU -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-dropdown-header" id="mobileHomeDropdown">
+            <span>Home</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="mobile-dropdown-content">
+            <a href="./index.html"><i class="fas fa-house-chimney"></i> Home 1 </a>
+            <a href="./home 2.html" style="color: #d4a373; font-weight: 700;"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+        </div>
+        <a href="./about.html" class="nav-link" data-page="about">About</a>
+        <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+        <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+        <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+        <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+        <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+        <a href="./reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+        <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+        
+        <div class="mobile-actions">
+            <button class="mobile-action-btn" id="mobileDarkModeToggle">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+            <button class="mobile-action-btn" id="mobileRtlToggle">
+                <i class="fa-solid fa-right-left"></i> RTL Mode
+            </button>
+            <button class="mobile-action-btn mobile-login" id="mobileLoginBtn">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </div>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- =========================================
+         SERIES II: SOVEREIGN ARCHITECT HUB
+         ========================================= -->
+
+    <!-- Sovereign Banner Module -->
+    <section class="sovereign-hero">
+        <div class="sovereign-badge">
+            <i class="fas fa-scroll"></i>
+            <span>Curated Vault // Series II</span>
+        </div>
+        
+        <h1 class="sovereign-title">
+            Architects of the <em>Unwritten Page</em>
+        </h1>
+        
+        <p class="sovereign-subtext">
+            Where heavy vegetable-tanned shoulder hides meet precision solid-brass closure mechanisms. Engineered exclusively for chroniclers who map the uncharted frontiers of artistic vision.
+        </p>
+    </section>
+
+    <!-- Masterwork Interactive Tab Switcher Suite -->
+    <section class="interactive-showcase">
+        <div class="tab-triggers">
+            <button class="tab-trigger active" onclick="switchSeriesTab(0)">Tab I: The Chancellor’s Folio</button>
+            <button class="tab-trigger" onclick="switchSeriesTab(1)">Tab II: The Diplomat Codex</button>
+            <button class="tab-trigger" onclick="switchSeriesTab(2)">Tab III: The Nomad Field-Stitch</button>
+        </div>
+
+        <!-- PANE 1 -->
+        <div class="tab-pane active" id="pane-0">
+            <div class="pane-img-box">
+                <img src="./images/home2_chancellor_folio.jpg" alt="The Chancellor Folio">
+            </div>
+            <div class="pane-info">
+                <h3>The Chancellor’s Folio</h3>
+                <p>Bound using unbleached natural calfskin finished with pure beeswax rubs. Integrates dual raw-edge bookmark slips alongside a dedicated interior brass clasp sleeve perfect for storing diplomatic quills.</p>
+                <div class="spec-grid">
+                    <div class="stat-item">
+                        <div class="stat-val">5.5oz</div>
+                        <div class="stat-lbl">Hide Weight</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">140 GSM</div>
+                        <div class="stat-lbl">Paper Density</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">Brass</div>
+                        <div class="stat-lbl">Spine Seals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANE 2 -->
+        <div class="tab-pane" id="pane-1">
+            <div class="pane-img-box">
+                <img src="./images/home2_diplomat_codex.jpg" alt="The Diplomat Codex">
+            </div>
+            <div class="pane-info">
+                <h3>The Diplomat Codex</h3>
+                <p>Engineered with rich oxblood dye layers saturated over six continuous days. Features triple internal security flaps and high-contrast Irish linen core thread bindings designed to resist atmospheric degradation.</p>
+                <div class="spec-grid">
+                    <div class="stat-item">
+                        <div class="stat-val">6.0oz</div>
+                        <div class="stat-lbl">Hide Weight</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">160 GSM</div>
+                        <div class="stat-lbl">Paper Density</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">Linen</div>
+                        <div class="stat-lbl">Core Bind</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANE 3 -->
+        <div class="tab-pane" id="pane-2">
+            <div class="pane-img-box">
+                <img src="./images/home2_nomad_field_stitch.jpg" alt="The Nomad Field Stitch">
+            </div>
+            <div class="pane-info">
+                <h3>The Nomad Field-Stitch</h3>
+                <p>A soft, highly pliable roll-cover model featuring continuous wraparound wrap straps. Designed specifically for external geographical documentation, allowing maximum weather expansion without structural cracking.</p>
+                <div class="spec-grid">
+                    <div class="stat-item">
+                        <div class="stat-val">4.5oz</div>
+                        <div class="stat-lbl">Hide Weight</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">120 GSM</div>
+                        <div class="stat-lbl">Paper Density</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">Strap</div>
+                        <div class="stat-lbl">Closure Loop</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW CONTENT SECTION 1: Architecture of the Vault Fold Matrix -->
+    <section class="anatomy-expansion">
+        <div class="expansion-header">
+            <h3>Architecture of the Vault Fold</h3>
+            <p>Anatomy of a masterpiece mapped layer by distinct functional layer</p>
+        </div>
+
+        <div class="anatomy-layers-grid">
+            <div class="anatomy-layer-card">
+                <div class="layer-id">A</div>
+                <span class="layer-tag">// Epidermis</span>
+                <h4>Heavy Shoulder Hide</h4>
+                <p>Meticulously planed full-grain external cuts steeped in chestnut vegetable extracts. Provides natural scratch self-healing and rich.</p>
+            </div>
+
+            <div class="anatomy-layer-card">
+                <div class="layer-id">B</div>
+                <span class="layer-tag">// Sinews</span>
+                <h4>Irish Flax Ligatures</h4>
+                <p>Multi-ply interlocked spine bindings pulled taut through unheated awl channels. Distributes kinetic stress evenly across every single page opening.</p>
+            </div>
+
+            <div class="anatomy-layer-card">
+                <div class="layer-id">C</div>
+                <span class="layer-tag">// Core Fill</span>
+                <h4>Archival Rag-Buffer</h4>
+                <p>Pure raw acid-free cold pressed unlined parchment engineered specifically to catch heavy fountain ink wells without bleed-through.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Brass-Monogram Display Matrix -->
+    <section class="matrix-section">
+        <div class="matrix-header">
+            <h3>Monogram & Imprint Signatures</h3>
+            <p>Select your tactile marking chemistry tailored for exclusive ownership indices</p>
+        </div>
+
+        <div class="matrix-grid">
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fas fa-stamp"></i></div>
+                <h4>Blind Deboss Strike</h4>
+                <p>Heavy deep hydraulic impression struck directly onto raw unheated grain without external foils. Produces a highly minimalist permanent profile.</p>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fas fa-award"></i></div>
+                <h4>24k Burnished Goldleaf</h4>
+                <p>Hand-laid pure metallic master sheets pressed using heated typography dies. Illuminates index edge initials with unparalleled museum brilliance.</p>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-icon"><i class="fas fa-fire"></i></div>
+                <h4>Molten Sterling Stamping</h4>
+                <p>An elite treatment fusing premium oxidized fine silver layers into core hide margins. Striking when contrasted against heavy charcoal bindings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW CONTENT SECTION 2: The Private Apprentice Table -->
+    <section class="apprentice-suite">
+        <div class="apprentice-wrapper">
+            <div class="apprentice-visual">
+                <img src="./images/home2_apprentice_workbench.jpg" alt="Artisan Table Workbench">
+            </div>
+
+            <div class="apprentice-content">
+                <h4>The Private Apprentice Bench</h4>
+                <p>Access our sealed video ledgers illustrating heavy hand-stitching configurations. Taught directly by master bench hands possessing forty consecutive years of raw awl guidance.</p>
+                
+                <div class="tool-list">
+                    <div class="tool-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Saddler's Clams & Heavy Vise Alignment</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Edge Beveling & Gum Tragacanth Burnishing</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Diamond Pricking Iron Punch Geometries</span>
+                    </div>
+                </div>
+
+                <button type="button" class="btn-apprentice" onclick="alert('Access Request Submitted:\n\nTransmitting private workbench stream clearance coordinates to your email address.')">
+                    <span>Inspect Tooling Archives</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW CONTENT SECTION 3: Global Curator Map & Dispatch Matrix -->
+    <section class="curator-matrix">
+        <div class="expansion-header">
+            <h3>Global Archival Dispatches</h3>
+            <p>Tracking custom binding orders prepared for international library vaults</p>
+        </div>
+
+        <div class="curator-grid">
+            <div class="curator-card">
+                <div>
+                    <div class="curator-header">
+                        <span class="city-name">Vienna Envoys</span>
+                        <div class="ping-indicator">
+                            <span class="ping-dot"></span>
+                            <span>Inbound</span>
+                        </div>
+                    </div>
+                    <p class="curator-desc">Six continuous matching volumes commissioned by the state historical trust bound in smooth natural bridle.</p>
+                </div>
+                <div class="curator-seal">// SEAL CODE: V-8812</div>
+            </div>
+
+            <div class="curator-card">
+                <div>
+                    <div class="curator-header">
+                        <span class="city-name">London Guildhall</span>
+                        <div class="ping-indicator">
+                            <span class="ping-dot" style="background: #6a2c3e;"></span>
+                            <span style="color: #6a2c3e;">Sealed</span>
+                        </div>
+                    </div>
+                    <p class="curator-desc">Heavy bespoke ledger block incorporating brass dual combination mechanisms requested by regional chroniclers.</p>
+                </div>
+                <div class="curator-seal">// SEAL CODE: L-0193</div>
+            </div>
+
+            <div class="curator-card">
+                <div>
+                    <div class="curator-header">
+                        <span class="city-name">Tokyo Library</span>
+                        <div class="ping-indicator">
+                            <span class="ping-dot"></span>
+                            <span>En Route</span>
+                        </div>
+                    </div>
+                    <p class="curator-desc">Ultra-soft wrap-tied nomad editions mapped with natural unlined mulberry leaf buffer pages are connected to a secure dispatch network.</p>
+                </div>
+                <div class="curator-seal">// SEAL CODE: T-4401</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auditory Blueprint Module -->
+    <section class="auditory-module">
+        <div class="auditory-content">
+            <span class="auditory-tag">// Auditory Blueprint Archive</span>
+            <h3>"The Spine Knows No Haste"</h3>
+            <p class="auditory-quote">
+                "We soak the hemp twine for 48 hours in warm resin before passing a single needle through the fold. Speed is the mortal enemy of a diary bound for the next century."
+            </p>
+            <button type="button" class="auditory-btn" onclick="alert('Transmitting studio tape recording...\n\n[Audio Simulation Played: Ambient crackling fireplace interlocked with heavy Mallet hits on leather hides.]')">
+                <i class="fas fa-volume-up"></i>
+                <span>Listen to Artisan Log</span>
+            </button>
+        </div>
+
+        <div class="wave-ring">
+            <div class="ring-core">
+                <i class="fas fa-microphone-alt"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION (Fully Synchronized CSS Layout Parity) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="./index.html" class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <div class="footer-logo-text">
+                        <span class="footer-logo-main">LEATHER & QUILL</span>
+                        <span class="footer-logo-sub">HANDCRAFTED JOURNALS</span>
+                    </div>
+                </a>
+                <p class="footer-description">Handcrafted leather journals and notebooks made with premium materials and traditional binding techniques. Each piece tells a unique story.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html" class="footer-link" data-page="home">Home</a></li>
+                    <li><a href="./collections.html" class="footer-link" data-page="collections">Collections</a></li>
+                    <li><a href="./customization.html" class="footer-link" data-page="customization">Customization</a></li>
+                    <li><a href="./craftsmanship.html" class="footer-link" data-page="craftsmanship">Craftsmanship</a></li>
+                    <li><a href="./workshops.html" class="footer-link" data-page="workshops">Workshops</a></li>
+                    <li><a href="./gallery.html" class="footer-link" data-page="gallery">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Support Hub</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Help Desk Hub</a></li>
+                    <li><a href="#" class="footer-link">Returns & Seals</a></li>
+                    <li><a href="#" class="footer-link">Diplomatic Pouches</a></li>
+                    <li><a href="#" class="footer-link">Privacy Ledger</a></li>
+                    <li><a href="#" class="footer-link">Binding Acts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Studio Location</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Leather Lane, Artisan District</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@leatherandquill.com</p>
+                </div>
+                <h3 style="margin-top: 25px;">Newsletter Matrix</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Assigned dispatch email" class="newsletter-input">
+                    <button class="newsletter-btn">Enlist</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Leather & Quill Studio. All rights reserved. | Crafted with premium care</p>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const rtlToggle = document.getElementById('rtlToggle');
+        const loginBtnDesktop = document.getElementById('loginBtnDesktop');
+        const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+        const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+        const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+        const body = document.body;
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileHomeDropdown = document.getElementById('mobileHomeDropdown');
+        const mobileDropdownContent = document.querySelector('.mobile-dropdown-content');
+
+        // Dropdown Logic
+        mobileHomeDropdown?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileDropdownContent?.classList.toggle('open');
+            const icon = mobileHomeDropdown.querySelector('i');
+            if (icon) {
+                icon.style.transform = mobileDropdownContent?.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0)';
+                icon.style.transition = 'transform 0.3s ease';
+            }
+        });
+
+        mobileMenuBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileNav?.classList.toggle('open');
+            mobileOverlay?.classList.toggle('open');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                if (mobileNav?.classList.contains('open')) {
+                    icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+                    mobileDropdownContent?.classList.remove('open');
+                    const hdrIcon = mobileHomeDropdown?.querySelector('i');
+                    if (hdrIcon) hdrIcon.style.transform = 'rotate(0)';
+                }
+            }
+        });
+
+        mobileOverlay?.addEventListener('click', () => {
+            mobileNav?.classList.remove('open');
+            mobileOverlay?.classList.remove('open');
+            const icon = mobileMenuBtn?.querySelector('i');
+            if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+            mobileDropdownContent?.classList.remove('open');
+            const hdrIcon = mobileHomeDropdown?.querySelector('i');
+            if (hdrIcon) hdrIcon.style.transform = 'rotate(0)';
+        });
+
+        // Dark Mode
+        function toggleDarkMode() {
+            body.classList.toggle('dark-mode');
+            const icon = darkModeToggle?.querySelector('i');
+            if (body.classList.contains('dark-mode')) {
+                if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+                if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+                    mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+                }
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+                if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+                    mobileDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+                }
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // RTL
+        function toggleRTL() {
+            body.classList.toggle('rtl');
+            const icon = rtlToggle?.querySelector('i');
+            if (body.classList.contains('rtl')) {
+                if (icon) { icon.classList.remove('fa-arrow-right'); icon.classList.add('fa-arrow-left'); }
+                if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+                    mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+                }
+                localStorage.setItem('rtlMode', 'enabled');
+            } else {
+                if (icon) { icon.classList.remove('fa-arrow-left'); icon.classList.add('fa-arrow-right'); }
+                if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+                    mobileRtlToggle.innerHTML = '<i class="fa-solid fa-right-left"></i> RTL Mode';
+                }
+                localStorage.setItem('rtlMode', 'disabled');
+            }
+        }
+
+        darkModeToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDarkMode();
+        });
+
+        rtlToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleRTL();
+        });
+
+        mobileDarkModeToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDarkMode();
+        });
+
+        mobileRtlToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleRTL();
+        });
+
+        // Site-wide login routing rule
+        function handleLogin() {
+            window.location.href = './login.html';
+        }
+
+        loginBtnDesktop?.addEventListener('click', handleLogin);
+        mobileLoginBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            handleLogin();
+        });
+
+        // Boot theme application
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            if (darkModeToggle) {
+                darkModeToggle.querySelector('i').classList.remove('fa-moon');
+                darkModeToggle.querySelector('i').classList.add('fa-sun');
+            }
+            if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+                mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            }
+        }
+
+        if (localStorage.getItem('rtlMode') === 'enabled') {
+            body.classList.add('rtl');
+            if (rtlToggle) {
+                rtlToggle.querySelector('i').classList.remove('fa-arrow-right');
+                rtlToggle.querySelector('i').classList.add('fa-arrow-left');
+            }
+            if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+                mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+            }
+        }
+
+        // Series II Specific Tab Controller Logic
+        function switchSeriesTab(idx) {
+            const triggers = document.querySelectorAll('.tab-trigger');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            triggers.forEach((trig, i) => {
+                if (i === idx) {
+                    trig.classList.add('active');
+                } else {
+                    trig.classList.remove('active');
+                }
+            });
+
+            panes.forEach((pane, i) => {
+                if (i === idx) {
+                    pane.classList.add('active');
+                } else {
+                    pane.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

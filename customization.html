@@ -1,0 +1,2552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Leather & Quill | Handcrafted Journals</title>
+
+<!-- Website Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236a2c3e'/%3E%3Cstop offset='100%25' stop-color='%23471825'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 6 L78 6 A16 16 0 0 1 94 22 L94 50 A44 44 0 0 1 50 94 L22 94 A16 16 0 0 1 6 78 L6 50 A44 44 0 0 1 50 6 Z' fill='url(%23g)' stroke='%23d4a373' stroke-width='6'/%3E%3Cpath d='M68 28 C68 28 56 32 46 44 C36 56 30 70 28 72 C26 74 28 70 32 64 C38 54 50 42 62 34 C68 28 68 28 68 28 Z' fill='%23fdf0e3'/%3E%3Cpath d='M29 71 L20 80' stroke='%23fdf0e3' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 40 L59 47 M44 48 L51 55 M36 56 L42 62' stroke='%23fdf0e3' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fbf6f9;
+    transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-break: break-word;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+    background: #1a111a;
+    color: #e8dfe8;
+}
+
+body.dark-mode .navbar {
+    background: rgba(26, 26, 26, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .footer {
+    background: rgba(26, 26, 26, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-link {
+    color: #d8ccce;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #d4a373;
+}
+
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .footer-logo-main {
+    color: #d4a373;
+}
+
+body.dark-mode .logo-text .logo-sub,
+body.dark-mode .footer-logo-sub {
+    color: #bda4aa;
+}
+
+body.dark-mode .icon-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #d8ccce;
+}
+
+body.dark-mode .icon-btn:hover {
+    background: #d4a373;
+    color: #1a111a;
+}
+
+body.dark-mode .mobile-menu-btn {
+    color: #d4a373;
+}
+
+body.dark-mode .mobile-nav {
+    background: #1a111a;
+}
+
+body.dark-mode .mobile-nav .nav-link {
+    color: #d8ccce;
+    border-bottom-color: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .login-btn {
+    background: linear-gradient(135deg, #d4a373, #6a2c3e);
+}
+
+body.dark-mode .footer-link {
+    color: #d8ccce;
+}
+
+body.dark-mode .footer-link:hover {
+    color: #d4a373;
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+body.dark-mode .social-icon {
+    background: rgba(255,255,255,0.05);
+    color: #d8ccce;
+}
+
+body.dark-mode .social-icon:hover {
+    background: #d4a373;
+    color: #1a111a;
+}
+
+/* RTL Layout */
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .navbar {
+    padding: 16px 20px 16px 40px;
+}
+
+body.rtl .nav-actions {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body.rtl .mobile-menu-btn {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body.rtl .logo {
+    margin-right: 0;
+}
+
+body.rtl .footer-content {
+    direction: rtl;
+}
+
+body.rtl .footer-section h3::after {
+    left: auto;
+    right: 0;
+}
+
+body.rtl .social-links {
+    justify-content: flex-start;
+}
+
+/* Navbar Container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Section - Reduced Size & Moved Left */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: -10px;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid #d4a373;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.logo-icon i {
+    font-size: 20px;
+    color: #fdf0e3;
+    z-index: 1;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.logo:hover .logo-icon::before {
+    transform: translateX(100%);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 800;
+    color: #381420;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.logo-sub {
+    font-size: clamp(7px, 1.8vw, 9px);
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Navigation Menu - Desktop Only (Hidden on Tablet/Mobile) */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Dropdown Menu for Home */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 8px 0;
+}
+
+body.dark-mode .dropdown-menu {
+    background: #2a2a2a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #381420;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+body.dark-mode .dropdown-menu a {
+    color: #d8ccce;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(106, 44, 62, 0.1);
+    color: #6a2c3e;
+    padding-left: 25px;
+}
+
+.dropdown-menu a i {
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+/* Nav Link - NO ICONS, Reduced Font Size */
+.nav-link {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #2d101a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6a2c3e, #d4a373);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 70%;
+}
+
+.nav-link:hover {
+    color: #6a2c3e;
+}
+
+/* Path-based Active State Navigation Highlighting */
+.nav-link.active {
+    color: #d4a373 !important;
+    font-weight: 700;
+}
+
+.nav-link.active::before {
+    width: 85%;
+    background: linear-gradient(90deg, #d4a373, #6a2c3e);
+}
+
+.footer-link.active {
+    color: #d4a373 !important;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Right Side Actions - Desktop Only */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #381420;
+}
+
+.icon-btn:hover {
+    background: #6a2c3e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Login Button */
+.login-btn {
+    padding: 8px 22px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    color: white !important;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3);
+}
+
+/* Mobile Menu Button - Visible on Tablet & Mobile */
+.mobile-menu-btn {
+    display: none;
+    width: 38px;
+    height: 38px;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #381420;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.mobile-menu-btn:hover {
+    background: #6a2c3e;
+    color: white;
+}
+
+/* Mobile Navigation Menu - Opens from Right */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    padding: 85px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+body.rtl .mobile-nav {
+    right: auto;
+    left: -100%;
+}
+
+body.rtl .mobile-nav.open {
+    right: auto;
+    left: 0;
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    white-space: normal;
+}
+
+/* Mobile Dropdown in Hamburger */
+.mobile-dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.mobile-dropdown-header span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #2d101a;
+}
+
+body.dark-mode .mobile-dropdown-header span {
+    color: #d8ccce;
+}
+
+.mobile-dropdown-header i:first-child {
+    width: 28px;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    padding-left: 44px;
+    background: rgba(106, 44, 62, 0.05);
+}
+
+.mobile-dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #7a5260;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+body.dark-mode .mobile-dropdown-content a {
+    color: #b0b0b0;
+}
+
+.mobile-dropdown-content a:hover {
+    color: #6a2c3e;
+    background: rgba(106, 44, 62, 0.1);
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+    display: block;
+}
+
+.mobile-dropdown.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Mobile Action Buttons */
+.mobile-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+body.dark-mode .mobile-actions {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+.mobile-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(106, 44, 62, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #381420;
+    box-sizing: border-box;
+}
+
+.mobile-action-btn:hover {
+    background: rgba(106, 44, 62, 0.15);
+}
+
+.mobile-action-btn i {
+    width: 24px;
+    font-size: 18px;
+    color: #6a2c3e;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .mobile-action-btn {
+    color: #fdf0e3 !important;
+    background: rgba(212, 163, 115, 0.12) !important;
+    border-color: rgba(212, 163, 115, 0.25) !important;
+}
+
+body.dark-mode .mobile-action-btn:hover {
+    background: rgba(212, 163, 115, 0.2) !important;
+}
+
+body.dark-mode .mobile-action-btn i {
+    color: #d4a373 !important;
+}
+
+.mobile-action-btn.mobile-login {
+    background: linear-gradient(135deg, #6a2c3e, #471825) !important;
+    color: white !important;
+    border-color: #d4a373 !important;
+    justify-content: center;
+}
+
+.mobile-action-btn.mobile-login:hover {
+    background: linear-gradient(135deg, #d4a373, #b87333) !important;
+    color: #15060b !important;
+}
+
+.mobile-action-btn.mobile-login i {
+    color: white !important;
+}
+
+.mobile-action-btn.mobile-login:hover i {
+    color: #15060b !important;
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+    display: none;
+}
+
+.mobile-overlay.open {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 5% 60px;
+    background: linear-gradient(135deg, rgba(106, 44, 62, 0.05), rgba(71, 24, 37, 0.02));
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 8vw, 64px);
+    font-weight: 700;
+    color: #381420;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+body.dark-mode .hero h1 {
+    color: #d4a373;
+}
+
+.hero p {
+    font-size: clamp(14px, 4vw, 18px);
+    color: #7a5260;
+    max-width: 600px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+body.dark-mode .hero p {
+    color: #b0b0b0;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #6a2c3e;
+    color: white;
+    border-radius: 40px;
+    font-size: clamp(12px, 3vw, 14px);
+    font-weight: 500;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* ========== CUSTOMIZATION STUDIO STYLES ========== */
+.cust-studio-header {
+    padding: 110px 5% 40px;
+    background: linear-gradient(135deg, #2d101a 0%, #15060b 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cust-studio-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 20%, rgba(212, 163, 115, 0.15), transparent 70%);
+}
+
+.cust-studio-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5.5vw, 52px);
+    font-weight: 800;
+    color: #fdf0e3;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+.cust-studio-header p {
+    font-size: clamp(14px, 2.2vw, 16px);
+    color: #d8ccce;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+}
+
+/* Studio Anchor Bar */
+.cust-nav-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.cust-nav-btn {
+    padding: 10px 22px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    color: #e8dfe8;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.cust-nav-btn:hover, .cust-nav-btn.active {
+    background: #d4a373;
+    color: #15060b;
+    border-color: #d4a373;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 163, 115, 0.3);
+}
+
+/* Master Workbench Space */
+.cust-workbench {
+    padding: 60px 5% 100px;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+/* Step Row Module */
+.cust-step-module {
+    background: white;
+    border-radius: 24px;
+    border: 1px solid rgba(106, 44, 62, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: all 0.4s ease;
+}
+
+body.dark-mode .cust-step-module {
+    background: #241a1e;
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cust-step-module:hover {
+    box-shadow: 0 15px 50px rgba(106, 44, 62, 0.08);
+    border-color: rgba(106, 44, 62, 0.2);
+}
+
+body.dark-mode .cust-step-module:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    border-color: rgba(212, 163, 115, 0.25);
+}
+
+.cust-step-info {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.step-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6a2c3e;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+body.dark-mode .step-indicator {
+    color: #d4a373;
+}
+
+.cust-step-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 700;
+    color: #381420;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+body.dark-mode .cust-step-info h2 {
+    color: #fdf0e3;
+}
+
+.cust-step-info p {
+    font-size: 14px;
+    color: #63434d;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+body.dark-mode .cust-step-info p {
+    color: #c4b3b8;
+}
+
+.cust-step-visual {
+    position: relative;
+    min-height: 380px;
+}
+
+.cust-step-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Interactive Preview Box for Embossing */
+.live-typer-widget {
+    background: #fdfafb;
+    border: 2px dashed rgba(106, 44, 62, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 10px;
+}
+
+body.dark-mode .live-typer-widget {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.live-typer-widget label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #965b6b;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .live-typer-widget label {
+    color: #bda4aa;
+}
+
+.typer-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(106, 44, 62, 0.2);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background: white;
+    color: #381420;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+}
+
+body.dark-mode .typer-input {
+    background: #1a111a;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.typer-input:focus {
+    outline: none;
+    border-color: #6a2c3e;
+    box-shadow: 0 0 0 3px rgba(106, 44, 62, 0.1);
+}
+
+body.dark-mode .typer-input:focus {
+    border-color: #d4a373;
+    box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.1);
+}
+
+.typer-render-box {
+    background: #381420;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 3px 15px rgba(0,0,0,0.5);
+}
+
+.typer-render-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(212, 163, 115, 0.05) 0%, transparent 100%);
+}
+
+.render-output-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    font-style: italic;
+    background: linear-gradient(135deg, #ffd700, #d4a373, #ffdf73);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Monogram Grid Selector */
+.monogram-styles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.monogram-card {
+    border: 2px solid rgba(106, 44, 62, 0.1);
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fdfafb;
+}
+
+body.dark-mode .monogram-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.monogram-card:hover {
+    border-color: #d4a373;
+    background: white;
+}
+
+body.dark-mode .monogram-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.monogram-card.selected {
+    border-color: #6a2c3e;
+    background: rgba(106, 44, 62, 0.04);
+}
+
+body.dark-mode .monogram-card.selected {
+    border-color: #d4a373;
+    background: rgba(212, 163, 115, 0.08);
+}
+
+.monogram-preview-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #381420;
+    font-size: 16px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+body.dark-mode .monogram-preview-icon {
+    background: #1a111a;
+    border-color: rgba(255,255,255,0.1);
+    color: #d4a373;
+}
+
+.monogram-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #381420;
+    margin-bottom: 2px;
+}
+
+body.dark-mode .monogram-card h4 {
+    color: #e8dfe8;
+}
+
+.monogram-card span {
+    font-size: 11px;
+    color: #965b6b;
+}
+
+/* Leather Palette Widget */
+.color-picker-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.color-swatches-row {
+    display: flex;
+    gap: 15px;
+}
+
+.swatch-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.swatch-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+body.dark-mode .swatch-circle {
+    border-color: #1a111a;
+}
+
+.swatch-item:hover .swatch-circle {
+    transform: scale(1.15);
+}
+
+.swatch-item.active .swatch-circle::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.swatch-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a2832;
+}
+
+body.dark-mode .swatch-label {
+    color: #d8ccce;
+}
+
+.active-color-display {
+    padding: 16px 20px;
+    background: #fcf8fa;
+    border-left: 4px solid #6a2c3e;
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body.dark-mode .active-color-display {
+    background: rgba(255,255,255,0.03);
+    border-left-color: #d4a373;
+}
+
+.active-color-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: #381420;
+}
+
+body.dark-mode .active-color-text {
+    color: #e8dfe8;
+}
+
+/* Paper Deck Cards */
+.paper-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.paper-spec-card {
+    padding: 20px;
+    border: 1px solid rgba(106, 44, 62, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+body.dark-mode .paper-spec-card {
+    background: rgba(255,255,255,0.02);
+    border-color: rgba(255,255,255,0.06);
+}
+
+.paper-spec-card:hover {
+    border-color: #6a2c3e;
+    transform: translateX(5px);
+}
+
+body.dark-mode .paper-spec-card:hover {
+    border-color: #d4a373;
+}
+
+body.rtl .paper-spec-card:hover {
+    transform: translateX(-5px);
+}
+
+.paper-card-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.paper-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(106, 44, 62, 0.05);
+    color: #6a2c3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+body.dark-mode .paper-icon {
+    background: rgba(212, 163, 115, 0.1);
+    color: #d4a373;
+}
+
+.paper-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #381420;
+    margin-bottom: 2px;
+}
+
+body.dark-mode .paper-info h4 {
+    color: #fdf0e3;
+}
+
+.paper-info p {
+    font-size: 12px;
+    color: #7a5260;
+    margin: 0;
+}
+
+body.dark-mode .paper-info p {
+    color: #bda4aa;
+}
+
+.paper-weight-badge {
+    padding: 4px 10px;
+    background: #f3ecef;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #4a2832;
+}
+
+body.dark-mode .paper-weight-badge {
+    background: rgba(255,255,255,0.08);
+    color: #d8ccce;
+}
+
+/* Master Configuration Launch Suite */
+.cust-configurator-launch {
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border-radius: 24px;
+    padding: 45px 50px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(106, 44, 62, 0.3);
+}
+
+body.dark-mode .cust-configurator-launch {
+    background: linear-gradient(135deg, #2d101a, #15060b);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(212, 163, 115, 0.15);
+}
+
+.cust-configurator-launch h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: #ffd700;
+    margin-bottom: 12px;
+}
+
+body.dark-mode .cust-configurator-launch h3 {
+    color: #d4a373;
+}
+
+.cust-configurator-launch p {
+    font-size: 14px;
+    color: #e8dfe8;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
+
+.btn-launch-suite {
+    padding: 14px 36px;
+    background: white;
+    color: #6a2c3e;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .btn-launch-suite {
+    background: #d4a373;
+    color: #1a111a;
+}
+
+.btn-launch-suite:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+}
+
+body.dark-mode .btn-launch-suite:hover {
+    box-shadow: 0 8px 25px rgba(212, 163, 115, 0.4);
+}
+
+/* Breakpoint rules specifically for Customization space */
+@media (max-width: 992px) {
+    .cust-step-module {
+        grid-template-columns: 1fr;
+    }
+    
+    .cust-step-module:nth-child(even) .cust-step-visual {
+        order: -1;
+    }
+    
+    .cust-step-info {
+        padding: 35px 25px;
+    }
+    
+    .cust-step-visual {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .monogram-styles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .color-swatches-row {
+        justify-content: center;
+    }
+    
+    .paper-spec-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .paper-card-left {
+        flex-direction: column;
+    }
+    
+    .paper-weight-badge {
+        align-self: center;
+    }
+}
+
+/* ========== FOOTER SECTION ========== */
+.footer {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 50px 5% 20px;
+    transition: all 0.3s ease;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Footer Logo Section - Same as Navbar */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid #d4a373;
+    transition: all 0.4s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+    transform: rotate(-15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.footer-logo-icon i {
+    font-size: 20px;
+    color: #fdf0e3;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #381420;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.footer-logo-sub {
+    font-size: 9px;
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #7a5260;
+    margin-top: 15px;
+}
+
+body.dark-mode .footer-description {
+    color: #b0b0b0;
+}
+
+/* Footer Sections */
+.footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #381420;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+body.dark-mode .footer-section h3 {
+    color: #d4a373;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #6a2c3e, #d4a373);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-link {
+    color: #7a5260;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #6a2c3e;
+    transform: translateX(5px);
+}
+
+body.rtl .footer-link:hover {
+    transform: translateX(-5px);
+}
+
+/* Contact Info */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #7a5260;
+}
+
+body.dark-mode .contact-info p {
+    color: #b0b0b0;
+}
+
+.contact-info i {
+    width: 20px;
+    color: #6a2c3e;
+    font-size: 14px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(106, 44, 62, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6a2c3e;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    background: #6a2c3e;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background: rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .newsletter-input {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: #6a2c3e;
+}
+
+.newsletter-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    font-size: 12px;
+    color: #965b6b;
+}
+
+body.dark-mode .footer-bottom {
+    color: #bda4aa;
+}
+
+.footer-bottom a {
+    color: #6a2c3e;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll Effect */
+.navbar.scrolled {
+    padding: 10px 5%;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Nest Hub Max, iPad Pro, Tablets (1280px and below) */
+@media (max-width: 1280px) {
+    /* Hide desktop navigation */
+    .nav-menu {
+        display: none;
+    }
+    
+    /* Hide desktop action buttons */
+    .nav-actions {
+        display: none;
+    }
+    
+    /* Show hamburger menu */
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* Adjust navbar spacing */
+    .navbar {
+        padding: 12px 5%;
+        justify-content: space-between;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Mobile Devices (768px and below) - Footer Centered */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .contact-info p {
+        justify-content: center;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-btn {
+        width: 100%;
+    }
+    
+    .footer-links {
+        text-align: center;
+    }
+    
+    .footer-link {
+        display: inline-block;
+    }
+}
+
+/* Small Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .logo-icon, .footer-logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+    .logo-icon i, .footer-logo-icon i {
+        font-size: 15px;
+    }
+    .logo-main, .footer-logo-main {
+        font-size: 11px;
+    }
+    .logo-sub, .footer-logo-sub {
+        font-size: 6.5px;
+    }
+    .logo {
+        margin-left: -5px;
+    }
+    .cust-studio-header h1 {
+        font-size: clamp(26px, 7vw, 32px);
+    }
+    .cust-step-info h2 {
+        font-size: clamp(22px, 6vw, 26px);
+    }
+    .cust-configurator-launch h3 {
+        font-size: clamp(20px, 5.5vw, 24px);
+    }
+    .cust-step-info {
+        padding: 30px 20px;
+    }
+    .monogram-styles-grid {
+        grid-template-columns: 1fr;
+    }
+    .color-swatches-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Tooltip */
+.icon-btn {
+    position: relative;
+}
+
+.icon-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #381420;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.icon-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -30px;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <!-- LOGO - LEFT -->
+    <a href="./index.html" class="logo">
+        <div class="logo-icon">
+            <i class="fas fa-feather-alt"></i>
+        </div>
+        <div class="logo-text">
+            <span class="logo-main">LEATHER & QUILL</span>
+            <span class="logo-sub">HANDCRAFTED JOURNALS</span>
+        </div>
+    </a>
+
+    <!-- DESKTOP NAVIGATION MENU - CENTERED (Visible only on large screens) -->
+    <div class="nav-menu" id="navMenu">
+        <div class="dropdown">
+            <a href="./index.html" class="nav-link" data-page="home">Home <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+            <div class="dropdown-menu">
+                <a href="./index.html" id="home1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+                <a href="./home 2.html" id="home2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+            </div>
+        </div>
+        <a href="./about.html" class="nav-link" data-page="about">About</a>
+        <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+        <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+        <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+        <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+        <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+        <a href="./reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+        <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+    </div>
+
+    <!-- DESKTOP RIGHT ACTIONS (Visible only on large screens) -->
+    <div class="nav-actions">
+        <button class="icon-btn" id="darkModeToggle" data-tooltip="Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" data-tooltip="RTL Mode">
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+        <button class="login-btn" id="loginBtnDesktop">Login</button>
+    </div>
+
+    <!-- HAMBURGER MENU BUTTON (Visible on Tablet & Mobile) -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- MOBILE NAVIGATION MENU -->
+<div class="mobile-nav" id="mobileNav">
+    <div class="mobile-dropdown" id="mobileHomeDropdown">
+        <div class="mobile-dropdown-header">
+            <span>Home</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="mobile-dropdown-content">
+            <a href="./index.html" id="mobileHome1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+            <a href="./home 2.html" id="mobileHome2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+        </div>
+    </div>
+    <a href="./about.html" class="nav-link" data-page="about">About</a>
+    <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+    <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+    <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+    <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+    <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+    <a href="./reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+    <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+    
+    <div class="mobile-actions">
+        <button class="mobile-action-btn" id="mobileDarkModeToggle">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+        <button class="mobile-action-btn" id="mobileRtlToggle">
+            <i class="fa-solid fa-right-left"></i> RTL Mode
+        </button>
+        <button class="mobile-action-btn mobile-login" id="mobileLoginBtn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </div>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- Master Customization Navigation Studio Banner -->
+<header class="cust-studio-header">
+    <h1 id="heroTitle">Personalized Bespoke Customization</h1>
+    <p id="heroText">Command total ownership over your literary artifact. Implement precision hand-tooled name stamping, personalized heraldic seals, custom drum-dyed colorways, and select raw artisanal papers optimized for your preferred writing instrument.</p>
+    <div class="cust-nav-bar">
+        <a href="#embossing" class="cust-nav-btn active" onclick="document.querySelectorAll('.cust-nav-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');"><i class="fas fa-font"></i> 1. Name Embossing</a>
+        <a href="#monograms" class="cust-nav-btn" onclick="document.querySelectorAll('.cust-nav-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');"><i class="fas fa-stamp"></i> 2. Monogram Styles</a>
+        <a href="#colors" class="cust-nav-btn" onclick="document.querySelectorAll('.cust-nav-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');"><i class="fas fa-swatchbook"></i> 3. Leather Colors</a>
+        <a href="#papers" class="cust-nav-btn" onclick="document.querySelectorAll('.cust-nav-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');"><i class="fas fa-scroll"></i> 4. Paper Types</a>
+        <a href="#stitching" class="cust-nav-btn" onclick="document.querySelectorAll('.cust-nav-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');"><i class="fas fa-needle"></i> 5. Stitching</a>
+        <a href="#hardware" class="cust-nav-btn" onclick="document.querySelectorAll('.cust-nav-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');"><i class="fas fa-key"></i> 6. Hardware</a>
+        <a href="#gilding" class="cust-nav-btn" onclick="document.querySelectorAll('.cust-nav-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active');"><i class="fas fa-gem"></i> 7. Edge Gilding</a>
+    </div>
+</header>
+
+<!-- Detailed Customization Studio Content System -->
+<main class="cust-workbench">
+
+    <!-- STEP 1: NAME EMBOSSING -->
+    <section class="cust-step-module" id="embossing">
+        <div class="cust-step-info">
+            <span class="step-indicator"><i class="fas fa-fire-alt"></i> Module 01 // Thermal Tooling</span>
+            <h2>Precision Name Embossing</h2>
+            <p>We heat raw brass letterpress stamps up to 280°F to deeply press character outlines directly into the exterior hide fibers. Accentuate your volume with pure 24-karat gold leaf foil, polished rose gold overlays, or opt for deep blind-debossed raw indentation.</p>
+            
+            <div class="live-typer-widget">
+                <label for="liveNameInput"><i class="fas fa-terminal"></i> Interactive Gold-Foil Simulation</label>
+                <input type="text" id="liveNameInput" class="typer-input" placeholder="Type your full name or title..." onkeyup="document.getElementById('livePreviewRender').textContent = this.value.trim() || 'Your Name Here';">
+                <div class="typer-render-box">
+                    <div class="render-output-text" id="livePreviewRender">Your Name Here</div>
+                    <span style="font-size: 10px; color: #a58e94; display: block; margin-top: 8px;">Simulated 24K Gold Cursive Fontplate Overlay</span>
+                </div>
+            </div>
+        </div>
+        <div class="cust-step-visual">
+            <img src="images/cust_name_embossing_1778590490538.png" alt="Exquisite Gold Foil Custom Name Embossing">
+        </div>
+    </section>
+
+    <!-- STEP 2: MONOGRAM STYLES -->
+    <section class="cust-step-module" id="monograms">
+        <div class="cust-step-visual">
+            <img src="images/cust_monogram_styles_1778590509426.png" alt="Vintage Stamping Dies and Monogram Artwork">
+        </div>
+        <div class="cust-step-info">
+            <span class="step-indicator"><i class="fas fa-medal"></i> Module 02 // Identity Insignias</span>
+            <h2>Monogram & Crest Styles</h2>
+            <p>Elevate the rear spine base or front centering panel with customized structural artwork. We house genuine antique brass dies capable of indenting interlocking initials, geometric perimeters, and clean executive layouts.</p>
+            
+            <div class="monogram-styles-grid">
+                <div class="monogram-card selected" onclick="document.querySelectorAll('.monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon">S.J</div>
+                    <h4>Executive Serif</h4>
+                    <span>Clean & Authoritative</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('.monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon" style="font-style: italic;">ℳ</div>
+                    <h4>Interlocking Script</h4>
+                    <span>Flourished Old-World</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('.monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon" style="border-radius: 8px;">⌖</div>
+                    <h4>Geometric Ring</h4>
+                    <span>Minimalist Abstract</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('.monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon" style="border: 2px double #d4a373;">⚜</div>
+                    <h4>Heraldic Seal</h4>
+                    <span>Ornate Framed Border</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 3: LEATHER COLORS -->
+    <section class="cust-step-module" id="colors">
+        <div class="cust-step-info">
+            <span class="step-indicator"><i class="fas fa-paint-roller"></i> Module 03 // Natural Tanning</span>
+            <h2>Curated Leather Colors</h2>
+            <p>Every hide undergoes an exhaustive multi-week drum vegetable tanning cycle utilizing barks, leaves, and dense oils to achieve unparalleled chromatic saturation. These covers resist synthetic topcoats to ensure dynamic aging characteristics.</p>
+            
+            <div class="color-picker-widget">
+                <div class="color-swatches-row">
+                    <div class="swatch-item active" onclick="document.querySelectorAll('.swatch-item').forEach(s=>s.classList.remove('active')); this.classList.add('active'); document.getElementById('activeColorDescText').textContent = 'Royal Oxblood // A deep, majestic burgundy red that ages with high contrast shadows.';">
+                        <div class="swatch-circle" style="background: #5a1827;"></div>
+                        <span class="swatch-label">Oxblood</span>
+                    </div>
+                    <div class="swatch-item" onclick="document.querySelectorAll('.swatch-item').forEach(s=>s.classList.remove('active')); this.classList.add('active'); document.getElementById('activeColorDescText').textContent = 'Forest Emerald // A rich natural green inspired by dense highland spruce woods.';">
+                        <div class="swatch-circle" style="background: #1b382b;"></div>
+                        <span class="swatch-label">Emerald</span>
+                    </div>
+                    <div class="swatch-item" onclick="document.querySelectorAll('.swatch-item').forEach(s=>s.classList.remove('active')); this.classList.add('active'); document.getElementById('activeColorDescText').textContent = 'Antique Saddle // Warm golden cognac shade developing immediate breathtaking pull-up light bursts.';">
+                        <div class="swatch-circle" style="background: #a25f2b;"></div>
+                        <span class="swatch-label">Saddle Tan</span>
+                    </div>
+                    <div class="swatch-item" onclick="document.querySelectorAll('.swatch-item').forEach(s=>s.classList.remove('active')); this.classList.add('active'); document.getElementById('activeColorDescText').textContent = 'Obsidian Charcoal // Absolute matte charcoal full-grain suitable for discreet executives.';">
+                        <div class="swatch-circle" style="background: #222021;"></div>
+                        <span class="swatch-label">Obsidian</span>
+                    </div>
+                </div>
+                <div class="active-color-display">
+                    <span class="active-color-text" id="activeColorDescText">Royal Oxblood // A deep, majestic burgundy red that ages with high contrast shadows.</span>
+                    <i class="fas fa-info-circle" style="color: #d4a373;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="cust-step-visual">
+            <img src="images/cust_leather_colors_1778590532668.png" alt="Premium Full Grain Leather Color Swatches">
+        </div>
+    </section>
+
+    <!-- STEP 4: PAPER TYPES -->
+    <section class="cust-step-module" id="papers">
+        <div class="cust-step-visual">
+            <img src="images/cust_paper_types_1778590556827.png" alt="Deckle Edge Handmade and Ivory Paper Variants">
+        </div>
+        <div class="cust-step-info">
+            <span class="step-indicator"><i class="fas fa-file-contract"></i> Module 04 // Internal Stock</span>
+            <h2>Archival Paper Formats</h2>
+            <p>The core soul of any writing journal rests inside its leaf weight. Match your specific creative output to calibrated GSM densities built to resist wet bleeding, heavy fountain saturation, and coarse graphite abrasions.</p>
+            
+            <div class="paper-cards-container">
+                <div class="paper-spec-card">
+                    <div class="paper-card-left">
+                        <div class="paper-icon"><i class="fas fa-pen-nib"></i></div>
+                        <div class="paper-info">
+                            <h4>Ivory Dotted Matrix</h4>
+                            <p>Optimized for precision technical linework and crisp daily fountain pen prose.</p>
+                        </div>
+                    </div>
+                    <span class="paper-weight-badge">120 GSM</span>
+                </div>
+                <div class="paper-spec-card">
+                    <div class="paper-card-left">
+                        <div class="paper-icon"><i class="fas fa-scroll"></i></div>
+                        <div class="paper-info">
+                            <h4>Classic Unlined Cream</h4>
+                            <p>Pure, unobstructed archival vellum sheets offering effortless dry media glide.</p>
+                        </div>
+                    </div>
+                    <span class="paper-weight-badge">160 GSM</span>
+                </div>
+                <div class="paper-spec-card">
+                    <div class="paper-card-left">
+                        <div class="paper-icon"><i class="fas fa-water"></i></div>
+                        <div class="paper-info">
+                            <h4>Deckle Cotton Rag</h4>
+                            <p>Hand-pressed cold-pressed individual cotton sheets ideal for wet watercolor washes.</p>
+                        </div>
+                    </div>
+                    <span class="paper-weight-badge">300 GSM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- STEP 5: STITCHING & THREADS -->
+    <section class="cust-step-module" id="stitching">
+        <div class="cust-step-info">
+            <span class="step-indicator"><i class="fas fa-needle"></i> Module 05 // Structural Binding</span>
+            <h2>Artisanal Stitching & Threads</h2>
+            <p>We bind your selected pages using traditional exposed stitching techniques that allow the volume to lay completely flat without spine stress. Choose from heavy imported Irish linen thread infused with pure double-filtered beeswax.</p>
+            
+            <div class="monogram-styles-grid">
+                <div class="monogram-card selected" onclick="document.querySelectorAll('#stitching .monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon"><i class="fas fa-slash"></i></div>
+                    <h4>Coptic Braid Stitch</h4>
+                    <span>Exposed Kettle Loops</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('#stitching .monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon"><i class="fas fa-align-justify"></i></div>
+                    <h4>French Link Stitch</h4>
+                    <span>Interwoven Support Ribs</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('#stitching .monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon"><i class="fas fa-lock"></i></div>
+                    <h4>Secret Belgian</h4>
+                    <span>Distinctive Cross Lacing</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('#stitching .monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon"><i class="fas fa-bars"></i></div>
+                    <h4>Raised Cord Spine</h4>
+                    <span>Classic Renaissance Ribs</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <label style="display: block; font-size: 12px; font-weight: 600; color: #965b6b; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Waxed Linen Thread Tones</label>
+                <div class="color-swatches-row" style="gap: 12px;">
+                    <div class="swatch-item active" onclick="this.parentElement.querySelectorAll('.swatch-item').forEach(s=>s.classList.remove('active')); this.classList.add('active');">
+                        <div class="swatch-circle" style="background: #e8d8b8; width: 36px; height: 36px;"></div>
+                        <span class="swatch-label" style="font-size: 11px;">Ecru Wax</span>
+                    </div>
+                    <div class="swatch-item" onclick="this.parentElement.querySelectorAll('.swatch-item').forEach(s=>s.classList.remove('active')); this.classList.add('active');">
+                        <div class="swatch-circle" style="background: #8b263e; width: 36px; height: 36px;"></div>
+                        <span class="swatch-label" style="font-size: 11px;">Crimson</span>
+                    </div>
+                    <div class="swatch-item" onclick="this.parentElement.querySelectorAll('.swatch-item').forEach(s=>s.classList.remove('active')); this.classList.add('active');">
+                        <div class="swatch-circle" style="background: #1e3a5f; width: 36px; height: 36px;"></div>
+                        <span class="swatch-label" style="font-size: 11px;">Midnight</span>
+                    </div>
+                    <div class="swatch-item" onclick="this.parentElement.querySelectorAll('.swatch-item').forEach(s=>s.classList.remove('active')); this.classList.add('active');">
+                        <div class="swatch-circle" style="background: #b87333; width: 36px; height: 36px;"></div>
+                        <span class="swatch-label" style="font-size: 11px;">Copper</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cust-step-visual">
+            <img src="images/cust_artisanal_stitching_1778601544672.png" alt="Intricate Hand Stitching and Thread Binding">
+        </div>
+    </section>
+
+    <!-- STEP 6: HARDWARE CLOSURES -->
+    <section class="cust-step-module" id="hardware">
+        <div class="cust-step-visual">
+            <img src="images/cust_hardware_closures_1778601570438.png" alt="Ornate Antique Solid Brass Swing Clasp Lock">
+        </div>
+        <div class="cust-step-info">
+            <span class="step-indicator"><i class="fas fa-key"></i> Module 06 // Secure Fastenings</span>
+            <h2>Hardware Closures & Locks</h2>
+            <p>Safeguard your most profound internal musings and sensitive historical observations. We custom-rivet robust solid brass or forged steel anchoring mechanisms designed to keep environmental humidity out and lock pages tightly closed.</p>
+            
+            <div class="paper-cards-container">
+                <div class="paper-spec-card" style="cursor: pointer; border-color: #6a2c3e;" onclick="document.querySelectorAll('#hardware .paper-spec-card').forEach(c=>c.style.borderColor='rgba(106, 44, 62, 0.1)'); this.style.borderColor='#6a2c3e';">
+                    <div class="paper-card-left">
+                        <div class="paper-icon"><i class="fas fa-lock"></i></div>
+                        <div class="paper-info">
+                            <h4>Solid Brass Swing Clasp</h4>
+                            <p>Hand-aged mechanical lever action latch with satisfying heavy latching resistance.</p>
+                        </div>
+                    </div>
+                    <span class="paper-weight-badge">Premium</span>
+                </div>
+                <div class="paper-spec-card" style="cursor: pointer;" onclick="document.querySelectorAll('#hardware .paper-spec-card').forEach(c=>c.style.borderColor='rgba(106, 44, 62, 0.1)'); this.style.borderColor='#6a2c3e';">
+                    <div class="paper-card-left">
+                        <div class="paper-icon"><i class="fas fa-undo-alt"></i></div>
+                        <div class="paper-info">
+                            <h4>Tri-Wrap Leather Thong</h4>
+                            <p>Extra-long continuous full-grain cord that wraps circumferentially with lead weighted tips.</p>
+                        </div>
+                    </div>
+                    <span class="paper-weight-badge">Artisan</span>
+                </div>
+                <div class="paper-spec-card" style="cursor: pointer;" onclick="document.querySelectorAll('#hardware .paper-spec-card').forEach(c=>c.style.borderColor='rgba(106, 44, 62, 0.1)'); this.style.borderColor='#6a2c3e';">
+                    <div class="paper-card-left">
+                        <div class="paper-icon"><i class="fas fa-magnet"></i></div>
+                        <div class="paper-info">
+                            <h4>Concealed Neodymium Snaps</h4>
+                            <p>Invisible high-strength earth magnets integrated flush underneath the inner liner flap.</p>
+                        </div>
+                    </div>
+                    <span class="paper-weight-badge">Modern</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEP 7: EDGE GILDING -->
+    <section class="cust-step-module" id="gilding">
+        <div class="cust-step-info">
+            <span class="step-indicator"><i class="fas fa-gem"></i> Module 07 // Edge Illumination</span>
+            <h2>Edge Gilding & Marbling</h2>
+            <p>A masterfully bound volume should present a unified external statement even when resting horizontally upon a library shelf. Elevate your page edges with hand-applied historic edge finishes applied leaf-by-leaf under dense compression clamps.</p>
+            
+            <div class="monogram-styles-grid">
+                <div class="monogram-card selected" onclick="document.querySelectorAll('#gilding .monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon" style="background: linear-gradient(135deg, #ffd700, #d4a373); color: white;"><i class="fas fa-award"></i></div>
+                    <h4>24K Gold Leaf Edge</h4>
+                    <span>Pure Gleaming Metallic</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('#gilding .monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon" style="background: radial-gradient(circle, #2d101a, #15060b); color: #d4a373;"><i class="fas fa-star"></i></div>
+                    <h4>Celestial Speckling</h4>
+                    <span>Subtle Stardust Spatter</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('#gilding .monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon" style="background: linear-gradient(45deg, #1b382b, #6a2c3e); color: white;"><i class="fas fa-water"></i></div>
+                    <h4>Florentine Marbling</h4>
+                    <span>Hand-Swirled Organic Waves</span>
+                </div>
+                <div class="monogram-card" onclick="document.querySelectorAll('#gilding .monogram-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
+                    <div class="monogram-preview-icon" style="border: 2px dashed #965b6b;"><i class="fas fa-feather-alt"></i></div>
+                    <h4>Natural Rough Deckle</h4>
+                    <span>Untouched Historic Fibers</span>
+                </div>
+            </div>
+        </div>
+        <div class="cust-step-visual">
+            <img src="images/hero_journal_premium_1778587744514.png" alt="Brilliant Exquisite Gold Leaf Edge Gilding and Flyleaves">
+        </div>
+    </section>
+
+    <!-- Master Suite Checkout / Launch Configurator CTA -->
+    <section class="cust-configurator-launch">
+        <h3>Ready to Commission Your Masterpiece?</h3>
+        <p>Transfer your configured embossing inputs, monogram badge styling, chosen premium hide shade, and core leaf stock layout directly into our master layout dispatch studio.</p>
+        <a href="#" class="btn-launch-suite" onclick="const typedName = document.getElementById('liveNameInput')?.value.trim() || 'No custom name'; const activeCol = document.querySelector('#colors .swatch-item.active .swatch-label')?.textContent || 'Oxblood'; const activeStitch = document.querySelector('#stitching .monogram-card.selected h4')?.textContent || 'Coptic Braid Stitch'; const activeThread = document.querySelector('#stitching .swatch-item.active .swatch-label')?.textContent || 'Ecru Wax'; const activeGilding = document.querySelector('#gilding .monogram-card.selected h4')?.textContent || '24K Gold Leaf Edge'; alert('>>> DISPATCHING BESPOKE BLUEPRINT <<<\n\n• Embossing: ' + typedName + '\n• Monogram Style: Selected\n• Leather Hue: ' + activeCol + '\n• Internal Stock: Selected Formats\n• Binding: ' + activeStitch + ' (' + activeThread + ')\n• Hardware Fastening: Selected Mechanism\n• Page Edges: ' + activeGilding + '\n\nTransferring directly to custom workbench order allocation...'); return false;">
+            <i class="fas fa-cogs"></i> Custom Journal 
+        </a>
+    </section>
+
+</main>
+
+<!-- FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <a href="./index.html" class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <div class="footer-logo-text">
+                    <span class="footer-logo-main">LEATHER & QUILL</span>
+                    <span class="footer-logo-sub">HANDCRAFTED JOURNALS</span>
+                </div>
+            </a>
+            <p class="footer-description">Handcrafted leather journals and notebooks made with premium materials and traditional binding techniques. Each piece tells a unique story.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="./index.html" class="footer-link" data-page="home">Home</a></li>
+                <li><a href="./collections.html" class="footer-link" data-page="collections">Collections</a></li>
+                <li><a href="./customization.html" class="footer-link" data-page="customization">Customization</a></li>
+                <li><a href="./craftsmanship.html" class="footer-link" data-page="craftsmanship">Craftsmanship</a></li>
+                <li><a href="./workshops.html" class="footer-link" data-page="workshops">Workshops</a></li>
+                <li><a href="./gallery.html" class="footer-link" data-page="gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">Help Center</a></li>
+                <li><a href="#" class="footer-link">Returns & Exchanges</a></li>
+                <li><a href="#" class="footer-link">Shipping Info</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Leather Lane, Artisan District</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@leatherandquill.com</p>
+            </div>
+            <h3 style="margin-top: 20px;">Newsletter</h3>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Leather & Quill Studio. All rights reserved. | <a href="#">Crafted with ❤️</a></p>
+    </div>
+</footer>
+
+<script>
+// DOM Elements
+const darkModeToggle = document.getElementById('darkModeToggle');
+const rtlToggle = document.getElementById('rtlToggle');
+const loginBtnDesktop = document.getElementById('loginBtnDesktop');
+const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+const body = document.body;
+const navbar = document.getElementById('navbar');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileNav = document.getElementById('mobileNav');
+const mobileOverlay = document.getElementById('mobileOverlay');
+const heroTitle = document.getElementById('heroTitle');
+const heroText = document.getElementById('heroText');
+
+// Home Dropdown Items
+const home1 = document.getElementById('home1');
+const home2 = document.getElementById('home2');
+const mobileHome1 = document.getElementById('mobileHome1');
+const mobileHome2 = document.getElementById('mobileHome2');
+
+// Footer Links
+const footerLinks = document.querySelectorAll('.footer-link');
+
+// Dark Mode Toggle
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+    const icon = darkModeToggle?.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+        if (icon) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+        if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+            mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        }
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        if (icon) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+        if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+            mobileDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        }
+        localStorage.setItem('darkMode', 'disabled');
+    }
+}
+
+darkModeToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDarkMode();
+});
+
+mobileDarkModeToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDarkMode();
+});
+
+// RTL Toggle
+function toggleRTL() {
+    body.classList.toggle('rtl');
+    const icon = rtlToggle?.querySelector('i');
+    if (body.classList.contains('rtl')) {
+        if (icon) {
+            icon.classList.remove('fa-arrow-right');
+            icon.classList.add('fa-arrow-left');
+        }
+        if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+            mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+        }
+        localStorage.setItem('rtlMode', 'enabled');
+    } else {
+        if (icon) {
+            icon.classList.remove('fa-arrow-left');
+            icon.classList.add('fa-arrow-right');
+        }
+        if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+            mobileRtlToggle.innerHTML = '<i class="fa-solid fa-right-left"></i> RTL Mode';
+        }
+        localStorage.setItem('rtlMode', 'disabled');
+    }
+}
+
+rtlToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleRTL();
+});
+
+mobileRtlToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleRTL();
+});
+
+// Login Function
+function handleLogin() {
+    window.location.href = './login.html';
+}
+
+loginBtnDesktop?.addEventListener('click', handleLogin);
+mobileLoginBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    handleLogin();
+});
+
+// Load Preferences
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    if (darkModeToggle) {
+        darkModeToggle.querySelector('i').classList.remove('fa-moon');
+        darkModeToggle.querySelector('i').classList.add('fa-sun');
+    }
+    if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+        mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    }
+}
+
+if (localStorage.getItem('rtlMode') === 'enabled') {
+    body.classList.add('rtl');
+    if (rtlToggle) {
+        rtlToggle.querySelector('i').classList.remove('fa-arrow-right');
+        rtlToggle.querySelector('i').classList.add('fa-arrow-left');
+    }
+    if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+        mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+    }
+}
+
+// Home Dropdown Functions
+function showHome1() {
+    heroTitle.textContent = 'Classic Collection';
+    heroText.textContent = 'Discover our timeless classic leather journals, handcrafted with traditional binding methods and premium materials. Perfect for everyday journaling and special memories.';
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showHome2() {
+    heroTitle.textContent = 'Premium Series';
+    heroText.textContent = 'Experience luxury with our Premium Series - featuring exotic leathers, hand-embossed covers, and archival-quality paper. Made for discerning writers and collectors.';
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+home1?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') || !window.location.pathname.includes('.html');
+    if (!isIndex) {
+        window.location.href = './index.html';
+    } else {
+        showHome1();
+    }
+});
+
+home2?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isHome2 = window.location.pathname.includes('home 2.html') || window.location.pathname.includes('home2.html');
+    if (!isHome2) {
+        window.location.href = './home 2.html';
+    } else {
+        showHome2();
+    }
+});
+
+mobileHome1?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') || !window.location.pathname.includes('.html');
+    if (!isIndex) {
+        window.location.href = './index.html';
+    } else {
+        showHome1();
+        mobileNav?.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    }
+});
+
+mobileHome2?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isHome2 = window.location.pathname.includes('home 2.html') || window.location.pathname.includes('home2.html');
+    if (!isHome2) {
+        window.location.href = './home 2.html';
+    } else {
+        showHome2();
+        mobileNav?.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    }
+});
+
+// Mobile Dropdown Toggle
+const mobileHomeDropdown = document.getElementById('mobileHomeDropdown');
+mobileHomeDropdown?.addEventListener('click', (e) => {
+    if (!e.target.closest('.mobile-dropdown-content')) {
+        mobileHomeDropdown.classList.toggle('active');
+    }
+});
+
+// Navbar Scroll Effect
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar?.classList.add('scrolled');
+    } else {
+        navbar?.classList.remove('scrolled');
+    }
+});
+
+// Mobile Menu Toggle
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileNav?.classList.toggle('open');
+        mobileOverlay?.classList.toggle('open');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) {
+            if (mobileNav?.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileHomeDropdown?.classList.remove('active');
+            }
+        }
+    });
+}
+
+if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+        mobileNav?.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+        mobileHomeDropdown?.classList.remove('active');
+    });
+}
+
+// Path-based active link highlighting logic
+function highlightActiveNavigation() {
+    const path = window.location.pathname.toLowerCase();
+    let currentPage = 'home';
+    if (path.includes('collections.html')) currentPage = 'collections';
+    else if (path.includes('customization.html')) currentPage = 'customization';
+    else if (path.includes('craftsmanship.html')) currentPage = 'craftsmanship';
+    else if (path.includes('workshops.html')) currentPage = 'workshops';
+    else if (path.includes('gallery.html')) currentPage = 'gallery';
+    else if (path.includes('reviews.html')) currentPage = 'reviews';
+    else if (path.includes('about.html')) currentPage = 'about';
+    else if (path.includes('contact.html')) currentPage = 'contact';
+    else if (path.includes('home 2.html') || path.includes('home2.html')) currentPage = 'home';
+
+    // Remove active class globally
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    document.querySelectorAll('.footer-link').forEach(link => link.classList.remove('active'));
+
+    // Apply active class to current page targets
+    document.querySelectorAll(`.nav-link[data-page="${currentPage}"]`).forEach(link => link.classList.add('active'));
+    document.querySelectorAll(`.footer-link[data-page="${currentPage}"]`).forEach(link => link.classList.add('active'));
+
+    // Make parent 'Home' active if on home items
+    if (currentPage === 'home') {
+        const homeDesktop = document.querySelector('.nav-menu .nav-link[data-page="home"]');
+        if (homeDesktop) homeDesktop.classList.add('active');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', highlightActiveNavigation);
+highlightActiveNavigation();
+
+// Regular nav links multi-page routing
+document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const page = link.getAttribute('data-page');
+        const pageMap = {
+            home: './index.html',
+            collections: './collections.html',
+            customization: './customization.html',
+            craftsmanship: './craftsmanship.html',
+            workshops: './workshops.html',
+            gallery: './gallery.html',
+            reviews: './Reviews.html',
+            about: './about.html',
+            contact: './contact.html'
+        };
+        if (pageMap[page]) {
+            const currentPath = window.location.pathname.toLowerCase();
+            const targetFile = pageMap[page].replace('./', '').toLowerCase();
+            // Check if already on the requested page
+            const isHome = page === 'home' && (currentPath.endsWith('/') || currentPath.endsWith('index.html') || currentPath.includes('home 2.html') || currentPath.includes('home2.html'));
+            if (currentPath.includes(targetFile) || isHome) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                mobileNav?.classList.remove('open');
+                mobileOverlay?.classList.remove('open');
+                const icon = mobileMenuBtn?.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            } else {
+                window.location.href = pageMap[page];
+                e.preventDefault();
+            }
+        }
+    });
+});
+
+// Footer Links Navigation routing
+footerLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = link.getAttribute('data-page');
+        if (page) {
+            const pageMap = {
+                home: './index.html',
+                collections: './collections.html',
+                customization: './customization.html',
+                craftsmanship: './craftsmanship.html',
+                workshops: './workshops.html',
+                gallery: './gallery.html',
+                reviews: './Reviews.html',
+                about: './about.html',
+                contact: './contact.html'
+            };
+            if (pageMap[page]) {
+                const currentPath = window.location.pathname.toLowerCase();
+                const targetFile = pageMap[page].replace('./', '').toLowerCase();
+                const isHome = page === 'home' && (currentPath.endsWith('/') || currentPath.endsWith('index.html') || currentPath.includes('home 2.html') || currentPath.includes('home2.html'));
+                if (currentPath.includes(targetFile) || isHome) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    window.location.href = pageMap[page];
+                }
+            }
+        }
+    });
+});
+
+// Newsletter Subscribe
+const newsletterBtn = document.querySelector('.newsletter-btn');
+const newsletterInput = document.querySelector('.newsletter-input');
+
+newsletterBtn?.addEventListener('click', () => {
+    const email = newsletterInput.value.trim();
+    if (email) {
+        alert(`Thank you for subscribing with ${email}!\nYou'll receive our latest updates.`);
+        newsletterInput.value = '';
+    } else {
+        alert('Please enter a valid email address.');
+    }
+});
+
+// Close mobile menu on resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1280) {
+        mobileNav.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+</script>
+</body>
+</html>

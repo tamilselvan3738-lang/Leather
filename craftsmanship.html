@@ -1,0 +1,2685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Sovereign Craftsmanship | Leather & Quill Atelier</title>
+<meta name="description" content="Explore the anatomical codex, multi-sensory acoustic signatures, and kinetic architecture behind every handcrafted Leather & Quill masterwork ledger.">
+
+<!-- Global Favicon Parity -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236a2c3e'/%3E%3Cstop offset='100%25' stop-color='%23471825'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 6 L78 6 A16 16 0 0 1 94 22 L94 50 A44 44 0 0 1 50 94 L22 94 A16 16 0 0 1 6 78 L6 50 A44 44 0 0 1 50 6 Z' fill='url(%23g)' stroke='%23d4a373' stroke-width='6'/%3E%3Cpath d='M68 28 C68 28 56 32 46 44 C36 56 30 70 28 72 C26 74 28 70 32 64 C38 54 50 42 62 34 C68 28 68 28 68 28 Z' fill='%23fdf0e3'/%3E%3Cpath d='M29 71 L20 80' stroke='%23fdf0e3' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 40 L59 47 M44 48 L51 55 M36 56 L42 62' stroke='%23fdf0e3' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+<!-- Premium Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================
+   CORE DESIGN SYSTEM & RESET
+   ========================================= */
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --bg-primary: #fcf8fa;
+    --text-primary: #2d101a;
+    --text-secondary: #63434d;
+    --accent-gold: #d4a373;
+    --accent-gold-dark: #b87333;
+    --brand-wine: #6a2c3e;
+    --brand-wine-deep: #381420;
+    --card-bg: #ffffff;
+    --card-border: rgba(106, 44, 62, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 20px 60px rgba(106, 44, 62, 0.08);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-break: break-word;
+}
+
+/* =========================================
+   DYNAMIC DARK MODE PARITY
+   ========================================= */
+body.dark-mode {
+    --bg-primary: #12090e;
+    --text-primary: #fdf0e3;
+    --text-secondary: #c4b3b8;
+    --card-bg: #1d1016;
+    --card-border: rgba(212, 163, 115, 0.12);
+    --glass-bg: rgba(29, 16, 22, 0.75);
+    --glass-border: rgba(212, 163, 115, 0.15);
+    --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .navbar {
+    background: rgba(18, 9, 14, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .footer {
+    background: rgba(18, 9, 14, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .nav-link { color: #d8ccce; }
+body.dark-mode .nav-link:hover { color: var(--accent-gold); }
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .footer-logo-main { color: var(--accent-gold); }
+body.dark-mode .logo-text .logo-sub,
+body.dark-mode .footer-logo-sub { color: #bda4aa; }
+body.dark-mode .icon-btn { background: rgba(255, 255, 255, 0.05); color: #d8ccce; }
+body.dark-mode .icon-btn:hover { background: var(--accent-gold); color: #12090e; }
+body.dark-mode .mobile-menu-btn { color: var(--accent-gold); }
+body.dark-mode .mobile-nav { background: #12090e; }
+body.dark-mode .mobile-nav .nav-link { color: #d8ccce; border-bottom-color: rgba(255,255,255,0.05); }
+body.dark-mode .footer-link { color: #d8ccce; }
+body.dark-mode .footer-link:hover { color: var(--accent-gold); }
+body.dark-mode .social-icon { background: rgba(255,255,255,0.05); color: #d8ccce; }
+body.dark-mode .social-icon:hover { background: var(--accent-gold); color: #12090e; }
+
+/* =========================================
+   RTL CONFIGURATION PARITY
+   ========================================= */
+body.rtl { direction: rtl; }
+body.rtl .navbar { padding: 12px 20px 12px 5%; }
+body.rtl .nav-actions, body.rtl .mobile-menu-btn { margin-left: 0; margin-right: auto; }
+body.rtl .logo { margin-right: 0; }
+body.rtl .footer-content { direction: rtl; }
+body.rtl .footer-section h3::after { left: auto; right: 0; }
+body.rtl .social-links { justify-content: flex-start; }
+body.rtl .codex-anatomy-grid { direction: rtl; }
+body.rtl .layer-selector-list { padding-right: 0; padding-left: 10px; }
+body.rtl .layer-btn { text-align: right; }
+body.rtl .layer-btn::after { left: 0; right: auto; }
+body.rtl .timeline-card::before { left: auto; right: -7px; }
+body.rtl .timeline-card.left-side::before { right: auto; left: -7px; }
+
+/* =========================================
+   STANDARD NAVIGATION BAR
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled {
+    padding: 10px 5%;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .navbar.scrolled {
+    background: rgba(18, 9, 14, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: -10px;
+}
+
+.logo:hover { transform: scale(1.02); }
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid var(--accent-gold);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.logo-icon i { font-size: 20px; color: #fdf0e3; z-index: 1; }
+
+.logo-text { display: flex; flex-direction: column; }
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 800;
+    color: var(--brand-wine-deep);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.logo-sub {
+    font-size: clamp(7px, 1.8vw, 9px);
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Desktop Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown { position: relative; }
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 8px 0;
+}
+
+body.dark-mode .dropdown-menu { background: #1d1016; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--brand-wine-deep);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+body.dark-mode .dropdown-menu a { color: #d8ccce; }
+.dropdown-menu a:hover {
+    background: rgba(106, 44, 62, 0.1);
+    color: var(--brand-wine);
+    padding-left: 25px;
+}
+.dropdown-menu a i { margin-right: 8px; font-size: 12px; }
+
+.nav-link {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand-wine), var(--accent-gold));
+    transition: width 0.3s ease;
+}
+.nav-link:hover::before { width: 70%; }
+.nav-link:hover { color: var(--brand-wine); }
+.nav-link.active { color: var(--accent-gold) !important; font-weight: 700; }
+.nav-link.active::before { width: 85%; background: linear-gradient(90deg, var(--accent-gold), var(--brand-wine)); }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: var(--brand-wine-deep);
+    position: relative;
+}
+.icon-btn:hover { background: var(--brand-wine); color: white; transform: translateY(-2px); }
+
+.login-btn {
+    padding: 8px 22px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    color: white !important;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3); }
+
+/* Tooltip implementation */
+.icon-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand-wine-deep);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.icon-btn:hover::after { opacity: 1; visibility: visible; bottom: -30px; }
+
+/* Mobile Components */
+.mobile-menu-btn {
+    display: none;
+    width: 38px;
+    height: 38px;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--brand-wine-deep);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.mobile-menu-btn:hover { background: var(--brand-wine); color: white; }
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: var(--card-bg);
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    padding: 85px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+body.rtl .mobile-nav { right: auto; left: -100%; }
+body.rtl .mobile-nav.open { right: auto; left: 0; }
+.mobile-nav.open { right: 0; }
+.mobile-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    white-space: normal;
+}
+
+.mobile-dropdown { display: flex; flex-direction: column; }
+.mobile-dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+.mobile-dropdown-header span { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.mobile-dropdown-header i:first-child { width: 28px; }
+.mobile-dropdown-content { display: none; padding-left: 44px; background: rgba(106, 44, 62, 0.05); }
+.mobile-dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #7a5260;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+body.dark-mode .mobile-dropdown-content a { color: #b0b0b0; }
+.mobile-dropdown-content a:hover { color: var(--brand-wine); background: rgba(106, 44, 62, 0.1); }
+.mobile-dropdown.active .mobile-dropdown-content { display: block; }
+.mobile-dropdown.active .fa-chevron-down { transform: rotate(180deg); }
+
+.mobile-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+body.dark-mode .mobile-actions {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+.mobile-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(106, 44, 62, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--brand-wine-deep);
+    box-sizing: border-box;
+}
+
+.mobile-action-btn:hover {
+    background: rgba(106, 44, 62, 0.15);
+}
+
+.mobile-action-btn i {
+    width: 24px;
+    font-size: 18px;
+    color: var(--brand-wine);
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .mobile-action-btn {
+    color: #fdf0e3 !important;
+    background: rgba(212, 163, 115, 0.12) !important;
+    border-color: rgba(212, 163, 115, 0.25) !important;
+}
+
+body.dark-mode .mobile-action-btn:hover {
+    background: rgba(212, 163, 115, 0.2) !important;
+}
+
+body.dark-mode .mobile-action-btn i {
+    color: #d4a373 !important;
+}
+
+.mobile-action-btn.mobile-login {
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep)) !important;
+    color: white !important;
+    border-color: #d4a373 !important;
+    justify-content: center;
+}
+
+.mobile-action-btn.mobile-login:hover {
+    background: linear-gradient(135deg, #d4a373, #b87333) !important;
+    color: #15060b !important;
+}
+
+.mobile-action-btn.mobile-login i {
+    color: white !important;
+}
+
+.mobile-action-btn.mobile-login:hover i {
+    color: #15060b !important;
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    z-index: 998;
+    display: none;
+}
+.mobile-overlay.open { display: block; }
+
+
+/* =========================================
+   UNIQUE HERO: THE ALCHEMIST'S LENS
+   ========================================= */
+.lens-hero-container {
+    padding: 150px 5% 80px;
+    background: linear-gradient(135deg, #1e0b12 0%, #0c0407 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.lens-hero-container::before {
+    content: '';
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle at 50% 30%, rgba(212, 163, 115, 0.15) 0%, rgba(106, 44, 62, 0.08) 40%, transparent 70%);
+    top: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.lens-ribbon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 163, 115, 0.3);
+    border-radius: 40px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(212, 163, 115, 0.1);
+}
+
+.lens-ribbon i {
+    animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    from { opacity: 0.6; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 5px var(--accent-gold)); }
+}
+
+.lens-hero-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5.5vw, 62px);
+    font-weight: 800;
+    color: #fdf0e3;
+    max-width: 1000px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+.lens-hero-container h1 span {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent-gold);
+}
+
+.lens-hero-container p {
+    font-size: clamp(14px, 2.2vw, 16px);
+    color: #d8ccce;
+    max-width: 780px;
+    margin-bottom: 45px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+}
+
+/* Kinetic Trackers */
+.micro-scope-array {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+    z-index: 2;
+}
+
+.scope-card {
+    flex: 1;
+    min-width: 220px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    text-align: left;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+body.rtl .scope-card { text-align: right; }
+
+.scope-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scope-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(212, 163, 115, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.scope-card:hover::before { opacity: 1; }
+
+.scope-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.scope-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-gold);
+    line-height: 1;
+}
+
+.scope-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(106, 44, 62, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fdf0e3;
+    font-size: 13px;
+}
+
+.scope-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fdf0e3;
+    margin-bottom: 4px;
+}
+
+.scope-desc {
+    font-size: 11px;
+    color: #a89a9e;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   MAIN CRAFTSMANSHIP WORKBENCH
+   ========================================= */
+.bespoke-atelier-core {
+    padding: 80px 5% 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Custom Unique Header Titles for Sections */
+.unique-section-title-wrap {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+.title-micro-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand-wine);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+body.dark-mode .title-micro-tag { color: var(--accent-gold); }
+
+.core-heading-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 3.5vw, 42px);
+    font-weight: 800;
+    color: var(--brand-wine-deep);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+body.dark-mode .core-heading-title { color: #fdf0e3; }
+
+.core-heading-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   MODULE 1: THE ANATOMICAL CODEX
+   ========================================= */
+.codex-anatomy-container {
+    background: var(--card-bg);
+    border-radius: 28px;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.codex-anatomy-container:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(212, 163, 115, 0.25);
+}
+
+.codex-anatomy-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    min-height: 520px;
+}
+
+.layer-selector-list {
+    background: var(--bg-primary);
+    border-right: 1px solid var(--card-border);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.layer-btn {
+    width: 100%;
+    padding: 16px 20px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.layer-btn-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.layer-num {
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 700;
+    color: #965b6b;
+    letter-spacing: 1px;
+}
+
+.layer-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: color 0.2s ease;
+}
+
+.layer-btn i {
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.layer-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: var(--card-bg);
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.03);
+    z-index: 1;
+}
+
+.layer-btn:hover {
+    background: rgba(106, 44, 62, 0.03);
+}
+
+body.dark-mode .layer-btn:hover { background: rgba(255, 255, 255, 0.02); }
+
+.layer-btn.active {
+    border-color: var(--card-border);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.layer-btn.active::after { width: 100%; }
+
+.layer-btn.active .layer-num { color: var(--accent-gold); }
+.layer-btn.active .layer-name { color: var(--brand-wine-deep); font-weight: 700; }
+body.dark-mode .layer-btn.active .layer-name { color: #fdf0e3; }
+.layer-btn.active i { opacity: 1; color: var(--accent-gold); transform: translateX(3px); }
+body.rtl .layer-btn.active i { transform: translateX(-3px); }
+
+/* Right Showcase Display */
+.layer-display-stage {
+    position: relative;
+    background: #11080c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stage-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.45;
+    transition: transform 1.2s ease, opacity 0.4s ease;
+    mix-blend-mode: luminosity;
+}
+
+.codex-anatomy-container:hover .stage-bg-img {
+    transform: scale(1.03);
+    opacity: 0.55;
+}
+
+.stage-glass-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(17, 8, 12, 0.5) 0%, rgba(17, 8, 12, 0.85) 100%);
+    z-index: 2;
+}
+
+.active-layer-detail-card {
+    position: relative;
+    z-index: 3;
+    max-width: 580px;
+    width: 90%;
+    padding: 40px;
+    background: rgba(20, 10, 14, 0.85);
+    border: 1px solid rgba(212, 163, 115, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.96) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.detail-badge-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.detail-id {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.detail-tech {
+    font-family: monospace;
+    font-size: 11px;
+    color: #bda4aa;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.detail-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fdf0e3;
+    margin-bottom: 14px;
+    line-height: 1.25;
+}
+
+.detail-desc {
+    font-size: 13px;
+    color: #d8ccce;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.detail-metrics-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.metric-unit {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.metric-lbl {
+    font-size: 10px;
+    color: #965b6b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.metric-val {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-gold);
+}
+
+
+/* =========================================
+   MODULE 2: ACOUSTIC SIGNATURES
+   ========================================= */
+.acoustic-resonator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.resonator-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.4s ease;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resonator-card:hover {
+    border-color: rgba(212, 163, 115, 0.4);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+.res-top {
+    margin-bottom: 25px;
+}
+
+.res-header-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.sound-icon-ring {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(106, 44, 62, 0.05);
+    border: 1px solid rgba(106, 44, 62, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-wine);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .sound-icon-ring {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: var(--accent-gold);
+}
+
+.resonator-card:hover .sound-icon-ring {
+    background: var(--brand-wine);
+    color: white;
+    transform: scale(1.1);
+}
+
+body.dark-mode .resonator-card:hover .sound-icon-ring {
+    background: var(--accent-gold);
+    color: #12090e;
+}
+
+.acoustic-frequency {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: #965b6b;
+    background: var(--bg-primary);
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+}
+
+.resonator-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--brand-wine-deep);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+body.dark-mode .resonator-card h3 { color: #fdf0e3; }
+
+.resonator-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+/* Simulated Audio Wave Animation */
+.simulated-audio-wave {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 28px;
+    padding-top: 8px;
+    border-top: 1px solid var(--card-border);
+}
+
+.wave-bar {
+    flex: 1;
+    height: 4px;
+    background: var(--card-border);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.resonator-card:hover .wave-bar {
+    background: var(--accent-gold);
+    animation: waveBounce 0.8s infinite alternate ease-in-out;
+}
+
+.resonator-card:hover .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+.resonator-card:hover .wave-bar:nth-child(3) { animation-delay: 0.3s; }
+.resonator-card:hover .wave-bar:nth-child(4) { animation-delay: 0.2s; }
+.resonator-card:hover .wave-bar:nth-child(5) { animation-delay: 0.4s; }
+.resonator-card:hover .wave-bar:nth-child(6) { animation-delay: 0.15s; }
+.resonator-card:hover .wave-bar:nth-child(7) { animation-delay: 0.35s; }
+.resonator-card:hover .wave-bar:nth-child(8) { animation-delay: 0.05s; }
+
+@keyframes waveBounce {
+    0% { height: 4px; background: var(--card-border); }
+    100% { height: 24px; background: var(--brand-wine); }
+}
+
+body.dark-mode @keyframes waveBounce {
+    0% { height: 4px; background: var(--card-border); }
+    100% { height: 24px; background: var(--accent-gold); }
+}
+
+
+/* =========================================
+   MODULE 3: GUILD METROLOGY SHOWCASE
+   ========================================= */
+.metrology-module-box {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 28px;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+}
+
+.metrology-module-box:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(212, 163, 115, 0.25);
+}
+
+.metrology-content-side {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.instrument-grid-array {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.instrument-pill-card {
+    padding: 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.instrument-pill-card:hover, .instrument-pill-card.selected {
+    background: var(--card-bg);
+    border-color: var(--accent-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+}
+
+body.dark-mode .instrument-pill-card:hover, body.dark-mode .instrument-pill-card.selected {
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.inst-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(106, 44, 62, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-wine);
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+body.dark-mode .inst-icon { background: rgba(255, 255, 255, 0.04); color: var(--accent-gold); }
+
+.inst-meta h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.inst-meta span {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+/* Active Live Target Description readout */
+.live-readout-dashboard {
+    margin-top: 25px;
+    padding: 20px 24px;
+    background: var(--bg-primary);
+    border-radius: 16px;
+    border-left: 3px solid var(--brand-wine);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+body.dark-mode .live-readout-dashboard { border-left-color: var(--accent-gold); }
+
+.readout-hdr {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #965b6b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.readout-desc {
+    font-size: 13px;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Visual Image side */
+.metrology-visual-side {
+    position: relative;
+    background: #12090e;
+    min-height: 100%;
+}
+
+.metrology-visual-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   MODULE 4: CHRONOLOGY MATRIX (TIMELINE)
+   ========================================= */
+.chronology-matrix-flow {
+    position: relative;
+    max-width: 1000px;
+    margin: 30px auto 0;
+    padding: 20px 0;
+}
+
+.chronology-matrix-flow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--card-border) 10%, var(--card-border) 90%, transparent);
+}
+
+.timeline-card {
+    width: calc(50% - 40px);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-card:last-child { margin-bottom: 0; }
+
+.timeline-card.left-side {
+    margin-left: auto;
+}
+
+/* Center Nodes */
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -47px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 3px solid var(--accent-gold);
+    z-index: 2;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 4px rgba(212, 163, 115, 0.15);
+}
+
+.timeline-card.left-side::before {
+    right: auto;
+    left: -47px;
+}
+
+.timeline-content-box {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s ease;
+}
+
+.timeline-card:hover .timeline-content-box {
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+.timeline-card:hover::before {
+    background: var(--brand-wine);
+    border-color: white;
+    transform: scale(1.2);
+}
+
+body.dark-mode .timeline-card:hover::before {
+    background: var(--accent-gold);
+    border-color: #12090e;
+}
+
+.time-badge {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .time-badge {
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+    color: #12090e;
+}
+
+.timeline-content-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--brand-wine-deep);
+    margin-bottom: 8px;
+}
+
+body.dark-mode .timeline-content-box h4 { color: #fdf0e3; }
+
+.timeline-content-box p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   STANDARD FOOTER SECTION
+   ========================================= */
+.footer {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 60px 5% 30px;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid var(--accent-gold);
+    transition: all 0.4s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+    transform: rotate(-15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.footer-logo-icon i { font-size: 20px; color: #fdf0e3; }
+
+.footer-logo-text { display: flex; flex-direction: column; }
+.footer-logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--brand-wine-deep);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.footer-logo-sub {
+    font-size: 9px;
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #7a5260;
+    margin-top: 15px;
+}
+
+body.dark-mode .footer-description { color: #b0b0b0; }
+
+.footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--brand-wine-deep);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+body.dark-mode .footer-section h3 { color: var(--accent-gold); }
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand-wine), var(--accent-gold));
+}
+
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 12px; }
+.footer-link {
+    color: #7a5260;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: var(--brand-wine);
+    transform: translateX(5px);
+}
+
+body.rtl .footer-link:hover { transform: translateX(-5px); }
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #7a5260;
+}
+
+body.dark-mode .contact-info p { color: #b0b0b0; }
+.contact-info i { width: 20px; color: var(--brand-wine); font-size: 14px; }
+
+.social-links { display: flex; gap: 12px; margin-top: 20px; }
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(106, 44, 62, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-wine);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    background: var(--brand-wine);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.newsletter-form { display: flex; gap: 10px; margin-top: 15px; }
+.newsletter-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background: rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .newsletter-input {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.newsletter-input:focus { outline: none; border-color: var(--brand-wine); }
+.newsletter-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    font-size: 12px;
+    color: #965b6b;
+}
+
+body.dark-mode .footer-bottom { color: #bda4aa; }
+.footer-bottom a { color: var(--brand-wine); text-decoration: none; }
+.footer-bottom a:hover { text-decoration: underline; }
+
+
+/* =========================================
+   MODULE 5: KINETIC COMPRESSION LAB
+   ========================================= */
+.stress-lab-container {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 28px;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    transition: all 0.4s ease;
+}
+
+.stress-lab-container:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(212, 163, 115, 0.35);
+}
+
+.stress-visual-pane {
+    position: relative;
+    background: #0d0608;
+    min-height: 400px;
+}
+
+.stress-visual-pane img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stress-overlay-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background: rgba(10, 5, 7, 0.85);
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    backdrop-filter: blur(8px);
+}
+
+body.rtl .stress-overlay-badge { left: auto; right: 24px; }
+
+.stress-console-pane {
+    padding: 45px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stress-param-triggers {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.stress-param-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 12px 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.stress-param-btn:hover {
+    background: var(--card-bg);
+    color: var(--brand-wine);
+    border-color: var(--brand-wine);
+}
+
+body.dark-mode .stress-param-btn:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+
+.stress-param-btn.active {
+    background: var(--brand-wine);
+    color: white;
+    border-color: var(--brand-wine);
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.2);
+}
+
+body.dark-mode .stress-param-btn.active {
+    background: var(--accent-gold);
+    color: #12090e;
+    border-color: var(--accent-gold);
+}
+
+.stress-readout-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.readout-stat-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+body.dark-mode .readout-stat-line { border-bottom-color: rgba(255,255,255,0.04); }
+
+.readout-stat-line:last-child { border-bottom: none; padding-bottom: 0; }
+.readout-stat-line .lbl { color: var(--text-secondary); }
+.readout-stat-line .val { font-weight: 700; color: var(--brand-wine-deep); }
+body.dark-mode .readout-stat-line .val { color: #fdf0e3; }
+
+
+/* =========================================
+   RESPONSIVE LAYOUT BREAKPOINTS
+   ========================================= */
+@media (max-width: 1280px) {
+    .nav-menu, .nav-actions { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .metrology-module-box { grid-template-columns: 1fr; }
+    .metrology-visual-side { min-height: 320px; order: -1; }
+    .codex-anatomy-grid { grid-template-columns: 280px 1fr; }
+    .stress-lab-container { grid-template-columns: 1fr; }
+    .stress-visual-pane { min-height: 280px; order: -1; }
+    .stress-console-pane { padding: 30px 25px; }
+    .footer-content { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+}
+
+@media (max-width: 768px) {
+    .codex-anatomy-grid { grid-template-columns: 1fr; }
+    .layer-selector-list { border-right: none; border-bottom: 1px solid var(--card-border); padding: 20px; }
+    .layer-display-stage { min-height: 380px; padding: 20px 0; }
+    
+    .chronology-matrix-flow::before { left: 24px; }
+    body.rtl .chronology-matrix-flow::before { left: auto; right: 24px; }
+    
+    .timeline-card, .timeline-card.left-side {
+        width: calc(100% - 60px);
+        margin-left: auto;
+        margin-right: 0;
+    }
+    
+    body.rtl .timeline-card, body.rtl .timeline-card.left-side {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .timeline-card::before, .timeline-card.left-side::before {
+        right: auto;
+        left: -43px;
+    }
+    
+    body.rtl .timeline-card::before, body.rtl .timeline-card.left-side::before {
+        left: auto;
+        right: -43px;
+    }
+    
+    .footer-content { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .footer-logo, .social-links, .contact-info p { justify-content: center; }
+    .footer-section h3::after { left: 50%; transform: translateX(-50%); }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .bespoke-atelier-core { padding-top: 50px; gap: 50px; }
+    .lens-hero-container { padding-top: 120px; }
+    .lens-hero-container h1 { font-size: clamp(28px, 7vw, 36px); }
+    .core-heading-title { font-size: clamp(22px, 6vw, 28px); }
+    .active-layer-detail-card { padding: 25px; }
+    .detail-title { font-size: 20px; }
+    .detail-metrics-row { grid-template-columns: 1fr; gap: 8px; }
+    .metrology-content-side { padding: 30px 20px; }
+    .timeline-content-box { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- STANDARD NAVIGATION BAR -->
+<nav class="navbar" id="navbar">
+    <a href="./index.html" class="logo">
+        <div class="logo-icon">
+            <i class="fas fa-feather-alt"></i>
+        </div>
+        <div class="logo-text">
+            <span class="logo-main">LEATHER & QUILL</span>
+            <span class="logo-sub">HANDCRAFTED JOURNALS</span>
+        </div>
+    </a>
+
+    <div class="nav-menu" id="navMenu">
+        <div class="dropdown">
+            <a href="./index.html" class="nav-link" data-page="home">Home <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+            <div class="dropdown-menu">
+                <a href="./index.html" id="home1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+                <a href="./home 2.html" id="home2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+            </div>
+        </div>
+        <a href="./about.html" class="nav-link" data-page="about">About</a>
+        <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+        <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+        <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+        <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+        <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+        <a href="./Reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+        <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+        <button class="icon-btn" id="darkModeToggle" data-tooltip="Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" data-tooltip="RTL Mode">
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+        <button class="login-btn" id="loginBtnDesktop">Login</button>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- MOBILE NAVIGATION MENU -->
+<div class="mobile-nav" id="mobileNav">
+    <div class="mobile-dropdown" id="mobileHomeDropdown">
+        <div class="mobile-dropdown-header">
+            <span>Home</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="mobile-dropdown-content">
+            <a href="./index.html" id="mobileHome1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+            <a href="./home 2.html" id="mobileHome2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+        </div>
+    </div>
+    <a href="./about.html" class="nav-link" data-page="about">About</a>
+    <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+    <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+    <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+    <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+    <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+    <a href="./Reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+    <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+    
+    <div class="mobile-actions">
+        <button class="mobile-action-btn" id="mobileDarkModeToggle">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+        <button class="mobile-action-btn" id="mobileRtlToggle">
+            <i class="fa-solid fa-right-left"></i> RTL Mode
+        </button>
+        <button class="mobile-action-btn mobile-login" id="mobileLoginBtn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </div>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<!-- UNIQUE HERO SECTION: THE ALCHEMIST'S LENS -->
+<header class="lens-hero-container">
+    <div class="lens-ribbon">
+        <i class="fas fa-crosshairs"></i> Sovereign Atelier Engine // Patented Metrics
+    </div>
+    <h1>The Anatomical Codex &amp; <span>Kinetic Craftsmanship</span> Architecture</h1>
+    <p>We invite discerning collectors past standard marketing hyperbole into the unvarnished mathematical reality of bespoke bench fabrication. Every single volume built by our sovereign masters incorporates multi-phase tactile calibration designed to confidently span centuries of active deployment.</p>
+    
+    <div class="micro-scope-array">
+        <div class="scope-card">
+            <div class="scope-header">
+                <span class="scope-num">42</span>
+                <div class="scope-icon"><i class="fas fa-layer-group"></i></div>
+            </div>
+            <span class="scope-label">Manual Tooling Phases</span>
+            <p class="scope-desc">Discrete sequential hand-operations performed by single artisan ownership and oversight.</p>
+        </div>
+        <div class="scope-card">
+            <div class="scope-header">
+                <span class="scope-num">300+</span>
+                <div class="scope-icon"><i class="fas fa-hourglass-half"></i></div>
+            </div>
+            <span class="scope-label">Year Tensile Resilience</span>
+            <p class="scope-desc">ISO 9706 archival unbleached bindings certified against atmospheric degradation.</p>
+        </div>
+        <div class="scope-card">
+            <div class="scope-header">
+                <span class="scope-num">450</span>
+                <div class="scope-icon"><i class="fas fa-compress-alt"></i></div>
+            </div>
+            <span class="scope-label">PSI Relief Impression</span>
+            <p class="scope-desc">Thermal solid brass dies embedding pure 24K gold foil inside raw epidermal matrices.</p>
+        </div>
+    </div>
+</header>
+
+
+<!-- MAIN BESPOKE ATELIER WORKBENCH -->
+<main class="bespoke-atelier-core">
+
+    <!-- MODULE 1: THE ANATOMICAL CODEX -->
+    <section class="atelier-section-block">
+        <div class="unique-section-title-wrap">
+            <span class="title-micro-tag"><i class="fas fa-cube"></i> Layer Dissection Array</span>
+            <h2 class="core-heading-title">Exploded Ledger Anatomy</h2>
+            <p class="core-heading-desc">Interact directly with the master framework. Click through the distinct physical substrates that combine to guarantee total kinetic balance and unyielding flat-lay performance.</p>
+        </div>
+
+        <div class="codex-anatomy-container">
+            <div class="codex-anatomy-grid">
+                <!-- Selector List -->
+                <div class="layer-selector-list">
+                    <button class="layer-btn active" data-layer="1">
+                        <div class="layer-btn-info">
+                            <span class="layer-num">LAYER // 01</span>
+                            <span class="layer-name">Epidermal Hide Wrapper</span>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="layer-btn" data-layer="2">
+                        <div class="layer-btn-info">
+                            <span class="layer-num">LAYER // 02</span>
+                            <span class="layer-name">Kinetic Tension Spine</span>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="layer-btn" data-layer="3">
+                        <div class="layer-btn-info">
+                            <span class="layer-num">LAYER // 03</span>
+                            <span class="layer-name">Alkaline Buffered Leaves</span>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="layer-btn" data-layer="4">
+                        <div class="layer-btn-info">
+                            <span class="layer-num">LAYER // 04</span>
+                            <span class="layer-name">Irish Linen Ligatures</span>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="layer-btn" data-layer="5">
+                        <div class="layer-btn-info">
+                            <span class="layer-num">LAYER // 05</span>
+                            <span class="layer-name">Pneumatic 24K Leaf Foil</span>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Stage Showcase -->
+                <div class="layer-display-stage">
+                    <img src="images/craft_exploded_anatomy.png" alt="Exploded view of handcrafted leather journal showing structural layers" class="stage-bg-img" id="stageFeatureImg">
+                    <div class="stage-glass-overlay"></div>
+                    
+                    <!-- Dynamic Detail Card -->
+                    <div class="active-layer-detail-card" id="layerDetailCard">
+                        <div class="detail-badge-wrap">
+                            <span class="detail-id" id="detailId">Substrate // 01</span>
+                            <span class="detail-tech" id="detailTech">Vegetable Tannin Steerhide</span>
+                        </div>
+                        <h3 class="detail-title" id="detailTitle">Uncorrected Full-Grain Epidermis</h3>
+                        <p class="detail-desc" id="detailDesc">Sourced directly from highly curated micro-tanneries, our full-weight exterior wrappers preserve original life hallmarks including stretch signatures and rich chromatic pull-up bursts that continually develop profound bespoke patina over active manual usage.</p>
+                        
+                        <div class="detail-metrics-row">
+                            <div class="metric-unit">
+                                <span class="metric-lbl">Thickness Rating</span>
+                                <span class="metric-val" id="metric1">5.5 oz Heavy Hide Standard</span>
+                            </div>
+                            <div class="metric-unit">
+                                <span class="metric-lbl">Chemical Purity</span>
+                                <span class="metric-val" id="metric2">Zero Synthetic Surface Seals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MODULE 2: ACOUSTIC SIGNATURES OF HANDCRAFTING -->
+    <section class="atelier-section-block">
+        <div class="unique-section-title-wrap">
+            <span class="title-micro-tag"><i class="fas fa-wave-square"></i> Sensory Feedback Arrays</span>
+            <h2 class="core-heading-title">Acoustic Signatures of the Bench</h2>
+            <p class="core-heading-desc">True artisan fabrication produces a distinct auditory rhythm. Explore the unique tactile resonance profiles recorded daily across our manual assembly stations.</p>
+        </div>
+
+        <div class="acoustic-resonator-grid">
+            <div class="resonator-card">
+                <div class="res-top">
+                    <div class="res-header-line">
+                        <div class="sound-icon-ring"><i class="fas fa-hammer"></i></div>
+                        <span class="acoustic-frequency">120 Hz Impact</span>
+                    </div>
+                    <h3>The Pneumatic Strike</h3>
+                    <p>The deep, heavy resonance produced when our solid rawhide mallet drives heated brass type blocks cleanly into thick, oiled outer hide. The physical shockwave seals open animal pores instantly, creating permanent.</p>
+                </div>
+                <div class="simulated-audio-wave">
+                    <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                    <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                    <div class="wave-bar"></div><div class="wave-bar"></div>
+                </div>
+            </div>
+
+            <div class="resonator-card">
+                <div class="res-top">
+                    <div class="res-header-line">
+                        <div class="sound-icon-ring"><i class="fas fa-slash"></i></div>
+                        <span class="acoustic-frequency">850 Hz Draw</span>
+                    </div>
+                    <h3>The Waxed Tension Snap</h3>
+                    <p>The rhythmic, high-tension friction sound of pure, unbleached Irish linen cords continuously hand-pulled through custom hand-pierced paper signatures. Each knot lock creates a distinct tactile vibration felt directly through the index finger.</p>
+                </div>
+                <div class="simulated-audio-wave">
+                    <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                    <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                    <div class="wave-bar"></div><div class="wave-bar"></div>
+                </div>
+            </div>
+
+            <div class="resonator-card">
+                <div class="res-top">
+                    <div class="res-header-line">
+                        <div class="sound-icon-ring"><i class="fas fa-scroll"></i></div>
+                        <span class="acoustic-frequency">2.4 kHz Swish</span>
+                    </div>
+                    <h3>The Archival Swish</h3>
+                    <p>The gentle, dry crackle of cold-pressed cotton rag fibers separating smoothly under manual leaf turns. The advanced internal buffers generate a dense structural rigidity that completely prevents synthetic page sticking or flaking over time.</p>
+                </div>
+                <div class="simulated-audio-wave">
+                    <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                    <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                    <div class="wave-bar"></div><div class="wave-bar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MODULE 3: GUILD METROLOGY SHOWCASE -->
+    <section class="atelier-section-block">
+        <div class="unique-section-title-wrap">
+            <span class="title-micro-tag"><i class="fas fa-tools"></i> Heritage Instrument Systems</span>
+            <h2 class="core-heading-title">Guild Metrology &amp; Tooling</h2>
+            <p class="core-heading-desc">Precision mastery requires specialized physical tools. Review our dedicated bench inventory maintained directly under centuries-old guild specifications.</p>
+        </div>
+
+        <div class="metrology-module-box">
+            <div class="metrology-content-side">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--brand-wine-deep); margin-bottom: 6px;">Select an Instrument</h3>
+                <p style="font-size: 13px; color: var(--text-secondary);">Review real-time mechanical calibration and manual deployment protocols.</p>
+                
+                <div class="instrument-grid-array">
+                    <div class="instrument-pill-card selected" data-tool="caliper">
+                        <div class="inst-icon"><i class="fas fa-ruler-combined"></i></div>
+                        <div class="inst-meta">
+                            <h4>Micrometric Caliper</h4>
+                            <span>Paper stock calibration</span>
+                        </div>
+                    </div>
+                    <div class="instrument-pill-card" data-tool="agate">
+                        <div class="inst-icon"><i class="fas fa-magic"></i></div>
+                        <div class="inst-meta">
+                            <h4>Convex Agate Burnisher</h4>
+                            <span>Gilt relief polishing</span>
+                        </div>
+                    </div>
+                    <div class="instrument-pill-card" data-tool="awl">
+                        <div class="inst-icon"><i class="fas fa-pen-nib"></i></div>
+                        <div class="inst-meta">
+                            <h4>French Diamond Awl</h4>
+                            <span>Signature puncturing</span>
+                        </div>
+                    </div>
+                    <div class="instrument-pill-card" data-tool="stylus">
+                        <div class="inst-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <div class="inst-meta">
+                            <h4>Heated Brass Toggle</h4>
+                            <span>Foil impression matrix</span>
+                        </div>
+                    </div>
+                    <div class="instrument-pill-card" data-tool="folder">
+                        <div class="inst-icon"><i class="fas fa-bone"></i></div>
+                        <div class="inst-meta">
+                            <h4>Polished Bone Folder</h4>
+                            <span>Crease & fold alignment</span>
+                        </div>
+                    </div>
+                    <div class="instrument-pill-card" data-tool="mallet">
+                        <div class="inst-icon"><i class="fas fa-gavel"></i></div>
+                        <div class="inst-meta">
+                            <h4>Rawhide Bench Mallet</h4>
+                            <span>Die impact distribution</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="live-readout-dashboard">
+                    <div class="readout-hdr">
+                        <i class="fas fa-sliders-h"></i>
+                        <span id="toolHeaderLbl">Active Calibration // Micrometric Caliper</span>
+                    </div>
+                    <p class="readout-desc" id="toolReadoutText">Engineered to precisely measure loose leaf gatherings down to 0.01mm tolerances. Ensures absolute uniform signature volume distribution prior to manual compression binding.</p>
+                </div>
+            </div>
+
+            <div class="metrology-visual-side">
+                <img src="images/craft_gilded_embossing.png" alt="Intricate gold leaf embossing using solid brass letterpress dies">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MODULE 4: MULTI-GENERATIONAL CHRONOLOGY MATRIX -->
+    <section class="atelier-section-block">
+        <div class="unique-section-title-wrap">
+            <span class="title-micro-tag"><i class="fas fa-history"></i> The Sovereign Lineage</span>
+            <h2 class="core-heading-title">Chronology Lifecycle Matrix</h2>
+            <p class="core-heading-desc">A standard journal is exhausted in months. A masterwork ledger initiates a stunning multi-generational physical maturation. Track the absolute lifecycle of an intact Leather &amp; Quill volume.</p>
+        </div>
+
+        <div class="chronology-matrix-flow">
+            <div class="timeline-card">
+                <div class="timeline-content-box">
+                    <span class="time-badge">Year // 01</span>
+                    <h4>Active Mechanical Break-In</h4>
+                    <p>The thick full-grain steerhide fibers begin yielding to personal opening habits. Saturated hand-stitching locks perfectly into paper signature folds as initial hand oils condition the porous exterior grain.</p>
+                </div>
+            </div>
+
+            <div class="timeline-card left-side">
+                <div class="timeline-content-box">
+                    <span class="time-badge">Year // 10</span>
+                    <h4>Profound Deepening Patina</h4>
+                    <p>Exposure to direct sunlight and ambient environmental conditions oxidizes internal vegetable tannins, morphing flat cover tones into brilliant multi-chromatic pull-up highlights with dark burnished edges.</p>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="timeline-content-box">
+                    <span class="time-badge">Year // 50</span>
+                    <h4>Sovereign Family Heirloom</h4>
+                    <p>Passed securely down to successor generations. The acid-neutral buffered interior rag stock retains original pristine whiteness, protecting vital ink records and creative thoughts completely from yellowing brittle oxidation.</p>
+                </div>
+            </div>
+
+            <div class="timeline-card left-side">
+                <div class="timeline-content-box">
+                    <span class="time-badge">Year // 100+</span>
+                    <h4>Museum Archival Stability</h4>
+                    <p>Independently verified state. High-grade unbleached linen thread bindings and solid brass stamped cover impressions remain completely legible and flexible, fully preserving human historical intent for centuries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MODULE 5: THE SUB-ZERO KINETIC COMPRESSION LAB -->
+    <section class="atelier-section-block">
+        <div class="unique-section-title-wrap">
+            <span class="title-micro-tag"><i class="fas fa-temperature-low"></i> Environmental Extreme Arrays</span>
+            <h2 class="core-heading-title">Sub-Zero Kinetic Stress Lab</h2>
+            <p class="core-heading-desc">A premium journal must perform flawlessly regardless of localized latitude extremes. Review our live diagnostics validating ultimate material survival parameters under continuous extreme pressure and atmospheric distress.</p>
+        </div>
+
+        <div class="stress-lab-container">
+            <div class="stress-visual-pane">
+                <img src="images/craft_kinetic_press.png" alt="High compression mechanical testing of master journal binding">
+                <span class="stress-overlay-badge">DIAGNOSTIC RIG ACTIVE</span>
+            </div>
+            
+            <div class="stress-console-pane">
+                <div>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--brand-wine-deep); margin-bottom: 12px;">Select Environmental Parameter</h3>
+                    
+                    <div class="stress-param-triggers">
+                        <button class="stress-param-btn active" data-stress="cryo">
+                            <i class="fas fa-snowflake" style="display: block; font-size: 14px; margin-bottom: 4px;"></i>
+                            Cryogenic Flex
+                        </button>
+                        <button class="stress-param-btn" data-stress="humid">
+                            <i class="fas fa-tint" style="display: block; font-size: 14px; margin-bottom: 4px;"></i>
+                            Tropical Saturation
+                        </button>
+                        <button class="stress-param-btn" data-stress="drop">
+                            <i class="fas fa-meteor" style="display: block; font-size: 14px; margin-bottom: 4px;"></i>
+                            Kinetic Freefall
+                        </button>
+                    </div>
+                </div>
+
+                <div class="stress-readout-card">
+                    <p id="stressDescText" style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 10px;">
+                        Evaluated under continuous -20°C chamber exposure. Raw uncorrected epidermal steerhide retains perfect elastic give without micro-fracturing along raised spine cord hinges.
+                    </p>
+                    
+                    <div class="readout-stat-line">
+                        <span class="lbl">Thread Contractile Index</span>
+                        <span class="val" id="stressStat1">100% Uncompromised</span>
+                    </div>
+                    <div class="readout-stat-line">
+                        <span class="lbl">Buffer Substrate Warp</span>
+                        <span class="val" id="stressStat2">0.00mm Deflection</span>
+                    </div>
+                    <div class="readout-stat-line">
+                        <span class="lbl">Chamber Stabilization</span>
+                        <span class="val" id="stressStat3">Certified ISO Class 1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- STANDARD FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <a href="./index.html" class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <div class="footer-logo-text">
+                    <span class="footer-logo-main">LEATHER & QUILL</span>
+                    <span class="footer-logo-sub">HANDCRAFTED JOURNALS</span>
+                </div>
+            </a>
+            <p class="footer-description">Handcrafted leather journals and notebooks made with premium materials and traditional binding techniques. Each piece tells a unique story.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="./index.html" class="footer-link" data-page="home">Home</a></li>
+                <li><a href="./collections.html" class="footer-link" data-page="collections">Collections</a></li>
+                <li><a href="./customization.html" class="footer-link" data-page="customization">Customization</a></li>
+                <li><a href="./craftsmanship.html" class="footer-link" data-page="craftsmanship">Craftsmanship</a></li>
+                <li><a href="./workshops.html" class="footer-link" data-page="workshops">Workshops</a></li>
+                <li><a href="./gallery.html" class="footer-link" data-page="gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">Help Center</a></li>
+                <li><a href="#" class="footer-link">Returns & Exchanges</a></li>
+                <li><a href="#" class="footer-link">Shipping Info</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Leather Lane, Artisan District</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@leatherandquill.com</p>
+            </div>
+            <h3 style="margin-top: 20px;">Newsletter</h3>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Leather & Quill Studio. All rights reserved. | <a href="#">Crafted with ❤️</a></p>
+    </div>
+</footer>
+
+
+<script>
+// DOM Elements Setup
+const darkModeToggle = document.getElementById('darkModeToggle');
+const rtlToggle = document.getElementById('rtlToggle');
+const loginBtnDesktop = document.getElementById('loginBtnDesktop');
+const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+const body = document.body;
+const navbar = document.getElementById('navbar');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileNav = document.getElementById('mobileNav');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+// Home Dropdown Items
+const home1 = document.getElementById('home1');
+const home2 = document.getElementById('home2');
+const mobileHome1 = document.getElementById('mobileHome1');
+const mobileHome2 = document.getElementById('mobileHome2');
+const footerLinks = document.querySelectorAll('.footer-link');
+
+// Layer Anatomical Codex Data
+const layerData = {
+    "1": {
+        id: "Substrate // 01",
+        tech: "Vegetable Tannin Steerhide",
+        title: "Uncorrected Full-Grain Epidermis",
+        desc: "Sourced directly from highly curated micro-tanneries, our full-weight exterior wrappers preserve original life hallmarks including stretch signatures and rich chromatic pull-up bursts that continually develop profound bespoke patina over active manual usage.",
+        m1: "5.5 oz Heavy Hide Standard",
+        m2: "Zero Synthetic Surface Seals"
+    },
+    "2": {
+        id: "Substrate // 02",
+        tech: "Exposed Raised Back Cords",
+        title: "Kinetic Flat-Lay Tension Spine",
+        desc: "Rather than applying brittle hot adhesives that crack under standard climate shifting, we individually secure internal signature sets over robust exterior rawhide cords. This traditional open architectural spine distributes mechanical stress continuously across every fold.",
+        m1: "Independent Flex Allocation",
+        m2: "180-Degree Dead-Flat Surface"
+    },
+    "3": {
+        id: "Substrate // 03",
+        tech: "Pure Cotton Rag Matrix",
+        title: "Alkaline Buffered Leaf Stock",
+        desc: "Engineered specifically to house heavy fountain pen arrays and dark iron-gall historical inks. Our pure cotton rag core leaves feature deep internal calcium buffer layers that completely neutralize localized paper acidity across future decades.",
+        m1: "> 2% Calcium Reserve Base",
+        m2: "ISO 9706 Certified Archival"
+    },
+    "4": {
+        id: "Substrate // 04",
+        tech: "Double-Waxed Binder Cord",
+        title: "Irish Linen Braided Ligatures",
+        desc: "We exclusively stitch core leaf groupings using thick, multi-ply Irish linen threads submerged twice inside high-purity filtered boiling yellow beeswax. Generates ultimate dynamic knot friction while locking complete mechanical waterproofing in place.",
+        m1: "Multi-Ply High Tensile Rating",
+        m2: "Thermal Beeswax Infusion"
+    },
+    "5": {
+        id: "Substrate // 05",
+        tech: "Solid Brass Relief Transfer",
+        title: "Pneumatic 24K Deep Leaf Foil",
+        desc: "Delivered beneath massive pneumatic lever impacts reaching perfect metallic binding thresholds. High compression drive instantly sears soft outer skin fibers while depositing genuine radiant 24-karat gold foil deeply into precision debossed channels.",
+        m1: "450 lbs Impact Load Strike",
+        m2: "Flake-Proof Foil Interlocking"
+    }
+};
+
+// Tool Metrology Data
+const toolData = {
+    caliper: {
+        lbl: "Active Calibration // Micrometric Caliper",
+        text: "Engineered to precisely measure loose leaf gatherings down to 0.01mm tolerances. Ensures absolute uniform signature volume distribution prior to manual compression binding."
+    },
+    agate: {
+        lbl: "Active Calibration // Convex Agate Burnisher",
+        text: "Highly polished semi-precious agate stone fitted to a rounded ergonomic handle. Used to smooth down hot-stamped gold foil edges until they achieve brilliant mirror-finish reflection without tearing fragile surrounding hide surfaces."
+    },
+    awl: {
+        lbl: "Active Calibration // French Diamond Awl",
+        text: "Tapered high-carbon blade ground to a precise angled diamond tip. Custom fitted to slice cleanly through multi-leaf rag bundles without splitting fragile cotton fibers, allowing smooth access for thick waxed ligatures."
+    },
+    stylus: {
+        lbl: "Active Calibration // Heated Brass Toggle",
+        text: "Solid high-density brass matrix blocks engineered to maintain stable 285°F core thermal limits. Transfers optimal uniform heat energy directly to dry leaf foils to fuse metallic fragments natively into steerhide pores."
+    },
+    folder: {
+        lbl: "Active Calibration // Polished Bone Folder",
+        text: "Hand-carved genuine elk bone tool shaped to apply firm, non-marring scoring friction. Sets absolutely crisp page fold lines and secures turn-in leather edges seamlessly without damaging buffered internal cotton fibers."
+    },
+    mallet: {
+        lbl: "Active Calibration // Rawhide Bench Mallet",
+        text: "Heavy tightly coiled solid rawhide head mounted on a seasoned hickory shaft. Delivers intense, distributed vertical shockwaves to cleanly transfer metal relief die designs deep into thick steerhide covers without surface rebound."
+    }
+};
+
+// Dark Mode Toggle Logic
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+    const icon = darkModeToggle?.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+        if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+        if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+            mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        }
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+        if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+            mobileDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        }
+        localStorage.setItem('darkMode', 'disabled');
+    }
+}
+
+darkModeToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleDarkMode(); });
+mobileDarkModeToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleDarkMode(); });
+
+// RTL Toggle Logic
+function toggleRTL() {
+    body.classList.toggle('rtl');
+    const icon = rtlToggle?.querySelector('i');
+    if (body.classList.contains('rtl')) {
+        if (icon) { icon.classList.remove('fa-arrow-right'); icon.classList.add('fa-arrow-left'); }
+        if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+            mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+        }
+        localStorage.setItem('rtlMode', 'enabled');
+    } else {
+        if (icon) { icon.classList.remove('fa-arrow-left'); icon.classList.add('fa-arrow-right'); }
+        if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+            mobileRtlToggle.innerHTML = '<i class="fa-solid fa-right-left"></i> RTL Mode';
+        }
+        localStorage.setItem('rtlMode', 'disabled');
+    }
+}
+
+rtlToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleRTL(); });
+mobileRtlToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleRTL(); });
+
+// Login routing
+function handleLogin() { window.location.href = './login.html'; }
+loginBtnDesktop?.addEventListener('click', handleLogin);
+mobileLoginBtn?.addEventListener('click', (e) => { e.stopPropagation(); handleLogin(); });
+
+// Load Preferences from Global LocalStorage
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    if (darkModeToggle) {
+        darkModeToggle.querySelector('i').classList.remove('fa-moon');
+        darkModeToggle.querySelector('i').classList.add('fa-sun');
+    }
+    if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+        mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    }
+}
+if (localStorage.getItem('rtlMode') === 'enabled') {
+    body.classList.add('rtl');
+    if (rtlToggle) {
+        rtlToggle.querySelector('i').classList.remove('fa-arrow-right');
+        rtlToggle.querySelector('i').classList.add('fa-arrow-left');
+    }
+    if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+        mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+    }
+}
+
+// Navigation Home Toggles
+home1?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = './index.html';
+});
+home2?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = './home 2.html';
+});
+mobileHome1?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = './index.html';
+});
+mobileHome2?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = './home 2.html';
+});
+
+// Mobile Dropdown toggling
+const mobileHomeDropdown = document.getElementById('mobileHomeDropdown');
+mobileHomeDropdown?.addEventListener('click', (e) => {
+    if (!e.target.closest('.mobile-dropdown-content')) {
+        mobileHomeDropdown.classList.toggle('active');
+    }
+});
+
+// Navbar Scrolled Effect
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar?.classList.add('scrolled');
+    } else {
+        navbar?.classList.remove('scrolled');
+    }
+});
+
+// Mobile Hamburger Handlers
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileNav?.classList.toggle('open');
+        mobileOverlay?.classList.toggle('open');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) {
+            if (mobileNav?.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileHomeDropdown?.classList.remove('active');
+            }
+        }
+    });
+}
+
+if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+        mobileNav?.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+        mobileHomeDropdown?.classList.remove('active');
+    });
+}
+
+// Path-based dynamic navigation marker logic
+function highlightActiveNavigation() {
+    const path = window.location.pathname.toLowerCase();
+    let currentPage = 'craftsmanship'; // default for this specific file
+    if (path.includes('collections.html')) currentPage = 'collections';
+    else if (path.includes('customization.html')) currentPage = 'customization';
+    else if (path.includes('craftsmanship.html')) currentPage = 'craftsmanship';
+    else if (path.includes('workshops.html')) currentPage = 'workshops';
+    else if (path.includes('gallery.html')) currentPage = 'gallery';
+    else if (path.includes('reviews.html')) currentPage = 'reviews';
+    else if (path.includes('about.html')) currentPage = 'about';
+    else if (path.includes('contact.html')) currentPage = 'contact';
+    else if (path.includes('home 2.html') || path.includes('home2.html')) currentPage = 'home';
+    else if (path.endsWith('/') || path.endsWith('index.html')) currentPage = 'home';
+
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    document.querySelectorAll('.footer-link').forEach(link => link.classList.remove('active'));
+
+    document.querySelectorAll(`.nav-link[data-page="${currentPage}"]`).forEach(link => link.classList.add('active'));
+    document.querySelectorAll(`.footer-link[data-page="${currentPage}"]`).forEach(link => link.classList.add('active'));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    highlightActiveNavigation();
+
+    // Module 1 Layer Click functionality
+    const layerButtons = document.querySelectorAll('.layer-btn');
+    const detailCard = document.getElementById('layerDetailCard');
+    const detailId = document.getElementById('detailId');
+    const detailTech = document.getElementById('detailTech');
+    const detailTitle = document.getElementById('detailTitle');
+    const detailDesc = document.getElementById('detailDesc');
+    const metric1 = document.getElementById('metric1');
+    const metric2 = document.getElementById('metric2');
+
+    layerButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            layerButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const layerKey = btn.getAttribute('data-layer');
+            const data = layerData[layerKey];
+            
+            if (data && detailCard) {
+                // Re-trigger visual entry animations smoothly
+                detailCard.style.animation = 'none';
+                detailCard.offsetHeight; // layout reflow trigger
+                detailCard.style.animation = 'fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+                
+                detailId.textContent = data.id;
+                detailTech.textContent = data.tech;
+                detailTitle.textContent = data.title;
+                detailDesc.textContent = data.desc;
+                metric1.textContent = data.m1;
+                metric2.textContent = data.m2;
+            }
+        });
+    });
+
+    // Module 3 Metrology Tool Click functionality
+    const toolCards = document.querySelectorAll('.instrument-pill-card');
+    const toolHeaderLbl = document.getElementById('toolHeaderLbl');
+    const toolReadoutText = document.getElementById('toolReadoutText');
+
+    toolCards.forEach(card => {
+        card.addEventListener('click', () => {
+            toolCards.forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            
+            const toolKey = card.getAttribute('data-tool');
+            const tData = toolData[toolKey];
+            
+            if (tData) {
+                toolHeaderLbl.textContent = tData.lbl;
+                toolReadoutText.textContent = tData.text;
+            }
+        });
+    });
+
+    // Module 5 Stress Lab Controller functionality
+    const stressData = {
+        cryo: {
+            desc: "Evaluated under continuous -20°C chamber exposure. Raw uncorrected epidermal steerhide retains perfect elastic give without micro-fracturing along raised spine cord hinges.",
+            s1: "100% Uncompromised",
+            s2: "0.00mm Deflection",
+            s3: "Certified ISO Class 1"
+        },
+        humid: {
+            desc: "Subjected to 98% continuous relative humidity at 40°C equatorial thresholds. Deep internal buffers completely arrest fungal colonization while natural carnauba edge seals repel ambient soaking.",
+            s1: "Zero Core Swell",
+            s2: "< 0.02mm Expansion",
+            s3: "Hydrophobic Rating A+"
+        },
+        drop: {
+            desc: "Subjected to multi-axis 1.5-meter drop tests onto unyielding polished granite bases. Solid internal gathering knots flex dynamically, fully protecting structural thread loops from localized impact shear.",
+            s1: "Absolute Loop Recovery",
+            s2: "Zero Corner Separation",
+            s3: "Kinetic Integrity Pass"
+        }
+    };
+
+    const stressButtons = document.querySelectorAll('.stress-param-btn');
+    const stressDescText = document.getElementById('stressDescText');
+    const stressStat1 = document.getElementById('stressStat1');
+    const stressStat2 = document.getElementById('stressStat2');
+    const stressStat3 = document.getElementById('stressStat3');
+
+    stressButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            stressButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const stressKey = btn.getAttribute('data-stress');
+            const sData = stressData[stressKey];
+            
+            if (sData) {
+                stressDescText.textContent = sData.desc;
+                stressStat1.textContent = sData.s1;
+                stressStat2.textContent = sData.s2;
+                stressStat3.textContent = sData.s3;
+            }
+        });
+    });
+});
+
+// Multi-page standard routing links
+document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const page = link.getAttribute('data-page');
+        const pageMap = {
+            home: './index.html',
+            collections: './collections.html',
+            customization: './customization.html',
+            craftsmanship: './craftsmanship.html',
+            workshops: './workshops.html',
+            gallery: './gallery.html',
+            reviews: './Reviews.html',
+            about: './about.html',
+            contact: './contact.html'
+        };
+        if (pageMap[page]) {
+            const currentPath = window.location.pathname.toLowerCase();
+            const targetFile = pageMap[page].replace('./', '').toLowerCase();
+            if (currentPath.includes(targetFile) || (page === 'craftsmanship' && currentPath.includes('craftsmanship.html'))) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                mobileNav?.classList.remove('open');
+                mobileOverlay?.classList.remove('open');
+                const icon = mobileMenuBtn?.querySelector('i');
+                if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+            } else {
+                window.location.href = pageMap[page];
+                e.preventDefault();
+            }
+        }
+    });
+});
+
+// Footer routing links
+footerLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        const page = link.getAttribute('data-page');
+        if (page) {
+            const pageMap = {
+                home: './index.html',
+                collections: './collections.html',
+                customization: './customization.html',
+                craftsmanship: './craftsmanship.html',
+                workshops: './workshops.html',
+                gallery: './gallery.html',
+                reviews: './Reviews.html',
+                about: './about.html',
+                contact: './contact.html'
+            };
+            if (pageMap[page]) {
+                const currentPath = window.location.pathname.toLowerCase();
+                const targetFile = pageMap[page].replace('./', '').toLowerCase();
+                if (currentPath.includes(targetFile) || (page === 'craftsmanship' && currentPath.includes('craftsmanship.html'))) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    window.location.href = pageMap[page];
+                    e.preventDefault();
+                }
+            }
+        }
+    });
+});
+
+// Newsletter subscription alert
+const newsletterBtn = document.querySelector('.newsletter-btn');
+const newsletterInput = document.querySelector('.newsletter-input');
+newsletterBtn?.addEventListener('click', () => {
+    const email = newsletterInput.value.trim();
+    if (email) {
+        alert(`Thank you for subscribing with ${email}!\nYou'll receive our latest studio updates.`);
+        newsletterInput.value = '';
+    } else {
+        alert('Please enter a valid email address.');
+    }
+});
+
+// Automatic resize closing handler
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1280 && mobileNav?.classList.contains('open')) {
+        mobileNav.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+    }
+});
+</script>
+</body>
+</html>

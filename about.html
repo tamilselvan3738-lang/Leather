@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>The Sovereign Scriptorium Codex | Leather &amp; Quill Atelier</title>
+<meta name="description" content="Explore our unyielding heritage, absolute pre-industrial manifestos, vertical guild pillars, and global literary registry within the living scriptorium archives.">
+
+<!-- Website Global Favicon Parity -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236a2c3e'/%3E%3Cstop offset='100%25' stop-color='%23471825'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 6 L78 6 A16 16 0 0 1 94 22 L94 50 A44 44 0 0 1 50 94 L22 94 A16 16 0 0 1 6 78 L6 50 A44 44 0 0 1 50 6 Z' fill='url(%23g)' stroke='%23d4a373' stroke-width='6'/%3E%3Cpath d='M68 28 C68 28 56 32 46 44 C36 56 30 70 28 72 C26 74 28 70 32 64 C38 54 50 42 62 34 C68 28 68 28 68 28 Z' fill='%23fdf0e3'/%3E%3Cpath d='M29 71 L20 80' stroke='%23fdf0e3' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 40 L59 47 M44 48 L51 55 M36 56 L42 62' stroke='%23fdf0e3' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+<!-- Premium Typography -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================
+   CORE SCRIPTORIUM DESIGN SYSTEM & RESET
+   ========================================= */
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --bg-scriptorium: #f4efe6;
+    --text-primary: #1c2822;
+    --text-muted: #52635a;
+    --script-gold: #d9ab73;
+    --script-gold-hover: #bc894c;
+    --ink-deep: #0b120e;
+    --ink-card: #ffffff;
+    --ink-border: rgba(11, 18, 14, 0.08);
+    --shadow-script: 0 16px 50px rgba(11, 18, 14, 0.05);
+    --shadow-strong: 0 25px 70px rgba(11, 18, 14, 0.12);
+    
+    /* Standard Colors for global navbar/footer compatibility */
+    --brand-wine: #6a2c3e;
+    --brand-wine-deep: #381420;
+    --accent-gold: #d4a373;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-scriptorium);
+    color: var(--text-primary);
+    transition: background 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-break: break-word;
+}
+
+/* =========================================
+   DYNAMIC DARK MODE PARITY
+   ========================================= */
+body.dark-mode {
+    --bg-scriptorium: #0d1410;
+    --text-primary: #e8edea;
+    --text-muted: #8a9991;
+    --ink-card: #151e18;
+    --ink-border: rgba(217, 171, 115, 0.15);
+    --shadow-script: 0 16px 50px rgba(0, 0, 0, 0.5);
+    --shadow-strong: 0 25px 70px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .navbar {
+    background: rgba(13, 20, 16, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .footer {
+    background: rgba(13, 20, 16, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .nav-link { color: #d8ccce; }
+body.dark-mode .nav-link:hover { color: var(--accent-gold); }
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .footer-logo-main { color: var(--accent-gold); }
+body.dark-mode .logo-text .logo-sub,
+body.dark-mode .footer-logo-sub { color: #bda4aa; }
+body.dark-mode .icon-btn { background: rgba(255, 255, 255, 0.05); color: #d8ccce; }
+body.dark-mode .icon-btn:hover { background: var(--accent-gold); color: #12090e; }
+body.dark-mode .mobile-menu-btn { color: var(--accent-gold); }
+body.dark-mode .mobile-nav { background: #0d1410; }
+body.dark-mode .mobile-nav .nav-link { color: #d8ccce; border-bottom-color: rgba(255,255,255,0.05); }
+body.dark-mode .footer-link { color: #d8ccce; }
+body.dark-mode .footer-link:hover { color: var(--accent-gold); }
+body.dark-mode .social-icon { background: rgba(255,255,255,0.05); color: #d8ccce; }
+body.dark-mode .social-icon:hover { background: var(--accent-gold); color: #12090e; }
+
+/* =========================================
+   RTL CONFIGURATION PARITY
+   ========================================= */
+body.rtl { direction: rtl; }
+body.rtl .navbar { padding: 12px 20px 12px 5%; }
+body.rtl .nav-actions, body.rtl .mobile-menu-btn { margin-left: 0; margin-right: auto; }
+body.rtl .logo { margin-right: 0; }
+body.rtl .footer-content { direction: rtl; }
+body.rtl .footer-section h3::after { left: auto; right: 0; }
+body.rtl .social-links { justify-content: flex-start; }
+body.rtl .manifesto-grid { direction: rtl; }
+body.rtl .pillar-header { text-align: right; }
+body.rtl .pillar-toggle-btn { margin-left: 0; margin-right: auto; }
+body.rtl .diagnostic-metrics-list { border-left: none; border-right: 2px solid var(--script-gold); padding-left: 0; padding-right: 20px; }
+body.rtl .sigil-badge { left: auto; right: 30px; }
+
+/* =========================================
+   STANDARD NAVIGATION BAR
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled {
+    padding: 10px 5%;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .navbar.scrolled {
+    background: rgba(13, 20, 16, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: -10px;
+}
+
+.logo:hover { transform: scale(1.02); }
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid var(--accent-gold);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.logo-icon i { font-size: 20px; color: #fdf0e3; z-index: 1; }
+
+.logo-text { display: flex; flex-direction: column; }
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 800;
+    color: var(--brand-wine-deep);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.logo-sub {
+    font-size: clamp(7px, 1.8vw, 9px);
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Desktop Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown { position: relative; }
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 8px 0;
+}
+
+body.dark-mode .dropdown-menu { background: #151e18; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--brand-wine-deep);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+body.dark-mode .dropdown-menu a { color: #d8ccce; }
+.dropdown-menu a:hover {
+    background: rgba(106, 44, 62, 0.1);
+    color: var(--brand-wine);
+    padding-left: 25px;
+}
+.dropdown-menu a i { margin-right: 8px; font-size: 12px; }
+
+.nav-link {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand-wine), var(--accent-gold));
+    transition: width 0.3s ease;
+}
+.nav-link:hover::before { width: 70%; }
+.nav-link:hover { color: var(--brand-wine); }
+.nav-link.active { color: var(--accent-gold) !important; font-weight: 700; }
+.nav-link.active::before { width: 85%; background: linear-gradient(90deg, var(--accent-gold), var(--brand-wine)); }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: var(--brand-wine-deep);
+    position: relative;
+}
+.icon-btn:hover { background: var(--brand-wine); color: white; transform: translateY(-2px); }
+
+.login-btn {
+    padding: 8px 22px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    color: white !important;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3); }
+
+/* Tooltips */
+.icon-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand-wine-deep);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.icon-btn:hover::after { opacity: 1; visibility: visible; bottom: -30px; }
+
+/* Mobile Navigation Drawer */
+.mobile-menu-btn {
+    display: none;
+    width: 38px;
+    height: 38px;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--brand-wine-deep);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.mobile-menu-btn:hover { background: var(--brand-wine); color: white; }
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: var(--ink-card);
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    padding: 85px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+body.rtl .mobile-nav { right: auto; left: -100%; }
+body.rtl .mobile-nav.open { right: auto; left: 0; }
+.mobile-nav.open { right: 0; }
+.mobile-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    white-space: normal;
+}
+
+.mobile-dropdown { display: flex; flex-direction: column; }
+.mobile-dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+.mobile-dropdown-header span { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.mobile-dropdown-header i:first-child { width: 28px; }
+.mobile-dropdown-content { display: none; padding-left: 44px; background: rgba(106, 44, 62, 0.05); }
+.mobile-dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #7a5260;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+body.dark-mode .mobile-dropdown-content a { color: #b0b0b0; }
+.mobile-dropdown-content a:hover { color: var(--brand-wine); background: rgba(106, 44, 62, 0.1); }
+.mobile-dropdown.active .mobile-dropdown-content { display: block; }
+.mobile-dropdown.active .fa-chevron-down { transform: rotate(180deg); }
+
+.mobile-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+body.dark-mode .mobile-actions {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+.mobile-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(106, 44, 62, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--brand-wine-deep);
+    box-sizing: border-box;
+}
+
+.mobile-action-btn:hover {
+    background: rgba(106, 44, 62, 0.15);
+}
+
+.mobile-action-btn i {
+    width: 24px;
+    font-size: 18px;
+    color: var(--brand-wine);
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .mobile-action-btn {
+    color: #fdf0e3 !important;
+    background: rgba(212, 163, 115, 0.12) !important;
+    border-color: rgba(212, 163, 115, 0.25) !important;
+}
+
+body.dark-mode .mobile-action-btn:hover {
+    background: rgba(212, 163, 115, 0.2) !important;
+}
+
+body.dark-mode .mobile-action-btn i {
+    color: #d4a373 !important;
+}
+
+.mobile-action-btn.mobile-login {
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep)) !important;
+    color: white !important;
+    border-color: #d4a373 !important;
+    justify-content: center;
+}
+
+.mobile-action-btn.mobile-login:hover {
+    background: linear-gradient(135deg, #d4a373, #b87333) !important;
+    color: #15060b !important;
+}
+
+.mobile-action-btn.mobile-login i {
+    color: white !important;
+}
+
+.mobile-action-btn.mobile-login:hover i {
+    color: #15060b !important;
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    z-index: 998;
+    display: none;
+}
+.mobile-overlay.open { display: block; }
+
+
+/* =========================================
+   SECTION 1: THE MONASTIC SCRIPTORIUM ARENA
+   ========================================= */
+.scriptorium-hero-arena {
+    padding: 160px 5% 90px;
+    background: linear-gradient(135deg, #0b120e 0%, #16231c 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scriptorium-hero-arena::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle at center, rgba(217, 171, 115, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.living-wax-emblem {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #a43048, #601222);
+    border: 2px solid var(--script-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #fdf0e3;
+    box-shadow: 0 0 30px rgba(164, 48, 72, 0.6), inset 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 25px;
+    animation: emblemPulse 3s infinite alternate;
+}
+
+@keyframes emblemPulse {
+    from { transform: scale(0.96); box-shadow: 0 0 20px rgba(164, 48, 72, 0.4); }
+    to { transform: scale(1.04); box-shadow: 0 0 40px rgba(164, 48, 72, 0.8); }
+}
+
+.scriptorium-hero-arena h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5.5vw, 64px);
+    font-weight: 800;
+    color: #fdf0e3;
+    max-width: 1100px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.scriptorium-hero-arena h1 em {
+    font-style: italic;
+    color: var(--script-gold);
+}
+
+.scriptorium-hero-arena p {
+    font-size: clamp(14px, 2.2vw, 16px);
+    color: #cbd5e1;
+    max-width: 820px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   MAIN SCRIPTORIUM CODEX ARCHITECTURE
+   ========================================= */
+.scriptorium-codex-core {
+    padding: 80px 5% 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+}
+
+/* Localized Section Title Box */
+.scriptorium-header-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.script-section-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--script-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.script-section-tag i { font-size: 13px; }
+
+.script-main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 3.5vw, 42px);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.script-desc-para {
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 850px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SECTION 2: THE IDEOLOGICAL MANIFESTO
+   ========================================= */
+.manifesto-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 40px;
+    align-items: center;
+    background: var(--ink-card);
+    border: 1px solid var(--ink-border);
+    border-radius: 28px;
+    padding: 50px;
+    box-shadow: var(--shadow-script);
+}
+
+.manifesto-prose {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.manifesto-prose p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.manifesto-prose p.lead-text {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink-deep);
+    line-height: 1.6;
+}
+
+body.dark-mode .manifesto-prose p.lead-text { color: var(--script-gold); }
+
+.manifesto-drop-cap {
+    float: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 50px;
+    padding-top: 4px;
+    padding-right: 12px;
+    color: var(--script-gold);
+}
+
+body.rtl .manifesto-drop-cap { float: right; padding-right: 0; padding-left: 12px; }
+
+.declaration-box {
+    background: rgba(217, 171, 115, 0.08);
+    border: 2px dashed var(--script-gold);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.dec-icon {
+    font-size: 32px;
+    color: var(--script-gold);
+}
+
+.dec-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.dec-author {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   SECTION 3: GUILD HERITAGE PILLARS
+   ========================================= */
+.pillars-accordion-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pillar-drawer {
+    background: var(--ink-card);
+    border: 1px solid var(--ink-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-script);
+    transition: all 0.4s ease;
+}
+
+.pillar-drawer:hover {
+    border-color: rgba(217, 171, 115, 0.35);
+}
+
+.pillar-header {
+    width: 100%;
+    padding: 24px 30px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.pillar-header:hover {
+    background: rgba(0,0,0,0.02);
+}
+
+body.dark-mode .pillar-header:hover { background: rgba(255,255,255,0.01); }
+
+.pillar-title-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pillar-num {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--script-gold);
+    background: rgba(217, 171, 115, 0.12);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pillar-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.pillar-toggle-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .pillar-toggle-btn { background: rgba(255,255,255,0.05); }
+
+.pillar-drawer.expanded .pillar-toggle-btn {
+    background: var(--script-gold);
+    color: #1c2822;
+    transform: rotate(180deg);
+}
+
+.pillar-content-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(0,0,0,0.01);
+}
+
+body.dark-mode .pillar-content-panel { background: rgba(255,255,255,0.005); }
+
+.pillar-content-inner {
+    padding: 0 30px 30px 78px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+body.rtl .pillar-content-inner { padding: 0 78px 30px 30px; }
+
+
+/* =========================================
+   SECTION 4: ARCHIVAL LONGEVITY CONSOLE
+   ========================================= */
+.longevity-console-box {
+    background: var(--ink-card);
+    border: 1px solid var(--ink-border);
+    border-radius: 28px;
+    box-shadow: var(--shadow-script);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 480px;
+}
+
+.longevity-visual-pane {
+    position: relative;
+    background: #060907;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.longevity-visual-pane img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+.longevity-hud-tag {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background: rgba(6, 9, 7, 0.9);
+    border: 1px solid var(--script-gold);
+    color: var(--script-gold);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+}
+
+body.rtl .longevity-hud-tag { left: auto; right: 25px; }
+
+.longevity-data-pane {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.longevity-interval-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    background: rgba(0,0,0,0.03);
+    padding: 6px;
+    border-radius: 14px;
+}
+
+body.dark-mode .longevity-interval-row { background: rgba(255,255,255,0.03); }
+
+.interval-btn {
+    flex: 1;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.interval-btn:hover { color: var(--text-primary); }
+
+.interval-btn.active {
+    background: var(--ink-card);
+    color: var(--script-gold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.diagnostic-metrics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-left: 2px solid var(--script-gold);
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.diag-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.diag-lbl {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.diag-val {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+
+/* =========================================
+   SECTION 5: CABINET OF CURIOSITIES
+   ========================================= */
+.curiosity-cabinet-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.cabinet-visual {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-script);
+    height: 100%;
+    min-height: 380px;
+    position: relative;
+}
+
+.cabinet-visual img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cabinet-relics-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.relic-specimen-card {
+    background: var(--ink-card);
+    border: 1px solid var(--ink-border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-script);
+}
+
+.relic-specimen-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--script-gold);
+}
+
+.relic-id-code {
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--script-gold);
+}
+
+.relic-specimen-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.relic-specimen-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================
+   SECTION 6: GLOBAL LITERARY AMBASSADORS
+   ========================================= */
+.ambassador-registry-box {
+    background: var(--ink-card);
+    border: 1px solid var(--ink-border);
+    border-radius: 28px;
+    padding: 50px;
+    box-shadow: var(--shadow-script);
+}
+
+.registry-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-top: 15px;
+}
+
+.charter-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.charter-col-hdr {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink-deep);
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark-mode .charter-col-hdr { color: var(--script-gold); border-bottom-color: rgba(255,255,255,0.05); }
+
+.charter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.charter-item h5 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.charter-item span {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+
+/* =========================================
+   SECTION 7: INTAGLIO APPRENTICESHIP
+   ========================================= */
+.protocol-dark-card {
+    background: linear-gradient(135deg, #131b17 0%, #080d0a 100%);
+    border: 1px solid rgba(217, 171, 115, 0.25);
+    border-radius: 28px;
+    padding: 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    box-shadow: var(--shadow-strong);
+}
+
+.protocol-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fdf0e3;
+    margin-bottom: 14px;
+}
+
+.protocol-info p {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.protocol-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.proto-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255,255,255,0.03);
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.proto-step-num {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--script-gold);
+    background: rgba(217, 171, 115, 0.1);
+    padding: 2px 8px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.proto-step-text h5 {
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.proto-step-text p {
+    font-size: 11px;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   SECTION 8: FAMILIAL SIGIL REGISTRY
+   ========================================= */
+.sigil-registry-banner {
+    background: var(--ink-card);
+    border: 1px solid var(--ink-border);
+    border-radius: 28px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: var(--shadow-script);
+    position: relative;
+    overflow: hidden;
+}
+
+.sigil-badge {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background: var(--script-gold);
+    color: #1c2822;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 0 0 8px 8px;
+    letter-spacing: 2px;
+}
+
+.sigil-registry-banner h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.sigil-registry-banner p {
+    font-size: 13px;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
+
+.sigil-selector-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.sigil-pill {
+    padding: 10px 20px;
+    background: var(--bg-scriptorium);
+    border: 1px solid var(--ink-border);
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sigil-pill:hover, .sigil-pill.selected {
+    background: var(--ink-deep);
+    color: var(--script-gold);
+    border-color: var(--ink-deep);
+}
+
+body.dark-mode .sigil-pill:hover, body.dark-mode .sigil-pill.selected {
+    background: var(--script-gold);
+    color: #1c2822;
+    border-color: var(--script-gold);
+}
+
+.sigil-result-box {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px;
+    background: rgba(217, 171, 115, 0.08);
+    border-radius: 12px;
+    font-size: 12px;
+    color: var(--script-gold);
+    font-weight: 500;
+}
+
+
+/* =========================================
+   STANDARD FOOTER SECTION
+   ========================================= */
+.footer {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 60px 5% 30px;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid var(--accent-gold);
+    transition: all 0.4s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+    transform: rotate(-15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.footer-logo-icon i { font-size: 20px; color: #fdf0e3; }
+
+.footer-logo-text { display: flex; flex-direction: column; }
+.footer-logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--brand-wine-deep);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.footer-logo-sub {
+    font-size: 9px;
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #7a5260;
+    margin-top: 15px;
+}
+
+body.dark-mode .footer-description { color: #b0b0b0; }
+
+.footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--brand-wine-deep);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+body.dark-mode .footer-section h3 { color: var(--accent-gold); }
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 40px; height: 2px;
+    background: linear-gradient(90deg, var(--brand-wine), var(--accent-gold));
+}
+
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 12px; }
+.footer-link {
+    color: #7a5260;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: var(--brand-wine);
+    transform: translateX(5px);
+}
+
+body.rtl .footer-link:hover { transform: translateX(-5px); }
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #7a5260;
+}
+
+body.dark-mode .contact-info p { color: #b0b0b0; }
+.contact-info i { width: 20px; color: var(--brand-wine); font-size: 14px; }
+
+.social-links { display: flex; gap: 12px; margin-top: 20px; }
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(106, 44, 62, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-wine);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    background: var(--brand-wine);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.newsletter-form { display: flex; gap: 10px; margin-top: 15px; }
+.newsletter-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    background: rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .newsletter-input {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.newsletter-input:focus { outline: none; border-color: var(--brand-wine); }
+.newsletter-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    font-size: 12px;
+    color: #965b6b;
+}
+
+body.dark-mode .footer-bottom { color: #bda4aa; }
+.footer-bottom a { color: var(--brand-wine); text-decoration: none; }
+.footer-bottom a:hover { text-decoration: underline; }
+
+
+/* =========================================
+   RESPONSIVE LAYOUT BREAKPOINTS
+   ========================================= */
+@media (max-width: 1280px) {
+    .nav-menu, .nav-actions { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .manifesto-grid { grid-template-columns: 1fr; gap: 30px; }
+    .longevity-console-box { grid-template-columns: 1fr; }
+    .longevity-visual-pane { min-height: 320px; order: -1; }
+    .curiosity-cabinet-grid { grid-template-columns: 1fr; }
+    .cabinet-visual { min-height: 300px; order: -1; }
+    .protocol-dark-card { grid-template-columns: 1fr; gap: 30px; }
+    .footer-content { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+}
+
+@media (max-width: 768px) {
+    .scriptorium-codex-core { gap: 60px; padding-top: 50px; }
+    .scriptorium-hero-arena { padding-top: 130px; }
+    .manifesto-grid { padding: 35px 25px; }
+    .declaration-box { padding: 25px; }
+    .pillar-header { padding: 18px 20px; }
+    .pillar-content-inner { padding: 0 20px 20px 20px; }
+    body.rtl .pillar-content-inner { padding: 0 20px 20px 20px; }
+    .longevity-data-pane { padding: 30px 25px; }
+    .protocol-dark-card { padding: 35px 25px; }
+    .sigil-registry-banner { padding: 35px 25px; }
+    
+    .footer-content { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .footer-logo, .social-links, .contact-info p { justify-content: center; }
+    .footer-section h3::after { left: 50%; transform: translateX(-50%); }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .scriptorium-hero-arena h1 { font-size: clamp(28px, 7vw, 36px); }
+    .script-main-heading { font-size: clamp(22px, 6vw, 28px); }
+    .manifesto-drop-cap { font-size: 50px; line-height: 40px; }
+    .dec-quote { font-size: 15px; }
+    .relic-specimen-card { padding: 18px; }
+    .registry-columns { grid-template-columns: 1fr; gap: 25px; }
+    .sigil-badge { left: 50%; transform: translateX(-50%); }
+    body.rtl .sigil-badge { right: 50%; transform: translateX(50%); }
+}
+</style>
+</head>
+<body>
+
+<!-- STANDARD NAVIGATION BAR -->
+<nav class="navbar" id="navbar">
+    <a href="./index.html" class="logo">
+        <div class="logo-icon">
+            <i class="fas fa-feather-alt"></i>
+        </div>
+        <div class="logo-text">
+            <span class="logo-main">LEATHER &amp; QUILL</span>
+            <span class="logo-sub">HANDCRAFTED JOURNALS</span>
+        </div>
+    </a>
+
+    <div class="nav-menu" id="navMenu">
+        <div class="dropdown">
+            <a href="./index.html" class="nav-link" data-page="home">Home <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+            <div class="dropdown-menu">
+                <a href="./index.html" id="home1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+                <a href="./home 2.html" id="home2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+            </div>
+        </div>
+        <a href="./about.html" class="nav-link" data-page="about">About</a>
+        <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+        <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+        <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+        <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+        <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+        <a href="./Reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+        <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+        <button class="icon-btn" id="darkModeToggle" data-tooltip="Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" data-tooltip="RTL Mode">
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+        <button class="login-btn" id="loginBtnDesktop">Login</button>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- MOBILE NAVIGATION MENU -->
+<div class="mobile-nav" id="mobileNav">
+    <div class="mobile-dropdown" id="mobileHomeDropdown">
+        <div class="mobile-dropdown-header">
+            <span>Home</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="mobile-dropdown-content">
+            <a href="./index.html" id="mobileHome1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+            <a href="./home 2.html" id="mobileHome2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+        </div>
+    </div>
+    <a href="./about.html" class="nav-link" data-page="about">About</a>
+    <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+    <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+    <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+    <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+    <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+    <a href="./Reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+    <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+    
+    <div class="mobile-actions">
+        <button class="mobile-action-btn" id="mobileDarkModeToggle">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+        <button class="mobile-action-btn" id="mobileRtlToggle">
+            <i class="fa-solid fa-right-left"></i> RTL Mode
+        </button>
+        <button class="mobile-action-btn mobile-login" id="mobileLoginBtn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </div>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<!-- SECTION 1: THE MONASTIC SCRIPTORIUM ARENA -->
+<header class="scriptorium-hero-arena">
+    <div class="living-wax-emblem"><i class="fas fa-feather"></i></div>
+    <h1>The Sovereign Scriptorium <em>Codex</em> &amp; Living Guild Archives</h1>
+    <p>Welcome to the absolute conceptual epicenter of Leather &amp; Quill. Here we document the unfiltered philosophical mandates, uncompromising anatomical pillars, and international literary custodianship responsible for guiding our private master-binders across generations.</p>
+</header>
+
+
+<!-- MAIN SCRIPTORIUM CODEX ARCHITECTURE -->
+<main class="scriptorium-codex-core">
+
+    <!-- SECTION 2: THE IDEOLOGICAL MANIFESTO -->
+    <section class="script-section-block">
+        <div class="scriptorium-header-box">
+            <span class="script-section-tag"><i class="fas fa-scroll"></i> Editorial Directives</span>
+            <h2 class="script-main-heading">The Uncompromising Manifesto</h2>
+            <p class="script-desc-para">Review the foundational alignment established before our heavy oak workbenches ever touched raw steerhide. We operate under rigorous non-negotiable guild statutes.</p>
+        </div>
+
+        <div class="manifesto-grid">
+            <div class="manifesto-prose">
+                <p class="lead-text">
+                    <span class="manifesto-drop-cap">W</span>e live in an era paralyzed by intentional physical obsolescence. Lightweight synthetic adhesives mimic original animal hide for months before fracturing helplessly under ambient humidity shifting. Our scriptorium rejects this hollow pretense entirely.
+                </p>
+                <p>
+                    Every volume built within our stone vaults operates under absolute pre-industrial accountability. We preserve genuine manual folding metrics, alkaline rag fiber balances, and double-waxed knotting paths precisely because original human thought deserves an eternal architectural shelter capable of remaining fully intact across coming centuries.
+                </p>
+            </div>
+            
+            <div class="declaration-box">
+                <i class="fas fa-balance-scale dec-icon"></i>
+                <p class="dec-quote">"No temporal shortcuts shall ever compromise bindings destined to chronicle intergenerational legacy."</p>
+                <span class="dec-author">Sovereign Atelier Statutory Precept // 01</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 3: GUILD HERITAGE PILLARS -->
+    <section class="script-section-block">
+        <div class="scriptorium-header-box">
+            <span class="script-section-tag"><i class="fas fa-columns"></i> Structural Taxonomy</span>
+            <h2 class="script-main-heading">Guild Heritage Pillars</h2>
+            <p class="script-desc-para">Interact directly with our primary internal statutes. Click the title blocks below to vertically slide open comprehensive reviews of our specialized bench protocols.</p>
+        </div>
+
+        <div class="pillars-accordion-frame">
+            <div class="pillar-drawer expanded">
+                <button class="pillar-header" type="button" aria-expanded="true">
+                    <div class="pillar-title-block">
+                        <span class="pillar-num">01</span>
+                        <h3 class="pillar-name">Pre-Industrial Temperance</h3>
+                    </div>
+                    <div class="pillar-toggle-btn"><i class="fas fa-chevron-down"></i></div>
+                </button>
+                <div class="pillar-content-panel" style="max-height: 500px;">
+                    <div class="pillar-content-inner">
+                        We deliberately limit monthly workbench production schedules to maintain singular ownership over individual assembly cycles. By avoiding mechanical division of labor, our master binders personally oversee signature gathering, thermal back-gluing, and rawhide side lacing from initial leaf collation down to the final beeswax seal burnish.
+                    </div>
+                </div>
+            </div>
+
+            <div class="pillar-drawer">
+                <button class="pillar-header" type="button" aria-expanded="false">
+                    <div class="pillar-title-block">
+                        <span class="pillar-num">02</span>
+                        <h3 class="pillar-name">Full-Weight Cowhide Architecture</h3>
+                    </div>
+                    <div class="pillar-toggle-btn"><i class="fas fa-chevron-down"></i></div>
+                </button>
+                <div class="pillar-content-panel">
+                    <div class="pillar-content-inner">
+                        We source exclusively uncorrected 5.5oz vegetable-tanned outer skins extracted naturally using 14-month chestnut bark soaking protocols. Preserving primary epidermal fat hallmarks allows covers to absorb active friction and natural hand warmth, continually deepening into profound bespoke pull-up patina rather than shedding brittle clear-coats.
+                    </div>
+                </div>
+            </div>
+
+            <div class="pillar-drawer">
+                <button class="pillar-header" type="button" aria-expanded="false">
+                    <div class="pillar-title-block">
+                        <span class="pillar-num">03</span>
+                        <h3 class="pillar-name">Multi-Axis Ligature Integrity</h3>
+                    </div>
+                    <div class="pillar-toggle-btn"><i class="fas fa-chevron-down"></i></div>
+                </button>
+                <div class="pillar-content-panel">
+                    <div class="pillar-content-inner">
+                        Internal pages are bound to external spines using heavy continuous multi-ply unbleached Irish linen threads locked sequentially behind raised cord staging blocks. This dynamic multi-axis load distribution ensures zero signature drooping while guaranteeing absolute flat-lay writing comfort across both initial and terminal sheets.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 4: ARCHIVAL LONGEVITY CONSOLE -->
+    <section class="script-section-block">
+        <div class="scriptorium-header-box">
+            <span class="script-section-tag"><i class="fas fa-hourglass-half"></i> Temporal Endurance Array</span>
+            <h2 class="script-main-heading">Archival Longevity Staging</h2>
+            <p class="script-desc-para">Examine simulated maturation intervals. Switch parameters below to track physical resilience metrics mapping how an uncompromised masterwork survives continuous ambient handling.</p>
+        </div>
+
+        <div class="longevity-console-box">
+            <div class="longevity-visual-pane">
+                <img src="images/about_scriptorium_tome.png" alt="Ancient masterwork manuscript ledger displayed under warm scriptorium candlelight" id="longevityImg">
+                <span class="longevity-hud-tag" id="longevityHudLbl">MATURATION STATE // YEAR 01</span>
+            </div>
+
+            <div class="longevity-data-pane">
+                <div>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Select Lifespan Interval</h3>
+                    
+                    <div class="longevity-interval-row">
+                        <button class="interval-btn active" data-interval="1">Year 01 Cut</button>
+                        <button class="interval-btn" data-interval="50">Year 50 Patina</button>
+                        <button class="interval-btn" data-interval="300">Century 03 Arc</button>
+                    </div>
+
+                    <p id="intervalDescPara" style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+                        Initial deployment phase. Unbleached inner rag fibers preserve pristine white bounds while outer steerhide pores actively acclimate to initial hand flexures and ink loads.
+                    </p>
+                </div>
+
+                <div class="diagnostic-metrics-list">
+                    <div class="diag-metric">
+                        <span class="diag-lbl">Oxidation Resistance</span>
+                        <span class="diag-val" id="diagVal1">100% Buffered Leaf Base</span>
+                    </div>
+                    <div class="diag-metric">
+                        <span class="diag-lbl">Thread Tensile Hold</span>
+                        <span class="diag-val" id="diagVal2">Zero Micro-Tearing Verified</span>
+                    </div>
+                    <div class="diag-metric">
+                        <span class="diag-lbl">Gilt Impression Depth</span>
+                        <span class="diag-val" id="diagVal3">Sharp 450 PSI Die Searing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 5: CABINET OF CURIOSITIES -->
+    <section class="script-section-block">
+        <div class="scriptorium-header-box">
+            <span class="script-section-tag"><i class="fas fa-microscope"></i> Monastic Bench Inventory</span>
+            <h2 class="script-main-heading">Cabinet of Forgotten Curiosities</h2>
+            <p class="script-desc-para">Review physical historical source materials recovered directly from pre-war monastic binderies. These heavy ironmongery items actively guide our modern tooling calibrations.</p>
+        </div>
+
+        <div class="curiosity-cabinet-grid">
+            <div class="cabinet-visual">
+                <img src="images/about_curiosity_cabinet.png" alt="Cabinet of curiosities displaying polished bone folders, brass heated intaglios, and linen spools">
+            </div>
+
+            <div class="cabinet-relics-masonry">
+                <div class="relic-specimen-card">
+                    <span class="relic-id-code">RELIC // 01-BONE</span>
+                    <h4>Polished Elk Horn Folder</h4>
+                    <p>Hand-sculpted in 1934 to deliver firm, gentle downward scoring friction without tearing alkaline buffered paper edges during signature insertion runs.</p>
+                </div>
+
+                <div class="relic-specimen-card">
+                    <span class="relic-id-code">RELIC // 02-BRASS</span>
+                    <h4>Heated Intaglio Toggles</h4>
+                    <p>Solid brass base blocks forged to transfer balanced high-density thermal loads, permanently welding pure 24K leaf elements natively into uncorrected.</p>
+                </div>
+
+                <div class="relic-specimen-card">
+                    <span class="relic-id-code">RELIC // 03-SINEW</span>
+                    <h4>Unbleached Linen Spools</h4>
+                    <p>Traditional raw multi-ply core cords submerged repeatedly inside unfiltered boiling beeswax vats to impart ultimate knot security and structural binding friction.</p>
+                </div>
+
+                <div class="relic-specimen-card">
+                    <span class="relic-id-code">RELIC // 04-AGATE</span>
+                    <h4>Convex Chalcedony Tooth</h4>
+                    <p>Dense natural stone mounted to an offset hand-grip. Flattens hot stamped gold lettering channels until they mirror incoming reading ambient light flawlessly.</p>
+                </div>
+
+                <div class="relic-specimen-card">
+                    <span class="relic-id-code">RELIC // 05-OAK</span>
+                    <h4>Gilded Cast-Iron Press</h4>
+                    <p>Recovered from an 1880s bookbinder guildhall. Applies multi-ton vertical pressure across collated bindings to ensure permanent flat-lay form retention.</p>
+                </div>
+
+                <div class="relic-specimen-card">
+                    <span class="relic-id-code">RELIC // 06-SLATE</span>
+                    <h4>Obsidian Marbling Comb</h4>
+                    <p>Hand-cut slate rakes configured to draw intricate, fluid non-repeating pattern matrices across suspended organic ink beds for bespoke endpaper transfers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 6: GLOBAL LITERARY AMBASSADORS -->
+    <section class="script-section-block">
+        <div class="ambassador-registry-box">
+            <span class="script-section-tag" style="margin-bottom: 8px;"><i class="fas fa-globe"></i> International Scope</span>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--text-primary);">Literary Custodianship Charter</h3>
+            <p style="font-size: 13px; color: var(--text-muted); max-width: 800px; margin-top: 6px;">Because our master bindings successfully endure atmospheric extremes without leaf dropping, we act as continuous private unbranded suppliers for elite international literary foundations.</p>
+            
+            <div class="registry-columns">
+                <div class="charter-column">
+                    <div class="charter-col-hdr"><i class="fas fa-university"></i> Elite Archival Vaults</div>
+                    <div class="charter-item">
+                        <h5>Oxford Bodleian Trusts</h5>
+                        <span>Rare manuscript preservation bindings</span>
+                    </div>
+                    <div class="charter-item">
+                        <h5>Geneva State Libraries</h5>
+                        <span>Continuous climate-neutral folder resupply</span>
+                    </div>
+                    <div class="charter-item">
+                        <h5>Kyoto Peace Institutes</h5>
+                        <span>Physical historic treaty portfolio mapping</span>
+                    </div>
+                </div>
+
+                <div class="charter-column">
+                    <div class="charter-col-hdr"><i class="fas fa-crown"></i> Private Royal Collections</div>
+                    <div class="charter-item">
+                        <h5>The Edinburgh Syndicates</h5>
+                        <span>Family genealogy ledger custom commissioning</span>
+                    </div>
+                    <div class="charter-item">
+                        <h5>Vienna Ambassador Suites</h5>
+                        <span>Unbranded premium state gift sets</span>
+                    </div>
+                    <div class="charter-item">
+                        <h5>Stockholm Estate Registry</h5>
+                        <span>Long-term continuous land track portfolios</span>
+                    </div>
+                </div>
+
+                <div class="charter-column">
+                    <div class="charter-col-hdr"><i class="fas fa-feather-alt"></i> Sovereign Authors Guilds</div>
+                    <div class="charter-item">
+                        <h5>Paris Literary Circle</h5>
+                        <span>Heavy rough-cut leaf custom bound tomes</span>
+                    </div>
+                    <div class="charter-item">
+                        <h5>Milan Typographer Unions</h5>
+                        <span>Bespoke master ink testing matrices</span>
+                    </div>
+                    <div class="charter-item">
+                        <h5>New York Master Scribes</h5>
+                        <span>Flat-lay dynamic uncorrected field logbooks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 7: INTAGLIO APPRENTICESHIP -->
+    <section class="script-section-block">
+        <div class="protocol-dark-card">
+            <div class="protocol-info">
+                <span style="font-size: 10px; font-weight: 700; color: var(--script-gold); letter-spacing: 2px; display: block; margin-bottom: 8px;">GUILD TRANSMISSION LORE</span>
+                <h3>The Master-Apprentice Precept</h3>
+                <p>
+                    True artisan capability cannot be acquired via documented theory or automated software. We pass our signature tactile techniques down through strict physical bench immersion.
+                </p>
+                <p style="margin-bottom: 0; font-size: 12px; color: #94a3b8; font-style: italic;">
+                    Every senior binder guides a singular dedicated novice for exactly seven continuous years before granting independent bench stamping sign-offs.
+                </p>
+            </div>
+
+            <div class="protocol-steps">
+                <div class="proto-step">
+                    <span class="proto-step-num">PHASE I</span>
+                    <div class="proto-step-text">
+                        <h5>Raw Hide Hand Sizing</h5>
+                        <p>Mastering manual blade adjustments to plane variable heavy hide thicknesses down to perfectly uniform margin tolerances.</p>
+                    </div>
+                </div>
+
+                <div class="proto-step">
+                    <span class="proto-step-num">PHASE II</span>
+                    <div class="proto-step-text">
+                        <h5>Ligature Tension Balance</h5>
+                        <p>Acquiring intuitive muscular resistance to pull waxed Irish thread continuous through raw cotton without snagging.</p>
+                    </div>
+                </div>
+
+                <div class="proto-step">
+                    <span class="proto-step-num">PHASE III</span>
+                    <div class="proto-step-text">
+                        <h5>Thermal Lever Searing</h5>
+                        <p>Judging absolute die temperature thresholds purely by ambient surface steam to fuse genuine gold leaf flawlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 8: FAMILIAL SIGIL REGISTRY -->
+    <section class="script-section-block">
+        <div class="sigil-registry-banner">
+            <span class="sigil-badge">SECURE ATELIER INTERFACE</span>
+            <h3>Register Your Private Lineage Sigil</h3>
+            <p>We maintain an exclusive offline cryptographic catalog matching personal familial marks to bespoke commission batches. Select a base aesthetic below to simulate inclusion inside our master record files.</p>
+            
+            <div class="sigil-selector-row">
+                <button class="sigil-pill selected" data-sigil="astronomy"><i class="fas fa-compass"></i> Astrolabe Monogram</button>
+                <button class="sigil-pill" data-sigil="botany"><i class="fas fa-seedling"></i> Wild Laurel Crest</button>
+                <button class="sigil-pill" data-sigil="heraldry"><i class="fas fa-shield-alt"></i> Rampant Lion Plaque</button>
+                <button class="sigil-pill" data-sigil="geometry"><i class="fas fa-cube"></i> Metrological Compass</button>
+            </div>
+
+            <div class="sigil-result-box" id="sigilResultBox">
+                <i class="fas fa-check-circle"></i> REGISTRY STATUS: Ready to emboss Astrolabe Monogram onto heavy oxblood bindings.
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- STANDARD FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <a href="./index.html" class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <div class="footer-logo-text">
+                    <span class="footer-logo-main">LEATHER &amp; QUILL</span>
+                    <span class="footer-logo-sub">HANDCRAFTED JOURNALS</span>
+                </div>
+            </a>
+            <p class="footer-description">Handcrafted leather journals and notebooks made with premium materials and traditional binding techniques. Each piece tells a unique story.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="./index.html" class="footer-link" data-page="home">Home</a></li>
+                <li><a href="./collections.html" class="footer-link" data-page="collections">Collections</a></li>
+                <li><a href="./customization.html" class="footer-link" data-page="customization">Customization</a></li>
+                <li><a href="./craftsmanship.html" class="footer-link" data-page="craftsmanship">Craftsmanship</a></li>
+                <li><a href="./workshops.html" class="footer-link" data-page="workshops">Workshops</a></li>
+                <li><a href="./gallery.html" class="footer-link" data-page="gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">Help Center</a></li>
+                <li><a href="#" class="footer-link">Returns &amp; Exchanges</a></li>
+                <li><a href="#" class="footer-link">Shipping Info</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Leather Lane, Artisan District</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@leatherandquill.com</p>
+            </div>
+            <h3 style="margin-top: 20px;">Newsletter</h3>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Leather &amp; Quill Studio. All rights reserved. | <a href="#">Crafted with ❤️</a></p>
+    </div>
+</footer>
+
+
+<script>
+// DOM Setup
+const darkModeToggle = document.getElementById('darkModeToggle');
+const rtlToggle = document.getElementById('rtlToggle');
+const loginBtnDesktop = document.getElementById('loginBtnDesktop');
+const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+const body = document.body;
+const navbar = document.getElementById('navbar');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileNav = document.getElementById('mobileNav');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+// Home Dropdowns
+const home1 = document.getElementById('home1');
+const home2 = document.getElementById('home2');
+const mobileHome1 = document.getElementById('mobileHome1');
+const mobileHome2 = document.getElementById('mobileHome2');
+const footerLinks = document.querySelectorAll('.footer-link');
+
+// Section 4 Longevity Data Store
+const longevityData = {
+    "1": {
+        hud: "MATURATION STATE // YEAR 01",
+        desc: "Initial deployment phase. Unbleached inner rag fibers preserve pristine white bounds while outer steerhide pores actively acclimate to initial hand flexures and ink loads.",
+        v1: "100% Buffered Leaf Base",
+        v2: "Zero Micro-Tearing Verified",
+        v3: "Sharp 450 PSI Die Searing"
+    },
+    "50": {
+        hud: "MATURATION STATE // YEAR 50",
+        desc: "Profound pull-up transition. Continuous daylight exposure darkens natural external vegetable oils, building brilliant multi-chromatic luster highlights across heavy flex folds.",
+        v1: "Total Acid Shield Active",
+        v2: "Perfect Dynamic Stitch Flex",
+        v3: "Mirror-Polished Gold Fusion"
+    },
+    "300": {
+        hud: "MATURATION STATE // CENTURY 03",
+        desc: "Independently verified archival persistence. Internal knot loops and unbleached binding ligatures remain robustly flexible, safeguarding primary historic script flawlessly.",
+        v1: "Certified ISO 9706 Longevity",
+        v2: "Perpetual Ligature Survival",
+        v3: "Everlasting Die Seal Embed"
+    }
+};
+
+// Section 8 Sigil Data Store
+const sigilMap = {
+    astronomy: "Astrolabe Monogram onto heavy oxblood bindings.",
+    botany: "Wild Laurel Crest over uncorrected raw natural grain.",
+    heraldry: "Rampant Lion Plaque embedded inside dark obsidian calfskin.",
+    geometry: "Metrological Compass thermal fused with 24K pure leaf foil."
+};
+
+// Toggle Dark Mode
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+    const icon = darkModeToggle?.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+        if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+        if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+            mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        }
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+        if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+            mobileDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        }
+        localStorage.setItem('darkMode', 'disabled');
+    }
+}
+
+darkModeToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleDarkMode(); });
+mobileDarkModeToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleDarkMode(); });
+
+// Toggle RTL Alignment
+function toggleRTL() {
+    body.classList.toggle('rtl');
+    const icon = rtlToggle?.querySelector('i');
+    if (body.classList.contains('rtl')) {
+        if (icon) { icon.classList.remove('fa-arrow-right'); icon.classList.add('fa-arrow-left'); }
+        if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+            mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+        }
+        localStorage.setItem('rtlMode', 'enabled');
+    } else {
+        if (icon) { icon.classList.remove('fa-arrow-left'); icon.classList.add('fa-arrow-right'); }
+        if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+            mobileRtlToggle.innerHTML = '<i class="fa-solid fa-right-left"></i> RTL Mode';
+        }
+        localStorage.setItem('rtlMode', 'disabled');
+    }
+}
+
+rtlToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleRTL(); });
+mobileRtlToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleRTL(); });
+
+// Login routing
+function handleLogin() { window.location.href = './login.html'; }
+loginBtnDesktop?.addEventListener('click', handleLogin);
+mobileLoginBtn?.addEventListener('click', (e) => { e.stopPropagation(); handleLogin(); });
+
+// Local preferences initialization
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    if (darkModeToggle) {
+        darkModeToggle.querySelector('i').classList.remove('fa-moon');
+        darkModeToggle.querySelector('i').classList.add('fa-sun');
+    }
+    if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+        mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    }
+}
+if (localStorage.getItem('rtlMode') === 'enabled') {
+    body.classList.add('rtl');
+    if (rtlToggle) {
+        rtlToggle.querySelector('i').classList.remove('fa-arrow-right');
+        rtlToggle.querySelector('i').classList.add('fa-arrow-left');
+    }
+    if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+        mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+    }
+}
+
+// Navigation links setup
+home1?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = './index.html'; });
+home2?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = './home 2.html'; });
+mobileHome1?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = './index.html'; });
+mobileHome2?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = './home 2.html'; });
+
+// Mobile Dropdown toggling
+const mobileHomeDropdown = document.getElementById('mobileHomeDropdown');
+mobileHomeDropdown?.addEventListener('click', (e) => {
+    if (!e.target.closest('.mobile-dropdown-content')) {
+        mobileHomeDropdown.classList.toggle('active');
+    }
+});
+
+// Scroll Effects
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { navbar?.classList.add('scrolled'); }
+    else { navbar?.classList.remove('scrolled'); }
+});
+
+// Mobile menu toggle
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileNav?.classList.toggle('open');
+        mobileOverlay?.classList.toggle('open');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) {
+            if (mobileNav?.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                mobileHomeDropdown?.classList.remove('active');
+            }
+        }
+    });
+}
+
+if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+        mobileNav?.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+        mobileHomeDropdown?.classList.remove('active');
+    });
+}
+
+// Global path highlighter
+function highlightActiveNavigation() {
+    const path = window.location.pathname.toLowerCase();
+    let currentPage = 'about'; // base file mapping
+    if (path.includes('collections.html')) currentPage = 'collections';
+    else if (path.includes('customization.html')) currentPage = 'customization';
+    else if (path.includes('craftsmanship.html')) currentPage = 'craftsmanship';
+    else if (path.includes('workshops.html')) currentPage = 'workshops';
+    else if (path.includes('gallery.html')) currentPage = 'gallery';
+    else if (path.includes('reviews.html')) currentPage = 'reviews';
+    else if (path.includes('about.html')) currentPage = 'about';
+    else if (path.includes('contact.html')) currentPage = 'contact';
+    else if (path.includes('home 2.html') || path.includes('home2.html')) currentPage = 'home';
+    else if (path.endsWith('/') || path.endsWith('index.html')) currentPage = 'home';
+
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    document.querySelectorAll('.footer-link').forEach(link => link.classList.remove('active'));
+
+    document.querySelectorAll(`.nav-link[data-page="${currentPage}"]`).forEach(link => link.classList.add('active'));
+    document.querySelectorAll(`.footer-link[data-page="${currentPage}"]`).forEach(link => link.classList.add('active'));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    highlightActiveNavigation();
+
+    // Section 3 Pillar Accordion UI handlers
+    const pillarDrawers = document.querySelectorAll('.pillar-drawer');
+    pillarDrawers.forEach(drawer => {
+        const header = drawer.querySelector('.pillar-header');
+        const panel = drawer.querySelector('.pillar-content-panel');
+        
+        header?.addEventListener('click', () => {
+            const isExpanded = drawer.classList.contains('expanded');
+            
+            // Close all
+            pillarDrawers.forEach(d => {
+                d.classList.remove('expanded');
+                d.querySelector('.pillar-header')?.setAttribute('aria-expanded', 'false');
+                const p = d.querySelector('.pillar-content-panel');
+                if (p) p.style.maxHeight = null;
+            });
+
+            // Toggle active
+            if (!isExpanded) {
+                drawer.classList.add('expanded');
+                header.setAttribute('aria-expanded', 'true');
+                if (panel) panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    });
+
+    // Section 4 Longevity UI handlers
+    const intervalButtons = document.querySelectorAll('.interval-btn');
+    const longevityHudLbl = document.getElementById('longevityHudLbl');
+    const intervalDescPara = document.getElementById('intervalDescPara');
+    const diagVal1 = document.getElementById('diagVal1');
+    const diagVal2 = document.getElementById('diagVal2');
+    const diagVal3 = document.getElementById('diagVal3');
+    const longevityImg = document.getElementById('longevityImg');
+
+    intervalButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            intervalButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const intervalKey = btn.getAttribute('data-interval');
+            const data = longevityData[intervalKey];
+            
+            if (data && longevityHudLbl) {
+                // Flash effect trigger
+                if (longevityImg) {
+                    longevityImg.style.opacity = '0.4';
+                    setTimeout(() => { longevityImg.style.opacity = '0.85'; }, 150);
+                }
+                
+                longevityHudLbl.textContent = data.hud;
+                intervalDescPara.textContent = data.desc;
+                diagVal1.textContent = data.v1;
+                diagVal2.textContent = data.v2;
+                diagVal3.textContent = data.v3;
+            }
+        });
+    });
+
+    // Section 8 Sigil selection handlers
+    const sigilPills = document.querySelectorAll('.sigil-pill');
+    const sigilResultBox = document.getElementById('sigilResultBox');
+
+    sigilPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            sigilPills.forEach(p => p.classList.remove('selected'));
+            pill.classList.add('selected');
+            
+            const sigilKey = pill.getAttribute('data-sigil');
+            const resultTxt = sigilMap[sigilKey];
+            if (resultTxt && sigilResultBox) {
+                sigilResultBox.innerHTML = `<i class="fas fa-check-circle"></i> REGISTRY STATUS: Ready to emboss ${resultTxt}`;
+            }
+        });
+    });
+});
+
+// Primary global internal routing listeners
+document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const page = link.getAttribute('data-page');
+        const pageMap = {
+            home: './index.html',
+            collections: './collections.html',
+            customization: './customization.html',
+            craftsmanship: './craftsmanship.html',
+            workshops: './workshops.html',
+            gallery: './gallery.html',
+            reviews: './Reviews.html',
+            about: './about.html',
+            contact: './contact.html'
+        };
+        if (pageMap[page]) {
+            const currentPath = window.location.pathname.toLowerCase();
+            const targetFile = pageMap[page].replace('./', '').toLowerCase();
+            if (currentPath.includes(targetFile) || (page === 'about' && currentPath.includes('about.html'))) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                mobileNav?.classList.remove('open');
+                mobileOverlay?.classList.remove('open');
+                const icon = mobileMenuBtn?.querySelector('i');
+                if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+            } else {
+                window.location.href = pageMap[page];
+                e.preventDefault();
+            }
+        }
+    });
+});
+
+// Footer routing link overrides
+footerLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        const page = link.getAttribute('data-page');
+        if (page) {
+            const pageMap = {
+                home: './index.html',
+                collections: './collections.html',
+                customization: './customization.html',
+                craftsmanship: './craftsmanship.html',
+                workshops: './workshops.html',
+                gallery: './gallery.html',
+                reviews: './Reviews.html',
+                about: './about.html',
+                contact: './contact.html'
+            };
+            if (pageMap[page]) {
+                const currentPath = window.location.pathname.toLowerCase();
+                const targetFile = pageMap[page].replace('./', '').toLowerCase();
+                if (currentPath.includes(targetFile) || (page === 'about' && currentPath.includes('about.html'))) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    window.location.href = pageMap[page];
+                    e.preventDefault();
+                }
+            }
+        }
+    });
+});
+
+// Newsletter feedback setup
+const newsletterBtn = document.querySelector('.newsletter-btn');
+const newsletterInput = document.querySelector('.newsletter-input');
+newsletterBtn?.addEventListener('click', () => {
+    const email = newsletterInput.value.trim();
+    if (email) {
+        alert(`Thank you for subscribing with ${email}!\nYou'll receive our latest scriptorium catalogs.`);
+        newsletterInput.value = '';
+    } else {
+        alert('Please enter a valid email address.');
+    }
+});
+
+// Auto-closing mobile interface on large resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1280 && mobileNav?.classList.contains('open')) {
+        mobileNav.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+    }
+});
+</script>
+</body>
+</html>

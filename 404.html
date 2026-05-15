@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>404 // Ledger Leaf Missing</title>
+
+<!-- Website Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236a2c3e'/%3E%3Cstop offset='100%25' stop-color='%23471825'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 6 L78 6 A16 16 0 0 1 94 22 L94 50 A44 44 0 0 1 50 94 L22 94 A16 16 0 0 1 6 78 L6 50 A44 44 0 0 1 50 6 Z' fill='url(%23g)' stroke='%23d4a373' stroke-width='6'/%3E%3Cpath d='M68 28 C68 28 56 32 46 44 C36 56 30 70 28 72 C26 74 28 70 32 64 C38 54 50 42 62 34 C68 28 68 28 68 28 Z' fill='%23fdf0e3'/%3E%3Cpath d='M29 71 L20 80' stroke='%23fdf0e3' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 40 L59 47 M44 48 L51 55 M36 56 L42 62' stroke='%23fdf0e3' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fbf7f4;
+    color: #381420;
+    transition: background 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-break: break-word;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+    background: #140b0e;
+    color: #e8dfe8;
+}
+
+body.dark-mode .navbar {
+    background: rgba(20, 11, 14, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .logo-text .logo-main {
+    color: #d4a373;
+}
+
+body.dark-mode .logo-text .logo-sub {
+    color: #bda4aa;
+}
+
+body.dark-mode .icon-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #d8ccce;
+}
+
+body.dark-mode .icon-btn:hover {
+    background: #d4a373;
+    color: #140b0e;
+}
+
+body.dark-mode .error-card {
+    background: rgba(36, 20, 25, 0.65);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .error-title {
+    color: #fdf0e3;
+}
+
+body.dark-mode .error-text {
+    color: #c4b3b8;
+}
+
+body.dark-mode .search-input {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+body.dark-mode .search-input:focus {
+    border-color: #d4a373;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .primary-btn {
+    background: linear-gradient(135deg, #d4a373, #b87333);
+    color: #15060b;
+    box-shadow: 0 8px 20px rgba(212, 163, 115, 0.2);
+}
+
+body.dark-mode .primary-btn:hover {
+    background: linear-gradient(135deg, #fdf0e3, #d4a373);
+    box-shadow: 0 12px 25px rgba(212, 163, 115, 0.3);
+}
+
+body.dark-mode .secondary-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #d8ccce;
+}
+
+body.dark-mode .secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #d4a373;
+    color: #d4a373;
+}
+
+/* RTL Layout */
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .navbar {
+    padding: 12px 20px 12px 40px;
+}
+
+body.rtl .nav-actions {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body.rtl .logo {
+    margin-right: 0;
+}
+
+body.rtl .search-input {
+    padding: 15px 22px 15px 55px;
+}
+
+body.rtl .search-btn {
+    right: auto;
+    left: 6px;
+}
+
+/* Navbar Container - Standalone Mode Parity */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid #d4a373;
+    transition: all 0.4s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.logo-icon i {
+    font-size: 20px;
+    color: #fdf0e3;
+    z-index: 1;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 800;
+    color: #381420;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.logo-sub {
+    font-size: clamp(7px, 1.8vw, 9px);
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Right Side Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #381420;
+    position: relative;
+}
+
+.icon-btn:hover {
+    background: #6a2c3e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Tooltip */
+.icon-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #381420;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.icon-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -30px;
+}
+
+/* Custom 404 Layout Suite */
+.error-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Artistic Background Flourishes */
+.error-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    max-width: 800px;
+    max-height: 800px;
+    background: radial-gradient(circle, rgba(212, 163, 115, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.error-card {
+    max-width: 720px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(106, 44, 62, 0.08);
+    border-top: 3px solid #d4a373;
+    border-radius: 24px;
+    padding: 60px 50px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 70px rgba(106, 44, 62, 0.06);
+    position: relative;
+    z-index: 1;
+    animation: fadeInDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.quill-icon {
+    font-size: 48px;
+    color: #d4a373;
+    margin-bottom: 10px;
+    display: inline-block;
+    animation: floatQuill 4s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(212, 163, 115, 0.4));
+}
+
+@keyframes floatQuill {
+    0%, 100% { transform: translateY(0) rotate(-10deg); }
+    50% { transform: translateY(-10px) rotate(-5deg); }
+}
+
+.error-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(80px, 15vw, 150px);
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, #381420 0%, #6a2c3e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    text-shadow: 0 10px 30px rgba(106, 44, 62, 0.1);
+}
+
+.error-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 3.5vw, 28px);
+    font-weight: 800;
+    color: #2d101a;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.error-text {
+    font-size: 14px;
+    color: #63434d;
+    line-height: 1.8;
+    max-width: 580px;
+    margin: 0 auto 35px;
+    font-weight: 300;
+}
+
+.search-box {
+    max-width: 480px;
+    margin: 0 auto 35px;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 55px 15px 22px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    background: white;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #381420;
+}
+
+.search-input:focus {
+    border-color: #6a2c3e;
+    box-shadow: 0 0 0 4px rgba(106, 44, 62, 0.08);
+}
+
+.search-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #d4a373;
+    color: #15060b;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.search-btn:hover {
+    background: #6a2c3e;
+    color: white;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.primary-btn {
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #6a2c3e, #471825);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(106, 44, 62, 0.25);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(106, 44, 62, 0.35);
+    background: linear-gradient(135deg, #d4a373, #b87333);
+    color: #15060b;
+}
+
+.secondary-btn {
+    padding: 14px 24px;
+    background: white;
+    border: 1px solid rgba(106, 44, 62, 0.15);
+    color: #6a2c3e;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background: rgba(106, 44, 62, 0.04);
+    transform: translateY(-2px);
+    border-color: #6a2c3e;
+}
+
+@media (max-width: 600px) {
+    .error-card {
+        padding: 45px 25px;
+    }
+    .action-buttons {
+        flex-direction: column;
+    }
+    .primary-btn, .secondary-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-icon { width: 36px; height: 36px; }
+    .logo-icon i { font-size: 15px; }
+    .logo-main { font-size: 11px; }
+    .logo-sub { font-size: 6.5px; }
+    .error-num { font-size: clamp(60px, 18vw, 80px); }
+    .error-title { font-size: clamp(18px, 5vw, 22px); }
+    .error-card { padding: 30px 15px; }
+}
+</style>
+</head>
+<body>
+
+    <!-- STANDALONE TOP NAVBAR (Logo + Theme Controls Only) -->
+    <nav class="navbar" id="navbar">
+        <a href="./index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-feather-alt"></i>
+            </div>
+            <div class="logo-text">
+                <span class="logo-main">LEATHER & QUILL</span>
+                <span class="logo-sub">HANDCRAFTED JOURNALS</span>
+            </div>
+        </a>
+
+        <!-- RIGHT SIDE ACTIONS -->
+        <div class="nav-actions">
+            <button class="icon-btn" id="darkModeToggle" data-tooltip="Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" id="rtlToggle" data-tooltip="RTL Mode">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MAIN 404 WRAPPER -->
+    <div class="error-wrapper">
+        <div class="error-card">
+            <div class="quill-icon">
+                <i class="fas fa-feather-alt"></i>
+            </div>
+            
+            <div class="error-num">404</div>
+            <div class="error-title">Missing Ledger Leaf // Volume Uncharted</div>
+            
+            <p class="error-text">The specific bespoke volume, historical commission leaf, or registration seal you are searching for has been misplaced from our primary shelf indices. It may have been archived into deep physical lock-boxes or its tracking coordinates updated.</p>
+
+            <form class="search-box" onsubmit="event.preventDefault(); const q = document.getElementById('errSearch').value; alert('Indexing Studio Vaults for: \"' + q + '\"\n\nNo active registry documents returned. Let us forge a new ledger leaf together.');">
+                <input type="text" class="search-input" placeholder="Search physical archival files..." required id="errSearch">
+                <button type="submit" class="search-btn" title="Execute Catalog Index">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <div class="action-buttons">
+                <a href="./index.html" class="primary-btn">
+                    <i class="fas fa-home"></i>
+                    <span>Main Workbench (Home)</span>
+                </a>
+                <a href="./collections.html" class="secondary-btn">
+                    <i class="fas fa-book-open"></i>
+                    <span>Explore Collections</span>
+                </a>
+                <a href="./contact.html" class="secondary-btn">
+                    <i class="fas fa-feather"></i>
+                    <span>File Vault Inquiry</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const rtlToggle = document.getElementById('rtlToggle');
+        const body = document.body;
+
+        // Dark Mode Logic
+        function toggleDarkMode() {
+            body.classList.toggle('dark-mode');
+            const icon = darkModeToggle?.querySelector('i');
+            if (body.classList.contains('dark-mode')) {
+                if (icon) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                }
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                if (icon) {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // RTL Logic
+        function toggleRTL() {
+            body.classList.toggle('rtl');
+            const icon = rtlToggle?.querySelector('i');
+            if (body.classList.contains('rtl')) {
+                if (icon) {
+                    icon.classList.remove('fa-arrow-right');
+                    icon.classList.add('fa-arrow-left');
+                }
+                localStorage.setItem('rtlMode', 'enabled');
+            } else {
+                if (icon) {
+                    icon.classList.remove('fa-arrow-left');
+                    icon.classList.add('fa-arrow-right');
+                }
+                localStorage.setItem('rtlMode', 'disabled');
+            }
+        }
+
+        darkModeToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDarkMode();
+        });
+
+        rtlToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleRTL();
+        });
+
+        // Load preferences on boot
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            if (darkModeToggle) {
+                darkModeToggle.querySelector('i').classList.remove('fa-moon');
+                darkModeToggle.querySelector('i').classList.add('fa-sun');
+            }
+        }
+
+        if (localStorage.getItem('rtlMode') === 'enabled') {
+            body.classList.add('rtl');
+            if (rtlToggle) {
+                rtlToggle.querySelector('i').classList.remove('fa-arrow-right');
+                rtlToggle.querySelector('i').classList.add('fa-arrow-left');
+            }
+        }
+    </script>
+</body>
+</html>

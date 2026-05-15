@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>The Guild Conservatorium Labs | Leather &amp; Quill Studio</title>
+<meta name="description" content="Immersive experiential bookbinding laboratories, interactive workstation topographies, multi-axis kinetic mechanics, and specialized substrate chemistry suites.">
+
+<!-- Universal Site Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236a2c3e'/%3E%3Cstop offset='100%25' stop-color='%23471825'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 6 L78 6 A16 16 0 0 1 94 22 L94 50 A44 44 0 0 1 50 94 L22 94 A16 16 0 0 1 6 78 L6 50 A44 44 0 0 1 50 6 Z' fill='url(%23g)' stroke='%23d4a373' stroke-width='6'/%3E%3Cpath d='M68 28 C68 28 56 32 46 44 C36 56 30 70 28 72 C26 74 28 70 32 64 C38 54 50 42 62 34 C68 28 68 28 68 28 Z' fill='%23fdf0e3'/%3E%3Cpath d='M29 71 L20 80' stroke='%23fdf0e3' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 40 L59 47 M44 48 L51 55 M36 56 L42 62' stroke='%23fdf0e3' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+<!-- Premium Typographic System -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================
+   CORE WORKSHOP CONSERVATORIUM RESET
+   ========================================= */
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --bg-conservatorium: #f4ede6;
+    --text-primary: #2d1e15;
+    --text-muted: #6e584a;
+    --gold-accent: #c9935b;
+    --gold-deep: #a8723a;
+    --mahogany-base: #3b1721;
+    --mahogany-dark: #240b11;
+    --surface-card: #ffffff;
+    --border-subtle: rgba(59, 23, 33, 0.08);
+    --shadow-lab: 0 12px 35px rgba(45, 30, 21, 0.05);
+    --shadow-cinema: 0 20px 60px rgba(0, 0, 0, 0.2);
+    
+    /* Universal navigation compatibility keys */
+    --brand-wine: #6a2c3e;
+    --brand-wine-deep: #381420;
+    --accent-gold: #d4a373;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-conservatorium);
+    color: var(--text-primary);
+    transition: background 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-break: break-word;
+}
+
+/* =========================================
+   DYNAMIC DARK MODE PARITY
+   ========================================= */
+body.dark-mode {
+    --bg-conservatorium: #130a08;
+    --text-primary: #e6dfd8;
+    --text-muted: #9c897a;
+    --surface-card: #1d120e;
+    --border-subtle: rgba(201, 147, 91, 0.12);
+    --shadow-lab: 0 12px 35px rgba(0, 0, 0, 0.5);
+    --shadow-cinema: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .navbar {
+    background: rgba(19, 10, 8, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .footer {
+    background: rgba(19, 10, 8, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .nav-link { color: #d8ccce; }
+body.dark-mode .nav-link:hover { color: var(--accent-gold); }
+body.dark-mode .logo-text .logo-main,
+body.dark-mode .footer-logo-main { color: var(--accent-gold); }
+body.dark-mode .logo-text .logo-sub,
+body.dark-mode .footer-logo-sub { color: #bda4aa; }
+body.dark-mode .icon-btn { background: rgba(255, 255, 255, 0.05); color: #d8ccce; }
+body.dark-mode .icon-btn:hover { background: var(--accent-gold); color: #130a08; }
+body.dark-mode .mobile-menu-btn { color: var(--accent-gold); }
+body.dark-mode .mobile-nav { background: #130a08; }
+body.dark-mode .mobile-nav .nav-link { color: #d8ccce; border-bottom-color: rgba(255,255,255,0.05); }
+body.dark-mode .footer-link { color: #d8ccce; }
+body.dark-mode .footer-link:hover { color: var(--accent-gold); }
+body.dark-mode .social-icon { background: rgba(255,255,255,0.05); color: #d8ccce; }
+body.dark-mode .social-icon:hover { background: var(--accent-gold); color: #130a08; }
+
+/* =========================================
+   RTL CONFIGURATION PARITY
+   ========================================= */
+body.rtl { direction: rtl; }
+body.rtl .navbar { padding: 12px 20px 12px 5%; }
+body.rtl .nav-actions, body.rtl .mobile-menu-btn { margin-left: 0; margin-right: auto; }
+body.rtl .logo { margin-right: 0; }
+body.rtl .footer-content { direction: rtl; }
+body.rtl .footer-section h3::after { left: auto; right: 0; }
+body.rtl .social-links { justify-content: flex-start; }
+body.rtl .topography-grid { direction: rtl; }
+body.rtl .lab-tab-btn { text-align: right; }
+body.rtl .lab-blueprint-panel { border-left: none; border-right: 3px solid var(--gold-accent); }
+
+/* =========================================
+   UNIVERSAL NAVIGATION BAR
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled {
+    padding: 10px 5%;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .navbar.scrolled {
+    background: rgba(19, 10, 8, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: -10px;
+}
+
+.logo:hover { transform: scale(1.02); }
+
+.logo-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border-radius: 50% 12px 50% 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid var(--accent-gold);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.logo-icon i { font-size: 20px; color: #fdf0e3; z-index: 1; }
+
+.logo-text { display: flex; flex-direction: column; }
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 800;
+    color: var(--brand-wine-deep);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.logo-sub {
+    font-size: clamp(7px, 1.8vw, 9px);
+    font-weight: 500;
+    color: #965b6b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Desktop Navigation */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown { position: relative; }
+.dropdown-menu {
+    position: absolute;
+    top: 100%; left: 0;
+    background: white;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0; visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 8px 0;
+}
+
+body.dark-mode .dropdown-menu { background: #1d120e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--brand-wine-deep);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+body.dark-mode .dropdown-menu a { color: #d8ccce; }
+.dropdown-menu a:hover {
+    background: rgba(106, 44, 62, 0.1);
+    color: var(--brand-wine);
+    padding-left: 25px;
+}
+.dropdown-menu a i { margin-right: 8px; font-size: 12px; }
+
+.nav-link {
+    position: relative;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 0; height: 2px;
+    background: linear-gradient(90deg, var(--brand-wine), var(--accent-gold));
+    transition: width 0.3s ease;
+}
+.nav-link:hover::before { width: 70%; }
+.nav-link:hover { color: var(--brand-wine); }
+.nav-link.active { color: var(--accent-gold) !important; font-weight: 700; }
+.nav-link.active::before { width: 85%; background: linear-gradient(90deg, var(--accent-gold), var(--brand-wine)); }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.icon-btn {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: var(--brand-wine-deep);
+    position: relative;
+}
+.icon-btn:hover { background: var(--brand-wine); color: white; transform: translateY(-2px); }
+
+.login-btn {
+    padding: 8px 22px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    color: white !important;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.login-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3); }
+
+/* Tooltips */
+.icon-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand-wine-deep);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0; visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.icon-btn:hover::after { opacity: 1; visibility: visible; bottom: -30px; }
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    width: 38px; height: 38px;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--brand-wine-deep);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.mobile-menu-btn:hover { background: var(--brand-wine); color: white; }
+
+.mobile-nav {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 85%; max-width: 400px;
+    height: 100vh;
+    background: var(--surface-card);
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    padding: 85px 20px 20px 20px;
+    display: flex; flex-direction: column; gap: 8px;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+body.rtl .mobile-nav { right: auto; left: -100%; }
+body.rtl .mobile-nav.open { right: auto; left: 0; }
+.mobile-nav.open { right: 0; }
+.mobile-nav .nav-link {
+    display: flex; align-items: center;
+    padding: 14px 16px; font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    white-space: normal;
+}
+
+.mobile-dropdown { display: flex; flex-direction: column; }
+.mobile-dropdown-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 16px; border-bottom: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+.mobile-dropdown-header span { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.mobile-dropdown-header i:first-child { width: 28px; }
+.mobile-dropdown-content { display: none; padding-left: 44px; background: rgba(106, 44, 62, 0.05); }
+.mobile-dropdown-content a {
+    display: block; padding: 12px 16px; text-decoration: none;
+    color: #7a5260; font-size: 14px; border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+body.dark-mode .mobile-dropdown-content a { color: #b0b0b0; }
+.mobile-dropdown-content a:hover { color: var(--brand-wine); background: rgba(106, 44, 62, 0.1); }
+.mobile-dropdown.active .mobile-dropdown-content { display: block; }
+.mobile-dropdown.active .fa-chevron-down { transform: rotate(180deg); }
+
+.mobile-actions {
+    margin-top: 20px; padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex; flex-direction: column; gap: 12px;
+    width: 100%;
+}
+
+body.dark-mode .mobile-actions {
+    border-top-color: rgba(255,255,255,0.08);
+}
+
+.mobile-action-btn {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 16px; background: rgba(106, 44, 62, 0.08);
+    border-radius: 12px; cursor: pointer; transition: all 0.3s ease;
+    border: 1px solid transparent; width: 100%; font-family: 'Poppins', sans-serif;
+    font-size: 15px; font-weight: 500; color: var(--brand-wine-deep);
+    box-sizing: border-box;
+}
+
+.mobile-action-btn:hover {
+    background: rgba(106, 44, 62, 0.15);
+}
+
+.mobile-action-btn i {
+    width: 24px; font-size: 18px; color: var(--brand-wine);
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .mobile-action-btn {
+    color: #fdf0e3 !important;
+    background: rgba(212, 163, 115, 0.12) !important;
+    border-color: rgba(212, 163, 115, 0.25) !important;
+}
+
+body.dark-mode .mobile-action-btn:hover {
+    background: rgba(212, 163, 115, 0.2) !important;
+}
+
+body.dark-mode .mobile-action-btn i {
+    color: #d4a373 !important;
+}
+
+.mobile-action-btn.mobile-login {
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep)) !important;
+    color: white !important;
+    border-color: #d4a373 !important;
+    justify-content: center;
+}
+
+.mobile-action-btn.mobile-login:hover {
+    background: linear-gradient(135deg, #d4a373, #b87333) !important;
+    color: #15060b !important;
+}
+
+.mobile-action-btn.mobile-login i {
+    color: white !important;
+}
+
+.mobile-action-btn.mobile-login:hover i {
+    color: #15060b !important;
+}
+
+.mobile-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); backdrop-filter: blur(3px);
+    z-index: 998; display: none;
+}
+.mobile-overlay.open { display: block; }
+
+
+/* =========================================
+   SECTION 1: THE GUILD CONSERVATORIUM ATRIUM
+   ========================================= */
+.conservatorium-hero-atrium {
+    padding: 160px 5% 90px;
+    background: linear-gradient(135deg, #1f0d11 0%, #0c0406 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conservatorium-hero-atrium::before {
+    content: '';
+    position: absolute;
+    width: 900px; height: 900px;
+    background: radial-gradient(circle at 50% 30%, rgba(201, 147, 91, 0.12), transparent 70%);
+    top: -250px; pointer-events: none;
+}
+
+.conservatorium-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 6px 18px; background: rgba(201, 147, 91, 0.12);
+    border: 1px solid var(--gold-accent); border-radius: 30px;
+    font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700;
+    color: var(--gold-accent); letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 25px;
+    animation: atriumGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes atriumGlow {
+    from { box-shadow: 0 0 8px rgba(201, 147, 91, 0.2); }
+    to { box-shadow: 0 0 20px rgba(201, 147, 91, 0.5); }
+}
+
+.conservatorium-hero-atrium h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(32px, 5.2vw, 62px);
+    font-weight: 900;
+    color: #fdf0e3;
+    max-width: 1100px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.conservatorium-hero-atrium p {
+    font-size: clamp(14px, 2.2vw, 16px);
+    color: #d8ccce;
+    max-width: 800px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Auditory Ambience Console */
+.auditory-ambience-console {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px 30px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.console-header-label {
+    font-size: 11px; font-weight: 700; color: var(--gold-accent);
+    text-transform: uppercase; letter-spacing: 2px;
+    display: flex; align-items: center; gap: 8px;
+}
+
+.audio-trigger-row {
+    display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; width: 100%;
+}
+
+.audio-sample-pill {
+    padding: 8px 18px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px; font-weight: 500;
+    color: #e6dfd8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex; align-items: center; gap: 8px;
+}
+
+.audio-sample-pill:hover, .audio-sample-pill.active {
+    background: var(--gold-accent);
+    color: #130a08;
+    border-color: var(--gold-accent);
+    transform: translateY(-2px);
+}
+
+.reactive-visualizer-wave {
+    display: flex; align-items: center; gap: 4px; height: 24px;
+}
+
+.wave-bar {
+    width: 3px; height: 6px;
+    background: var(--gold-accent);
+    border-radius: 2px;
+    transition: height 0.1s ease;
+}
+
+.wave-bar.animated { animation: soundReactive 0.6s infinite alternate ease-in-out; }
+
+@keyframes soundReactive {
+    0% { height: 4px; }
+    100% { height: 22px; }
+}
+
+
+/* =========================================
+   MAIN LAB PORTAL SYSTEM
+   ========================================= */
+.conservatorium-portal-core {
+    padding: 85px 5% 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.lab-section-hdr {
+    display: flex; flex-direction: column; gap: 8px; margin-bottom: 35px;
+}
+
+.lab-tag {
+    font-size: 11px; font-weight: 700; color: var(--gold-accent);
+    text-transform: uppercase; letter-spacing: 2px;
+    display: inline-flex; align-items: center; gap: 8px;
+}
+
+.lab-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(24px, 3.2vw, 38px);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.lab-desc {
+    font-size: 14px; color: var(--text-muted);
+    max-width: 850px; line-height: 1.7;
+}
+
+/* Bespoke interactive link design */
+.btn-conservatorium {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--mahogany-base), var(--mahogany-dark));
+    color: white; border: none; border-radius: 40px;
+    font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: all 0.3s ease;
+    display: inline-flex; align-items: center; gap: 10px;
+}
+
+body.dark-mode .btn-conservatorium {
+    background: linear-gradient(135deg, var(--gold-accent), var(--gold-deep));
+    color: #130a08;
+}
+
+.btn-conservatorium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 23, 33, 0.3);
+}
+
+body.dark-mode .btn-conservatorium:hover { box-shadow: 0 8px 25px rgba(201, 147, 91, 0.3); }
+
+
+/* =========================================
+   SECTION 2: ERGONOMIC WORKSTATION TOPOGRAPHY
+   ========================================= */
+.topography-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 28px;
+    padding: 45px;
+    box-shadow: var(--shadow-lab);
+    align-items: center;
+}
+
+.topography-schematic-view {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 380px;
+    background: #1a0f0d;
+}
+
+.topography-schematic-view img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9;
+}
+
+/* Absolute Positioning Blueprint Targets */
+.blueprint-pin {
+    position: absolute;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--gold-accent);
+    color: #130a08;
+    display: flex; align-items: center; justify-content: center;
+    font-family: monospace; font-size: 12px; font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 0 4px rgba(201, 147, 91, 0.3);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.blueprint-pin:hover, .blueprint-pin.active {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 8px rgba(201, 147, 91, 0.5);
+    background: white;
+}
+
+/* Local pin spots */
+.pin-1 { top: 25%; left: 30%; }
+.pin-2 { top: 60%; left: 45%; }
+.pin-3 { top: 40%; left: 75%; }
+.pin-4 { top: 75%; left: 20%; }
+
+.blueprint-inspection-card {
+    display: flex; flex-direction: column; justify-content: space-between; height: 100%;
+}
+
+.inspection-metadata-window {
+    background: rgba(0,0,0,0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 18px;
+    padding: 30px;
+    min-height: 220px;
+    display: flex; flex-direction: column; justify-content: center;
+}
+
+body.dark-mode .inspection-metadata-window { background: rgba(255,255,255,0.02); }
+
+.inspection-hdr {
+    font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700;
+    color: var(--gold-accent); margin-bottom: 10px;
+}
+
+.inspection-prose {
+    font-size: 13px; color: var(--text-muted); line-height: 1.7;
+}
+
+
+/* =========================================
+   SECTION 3: MULTI-AXIS KINETIC TOOLING
+   ========================================= */
+.kinetic-mechanics-container {
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 28px;
+    padding: 50px;
+    box-shadow: var(--shadow-lab);
+}
+
+.kinetic-timeline-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 25px; flex-wrap: wrap; gap: 15px;
+}
+
+.timeline-triggers {
+    display: flex; gap: 8px; background: rgba(0,0,0,0.03); padding: 6px; border-radius: 14px;
+}
+
+body.dark-mode .timeline-triggers { background: rgba(255,255,255,0.03); }
+
+.t-trigger-btn {
+    padding: 8px 18px; background: transparent; border: none; border-radius: 10px;
+    font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600;
+    color: var(--text-muted); cursor: pointer; transition: all 0.3s ease;
+}
+
+.t-trigger-btn.active {
+    background: var(--surface-card); color: var(--gold-accent);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.kinetic-stage-display {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center;
+}
+
+.k-stage-visual {
+    border-radius: 18px; overflow: hidden; min-height: 280px; position: relative;
+}
+
+.k-stage-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.k-stage-data h4 {
+    font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700;
+    color: var(--text-primary); margin-bottom: 8px;
+}
+
+.k-stage-data p {
+    font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;
+}
+
+.parameter-gauge-row {
+    display: flex; gap: 20px; align-items: center;
+    background: rgba(0,0,0,0.015); padding: 12px 20px; border-radius: 12px;
+}
+
+body.dark-mode .parameter-gauge-row { background: rgba(255,255,255,0.015); }
+
+
+/* =========================================
+   SECTION 4: MASTER-APPRENTICE RATIO CONSOLE
+   ========================================= */
+.ratio-console-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+}
+
+.ratio-profile-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: var(--shadow-lab);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.ratio-profile-card:hover, .ratio-profile-card.selected {
+    border-color: var(--gold-accent);
+    transform: translateY(-4px);
+}
+
+.ratio-profile-card.selected {
+    background: rgba(201, 147, 91, 0.04);
+}
+
+.profile-tier {
+    font-family: monospace; font-size: 10px; font-weight: 700;
+    color: var(--gold-accent); display: block; margin-bottom: 4px;
+}
+
+.ratio-profile-card h3 { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
+.ratio-profile-card p { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+
+.calculated-index-badge {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 15px; border-top: 1px solid var(--border-subtle);
+    font-size: 11px; font-weight: 600; color: var(--mahogany-base);
+}
+
+body.dark-mode .calculated-index-badge { color: var(--gold-accent); }
+
+
+/* =========================================
+   SECTION 5: SUBSTRATE CHEMISTRY LAB
+   ========================================= */
+.chemistry-laboratory-suite {
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 28px;
+    padding: 50px;
+    box-shadow: var(--shadow-lab);
+}
+
+.chemistry-comparison-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 15px;
+}
+
+.chem-item-box {
+    padding: 25px; border: 1px solid var(--border-subtle); border-radius: 16px;
+    background: rgba(0,0,0,0.01);
+}
+
+body.dark-mode .chem-item-box { background: rgba(255,255,255,0.01); }
+
+.chem-item-box h5 { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+.chem-item-box p { font-size: 12px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px; }
+
+.resilience-score-bar {
+    height: 6px; width: 100%; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden; margin-bottom: 6px;
+}
+
+body.dark-mode .resilience-score-bar { background: rgba(255,255,255,0.05); }
+
+.score-fill { height: 100%; background: var(--gold-accent); border-radius: 3px; }
+.score-readout { font-family: monospace; font-size: 10px; font-weight: 700; color: var(--gold-accent); text-align: right; display: block; }
+
+
+/* =========================================
+   SECTION 6: SEASONAL ATELIER REGISTER
+   ========================================= */
+.allocations-register-container {
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 28px;
+    padding: 50px;
+    box-shadow: var(--shadow-lab);
+}
+
+.allocations-grid {
+    display: flex; flex-direction: column; gap: 15px; margin-top: 20px;
+}
+
+.allocation-row-item {
+    display: grid; grid-template-columns: 100px 1fr 180px; gap: 20px;
+    align-items: center; padding: 20px 25px;
+    border: 1px solid var(--border-subtle); border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.allocation-row-item:hover {
+    border-color: var(--gold-accent);
+    background: rgba(201, 147, 91, 0.02);
+}
+
+.allocation-date {
+    text-align: center; border-right: 1px solid var(--border-subtle); padding-right: 15px;
+}
+
+body.rtl .allocation-date { border-right: none; border-left: 1px solid var(--border-subtle); padding-right: 0; padding-left: 15px; }
+
+.allocation-date span:first-child { font-size: 10px; font-weight: 700; color: var(--gold-accent); text-transform: uppercase; display: block; }
+.allocation-date span:last-child { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 900; color: var(--text-primary); }
+
+.allocation-details h4 { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.allocation-details p { font-size: 12px; color: var(--text-muted); margin: 0; }
+
+.allocation-status { text-align: right; }
+body.rtl .allocation-status { text-align: left; }
+
+.seat-capsule {
+    display: inline-block; padding: 6px 14px; border-radius: 20px;
+    font-size: 11px; font-weight: 600; background: rgba(201, 147, 91, 0.15); color: var(--gold-deep);
+}
+
+.seat-capsule.locked { background: rgba(0,0,0,0.05); color: var(--text-muted); text-decoration: line-through; }
+body.dark-mode .seat-capsule.locked { background: rgba(255,255,255,0.05); }
+
+
+/* =========================================
+   SECTION 7: PRIVATE CONSULAR FELLOWSHIP
+   ========================================= */
+.consular-fellowship-vault {
+    background: linear-gradient(135deg, #1d120e 0%, #0d0604 100%);
+    border: 1px solid rgba(201, 147, 91, 0.2);
+    border-radius: 28px; padding: 50px; color: white;
+    display: grid; grid-template-columns: 1fr 450px; gap: 40px;
+    align-items: center; box-shadow: var(--shadow-cinema);
+}
+
+.fellowship-prose h3 { font-family: 'Cinzel', serif; font-size: 28px; font-weight: 800; color: #fdf0e3; margin-bottom: 12px; }
+.fellowship-prose p { font-size: 13px; color: #d8ccce; line-height: 1.7; margin-bottom: 25px; }
+
+.fellowship-visual-stage { border-radius: 18px; overflow: hidden; min-height: 300px; position: relative; }
+.fellowship-visual-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+
+/* =========================================
+   SECTION 8: LIVE WORKBENCH TRANSMISSION FEED
+   ========================================= */
+.live-transmission-terminal {
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 28px;
+    padding: 50px;
+    box-shadow: var(--shadow-lab);
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px;
+}
+
+.terminal-inputs-column { display: flex; flex-direction: column; gap: 18px; }
+
+.terminal-lbl { font-size: 11px; font-weight: 700; color: var(--gold-accent); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 6px; }
+
+.terminal-input, .terminal-select {
+    width: 100%; padding: 14px 18px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px; background: rgba(0,0,0,0.015);
+    font-family: 'Poppins', sans-serif; font-size: 13px;
+    color: var(--text-primary); transition: all 0.3s ease;
+}
+
+body.dark-mode .terminal-input, body.dark-mode .terminal-select {
+    background: rgba(255,255,255,0.015); color: white;
+}
+
+.terminal-input:focus, .terminal-select:focus { outline: none; border-color: var(--gold-accent); }
+
+.terminal-readout-column {
+    background: rgba(201, 147, 91, 0.05);
+    border: 1px solid rgba(201, 147, 91, 0.2);
+    border-radius: 20px; padding: 35px;
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+
+.crypto-ticket-output { font-family: monospace; font-size: 12px; color: var(--text-primary); line-height: 1.6; white-space: pre-wrap; }
+
+
+/* =========================================
+   STANDARD FOOTER SECTION
+   ========================================= */
+.footer {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 60px 5% 30px;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; margin-bottom: 20px;
+}
+
+.footer-logo-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border-radius: 50% 12px 50% 12px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    box-shadow: 0 4px 15px rgba(106, 44, 62, 0.4);
+    border: 2px solid var(--accent-gold);
+    transition: all 0.4s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+    transform: rotate(-15deg) scale(1.1);
+    border-radius: 12px 50% 12px 50%;
+}
+
+.footer-logo-icon i { font-size: 20px; color: #fdf0e3; }
+
+.footer-logo-text { display: flex; flex-direction: column; }
+.footer-logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px; font-weight: 800;
+    color: var(--brand-wine-deep);
+    letter-spacing: 1px; line-height: 1.2;
+}
+.footer-logo-sub {
+    font-size: 9px; font-weight: 500;
+    color: #965b6b; letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-description {
+    font-size: 13px; line-height: 1.6;
+    color: #7a5260; margin-top: 15px;
+}
+
+body.dark-mode .footer-description { color: #b0b0b0; }
+
+.footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; font-weight: 600;
+    color: var(--brand-wine-deep);
+    margin-bottom: 20px; position: relative;
+    padding-bottom: 10px;
+}
+
+body.dark-mode .footer-section h3 { color: var(--accent-gold); }
+
+.footer-section h3::after {
+    content: ''; position: absolute;
+    bottom: 0; left: 0; width: 40px; height: 2px;
+    background: linear-gradient(90deg, var(--brand-wine), var(--accent-gold));
+}
+
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 12px; }
+.footer-link {
+    color: #7a5260; text-decoration: none;
+    font-size: 13px; transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover { color: var(--brand-wine); transform: translateX(5px); }
+body.rtl .footer-link:hover { transform: translateX(-5px); }
+
+.contact-info p {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 12px; font-size: 13px; color: #7a5260;
+}
+
+body.dark-mode .contact-info p { color: #b0b0b0; }
+.contact-info i { width: 20px; color: var(--brand-wine); font-size: 14px; }
+
+.social-links { display: flex; gap: 12px; margin-top: 20px; }
+.social-icon {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(106, 44, 62, 0.1);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--brand-wine); text-decoration: none;
+    transition: all 0.3s ease; font-size: 16px;
+}
+
+.social-icon:hover {
+    background: var(--brand-wine); color: white;
+    transform: translateY(-3px);
+}
+
+.newsletter-form { display: flex; gap: 10px; margin-top: 15px; }
+.newsletter-input {
+    flex: 1; padding: 10px 14px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 40px; font-family: 'Poppins', sans-serif;
+    font-size: 12px; background: rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .newsletter-input {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.newsletter-input:focus { outline: none; border-color: var(--brand-wine); }
+.newsletter-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--brand-wine), var(--brand-wine-deep));
+    border: none; border-radius: 40px; color: white;
+    font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500;
+    cursor: pointer; transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 44, 62, 0.3);
+}
+
+.footer-bottom {
+    text-align: center; padding-top: 30px; margin-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.08); font-size: 12px;
+    color: #965b6b;
+}
+
+body.dark-mode .footer-bottom { color: #bda4aa; }
+.footer-bottom a { color: var(--brand-wine); text-decoration: none; }
+.footer-bottom a:hover { text-decoration: underline; }
+
+
+/* =========================================
+   RESPONSIVE STACKING BREAKPOINTS
+   ========================================= */
+@media (max-width: 1280px) {
+    .nav-menu, .nav-actions { display: none; }
+    .mobile-menu-btn { display: flex; }
+    .topography-grid { grid-template-columns: 1fr; gap: 30px; }
+    .topography-schematic-view { order: -1; min-height: 320px; }
+    .kinetic-stage-display { grid-template-columns: 1fr; gap: 30px; }
+    .k-stage-visual { order: -1; min-height: 260px; }
+    .consular-fellowship-vault { grid-template-columns: 1fr; gap: 30px; }
+    .fellowship-visual-stage { order: -1; min-height: 250px; }
+    .live-transmission-terminal { grid-template-columns: 1fr; gap: 30px; }
+    .footer-content { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+}
+
+@media (max-width: 768px) {
+    .conservatorium-portal-core { gap: 60px; padding-top: 50px; }
+    .conservatorium-hero-atrium { padding-top: 130px; }
+    .topography-grid { padding: 30px 20px; }
+    .kinetic-mechanics-container { padding: 35px 20px; }
+    .chemistry-laboratory-suite { padding: 35px 20px; }
+    .allocations-register-container { padding: 35px 20px; }
+    .consular-fellowship-vault { padding: 35px 20px; }
+    .live-transmission-terminal { padding: 35px 20px; }
+    .allocation-row-item { grid-template-columns: 80px 1fr; gap: 15px; }
+    .allocation-status { grid-column: span 2; text-align: left; border-top: 1px solid var(--border-subtle); padding-top: 10px; }
+    body.rtl .allocation-status { text-align: right; }
+    
+    .footer-content { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    .footer-logo, .social-links, .contact-info p { justify-content: center; }
+    .footer-section h3::after { left: 50%; transform: translateX(-50%); }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .conservatorium-hero-atrium h1 { font-size: clamp(26px, 7vw, 34px); }
+    .lab-title { font-size: clamp(22px, 6vw, 28px); }
+    .auditory-ambience-console { padding: 15px; }
+    .audio-sample-pill { padding: 6px 14px; font-size: 11px; }
+    .inspection-metadata-window { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- STANDARD NAVIGATION BAR -->
+<nav class="navbar" id="navbar">
+    <a href="./index.html" class="logo">
+        <div class="logo-icon">
+            <i class="fas fa-feather-alt"></i>
+        </div>
+        <div class="logo-text">
+            <span class="logo-main">LEATHER &amp; QUILL</span>
+            <span class="logo-sub">HANDCRAFTED JOURNALS</span>
+        </div>
+    </a>
+
+    <div class="nav-menu" id="navMenu">
+        <div class="dropdown">
+            <a href="./index.html" class="nav-link" data-page="home">Home <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></a>
+            <div class="dropdown-menu">
+                <a href="./index.html" id="home1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+                <a href="./home 2.html" id="home2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+            </div>
+        </div>
+        <a href="./about.html" class="nav-link" data-page="about">About</a>
+        <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+        <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+        <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+        <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+        <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+        <a href="./Reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+        <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+        <button class="icon-btn" id="darkModeToggle" data-tooltip="Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="icon-btn" id="rtlToggle" data-tooltip="RTL Mode">
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+        <button class="login-btn" id="loginBtnDesktop">Login</button>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- MOBILE NAVIGATION MENU -->
+<div class="mobile-nav" id="mobileNav">
+    <div class="mobile-dropdown" id="mobileHomeDropdown">
+        <div class="mobile-dropdown-header">
+            <span>Home</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="mobile-dropdown-content">
+            <a href="./index.html" id="mobileHome1"><i class="fas fa-house-chimney"></i> Home 1 </a>
+            <a href="./home 2.html" id="mobileHome2"><i class="fas fa-house-chimney-window"></i> Home 2 </a>
+        </div>
+    </div>
+    <a href="./about.html" class="nav-link" data-page="about">About</a>
+    <a href="./collections.html" class="nav-link" data-page="collections">Collections</a>
+    <a href="./customization.html" class="nav-link" data-page="customization">Customization</a>
+    <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
+    <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
+    <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
+    <a href="./Reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+    <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
+    
+    <div class="mobile-actions">
+        <button class="mobile-action-btn" id="mobileDarkModeToggle">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+        <button class="mobile-action-btn" id="mobileRtlToggle">
+            <i class="fa-solid fa-right-left"></i> RTL Mode
+        </button>
+        <button class="mobile-action-btn mobile-login" id="mobileLoginBtn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </div>
+</div>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+<!-- SECTION 1: THE GUILD CONSERVATORIUM ATRIUM -->
+<header class="conservatorium-hero-atrium">
+    <div class="conservatorium-tag">
+        <i class="fas fa-scroll"></i>
+        <span>Advanced Experiential Academics</span>
+    </div>
+    
+    <h1>The Guild Conservatorium &amp; Intaglio Hand-Press Labs</h1>
+    
+    <p>
+        Transmitting multi-century structural protocols through rigorous physical verification. We invite scholars, typographers, and institutional conservators straight into dedicated individual working bays to execute precise kinetic striking, leather paring, and chemical substrate auditing.
+    </p>
+
+    <!-- Auditory Ambience Console -->
+    <div class="auditory-ambience-console">
+        <span class="console-header-label"><i class="fas fa-headphones-alt"></i> ATELIER AUDITORY RECONSTRUCTION CONSOLE</span>
+        
+        <div class="audio-trigger-row">
+            <button type="button" class="audio-sample-pill active" data-sound="bone">
+                <i class="fas fa-play" style="font-size: 10px;"></i> Agate Burnisher Friction
+            </button>
+            <button type="button" class="audio-sample-pill" data-sound="awl">
+                <i class="fas fa-play" style="font-size: 10px;"></i> Heavy Awl Puncture
+            </button>
+            <button type="button" class="audio-sample-pill" data-sound="thread">
+                <i class="fas fa-play" style="font-size: 10px;"></i> Waxed Linen Draw
+            </button>
+            <button type="button" class="audio-sample-pill" data-sound="press">
+                <i class="fas fa-play" style="font-size: 10px;"></i> 200-lb Kinetic Strike
+            </button>
+        </div>
+
+        <div class="reactive-visualizer-wave">
+            <span class="wave-bar animated" style="animation-delay: 0.1s;"></span>
+            <span class="wave-bar animated" style="animation-delay: 0.3s;"></span>
+            <span class="wave-bar animated" style="animation-delay: 0.5s;"></span>
+            <span class="wave-bar animated" style="animation-delay: 0.2s;"></span>
+            <span class="wave-bar animated" style="animation-delay: 0.4s;"></span>
+            <span class="wave-bar animated" style="animation-delay: 0.6s;"></span>
+            <span class="wave-bar animated" style="animation-delay: 0.3s;"></span>
+            <span class="wave-bar animated" style="animation-delay: 0.1s;"></span>
+            <span style="font-size: 10px; color: var(--gold-accent); margin-left: 8px; font-family: monospace;" id="activeSoundLabel">// Playing Synthetic Sample: Agate Burnisher Friction</span>
+        </div>
+    </div>
+</header>
+
+
+<!-- MAIN LAB PORTAL SYSTEM -->
+<main class="conservatorium-portal-core">
+
+    <!-- SECTION 2: ERGONOMIC WORKSTATION TOPOGRAPHY -->
+    <section>
+        <div class="lab-section-hdr">
+            <span class="lab-tag"><i class="fas fa-vector-square"></i> Architecture Map Alpha</span>
+            <h2 class="lab-title">Ergonomic Workstation Topography</h2>
+            <p class="lab-desc">Every candidate operates within a dedicated 4-meter working zone equipped with precise tool geometry. Click absolute blueprint target nodes overlaying our workbench surface below to render isolated structural metadata parameters.</p>
+        </div>
+
+        <div class="topography-grid">
+            <div class="topography-schematic-view">
+                <img src="images/workshop_conservatorium_hall.png" alt="Heritage bookbinding conservatorium hall lined up with custom wooden workbenches">
+                
+                <!-- Blueprint Markers overlaying workbench quadrants -->
+                <div class="blueprint-pin active pin-1" data-quad="1" title="Quadrant I: Precision Skiving Blade">01</div>
+                <div class="blueprint-pin pin-2" data-quad="2" title="Quadrant II: Polished Agate Burnishers">02</div>
+                <div class="blueprint-pin pin-3" data-quad="3" title="Quadrant III: Raw Hide Tensioning Bars">03</div>
+                <div class="blueprint-pin pin-4" data-quad="4" title="Quadrant IV: Saturated Wax Spools">04</div>
+            </div>
+
+            <div class="blueprint-inspection-card">
+                <div class="inspection-metadata-window">
+                    <span style="font-family: monospace; font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 4px;" id="inspectionQuadId">// ABSOLUTE NODE: QUADRANT I</span>
+                    <h3 class="inspection-hdr" id="inspectionTitle">Precision Skiving Blade Array</h3>
+                    <p class="inspection-prose" id="inspectionDesc">
+                        Machined from hardened high-carbon English steel. Each resident candidate is assigned three edge angles customized for variable skin paring. Facilitates seamless flush joints around heavy rib spines without fiber collapse.
+                    </p>
+                </div>
+
+                <div style="background: rgba(201, 147, 91, 0.08); padding: 12px 18px; border-radius: 12px; font-size: 11px; color: var(--text-muted); margin-top: 15px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-microscope" style="color: var(--gold-accent);"></i>
+                    <span>All instruments undergo double microscopic audit prior to classroom staging.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 3: MULTI-AXIS KINETIC TOOLING -->
+    <section>
+        <div class="lab-section-hdr">
+            <span class="lab-tag"><i class="fas fa-fire-alt"></i> Physics Matrix</span>
+            <h2 class="lab-title">Multi-Axis Kinetic Mechanics</h2>
+            <p class="lab-desc">Executing flawless deep-relief blind debossing or 24K leaf adhesion demands exact force calibration. Scrub through our localized striking timelines below to evaluate physical impression vectors.</p>
+        </div>
+
+        <div class="kinetic-mechanics-container">
+            <div class="kinetic-timeline-header">
+                <span style="font-size: 12px; font-weight: 700; color: var(--text-primary);">SELECT KINETIC PARAMETER TRACK</span>
+                <div class="timeline-triggers">
+                    <button type="button" class="t-trigger-btn active" data-mech="thermal">400&deg;F Thermal Tooling</button>
+                    <button type="button" class="t-trigger-btn" data-mech="kinetic">200-lb Kinetic Press</button>
+                    <button type="button" class="t-trigger-btn" data-mech="skive">Cold-Weld Paring</button>
+                </div>
+            </div>
+
+            <div class="kinetic-stage-display">
+                <div class="k-stage-data">
+                    <span style="font-family: monospace; font-size: 11px; color: var(--gold-accent); display: block; margin-bottom: 4px;" id="kStageCode">// IMPRESSION TRACK: THERMAL-400</span>
+                    <h4 id="kStageTitle">Intaglio Brass Die Impression</h4>
+                    <p id="kStageProse">
+                        Master binders position solid heated brass dies carrying classical typographic arrays directly against deep oxblood calfskin. Optimal molecular bond execution occurs at exactly 400 degrees Fahrenheit under rapid 3-second application curves.
+                    </p>
+
+                    <div class="parameter-gauge-row">
+                        <div>
+                            <span style="font-size: 10px; color: var(--text-muted); display: block; text-transform: uppercase;">Peak Friction Stress</span>
+                            <span style="font-family: monospace; font-size: 14px; font-weight: 700; color: var(--text-primary);" id="kStressNode">85.4 N/cm&sup2;</span>
+                        </div>
+                        <div style="width: 1px; height: 25px; background: var(--border-subtle);"></div>
+                        <div>
+                            <span style="font-size: 10px; color: var(--text-muted); display: block; text-transform: uppercase;">Dwell Timing Target</span>
+                            <span style="font-family: monospace; font-size: 14px; font-weight: 700; color: var(--text-primary);" id="kDwellNode">3.2 Seconds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="k-stage-visual">
+                    <img src="images/workshop_gilded_tooling.png" alt="Master bookbinder hand positioning heated solid brass tooling die onto deep oxblood leather spine">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 4: MASTER-APPRENTICE RATIO CONSOLE -->
+    <section>
+        <div class="lab-section-hdr">
+            <span class="lab-tag"><i class="fas fa-user-friends"></i> Spatial Density</span>
+            <h2 class="lab-title">Master-Apprentice Allocations</h2>
+            <p class="lab-desc">We reject massive seminar structures. True structural comprehension requires intense personalized bench guidance. Toggle track configuration models below to verify absolute studio occupancy indices.</p>
+        </div>
+
+        <div class="ratio-console-grid">
+            <div class="ratio-profile-card selected" data-ratio="solo">
+                <span class="profile-tier">TIER // 01-SOVEREIGN</span>
+                <h3>Solo Scholar Residency</h3>
+                <p>One dedicated candidate working parallel with a primary master binder and support technician. Complete access to all pneumatic intaglio presses without sequence limits.</p>
+                <div class="calculated-index-badge">
+                    <span>INSTRUCTOR RATIO:</span>
+                    <span style="font-family: monospace; font-size: 13px;">1 : 1 Density</span>
+                </div>
+            </div>
+
+            <div class="ratio-profile-card" data-ratio="duo">
+                <span class="profile-tier">TIER // 02-FELLOWSHIP</span>
+                <h3>Duo Guild Apprenticeship</h3>
+                <p>Configured strictly for professional book restoration partners or creative typographic design duos. Shared macro tooling modules coupled with two absolute independent working benches.</p>
+                <div class="calculated-index-badge">
+                    <span>INSTRUCTOR RATIO:</span>
+                    <span style="font-family: monospace; font-size: 13px;">1 : 2 Density</span>
+                </div>
+            </div>
+
+            <div class="ratio-profile-card" data-ratio="quad">
+                <span class="profile-tier">TIER // 03-DELEGATION</span>
+                <h3>4-Bench Studio Delegation</h3>
+                <p>Limited exclusively to pre-cleared institutional groups or elite rare book investment funds seeking standardized physical handling parameters. Guaranteed maximum cap of four total bays.</p>
+                <div class="calculated-index-badge">
+                    <span>INSTRUCTOR RATIO:</span>
+                    <span style="font-family: monospace; font-size: 13px;">1 : 4 Density</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 5: SUBSTRATE CHEMISTRY LAB -->
+    <section>
+        <div class="lab-section-hdr">
+            <span class="lab-tag"><i class="fas fa-flask"></i> Scientific Audit</span>
+            <h2 class="lab-title">Substrate Chemistry Laboratory</h2>
+            <p class="lab-desc">Authentic historical recreation requires analyzing chemical deterioration over centuries. We subject raw laboratory elements to automated stress arrays. Review dynamic batch scores below.</p>
+        </div>
+
+        <div class="chemistry-laboratory-suite">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 20px;">
+                <span style="font-size: 13px; font-weight: 600; color: var(--text-primary);">TARGET SUBSTRATE EVALUATION SCORECARD</span>
+                
+                <div style="display: flex; gap: 10px;">
+                    <button type="button" class="btn-conservatorium" style="padding: 8px 16px; font-size: 11px;" onclick="simulateChemTest()">
+                        <i class="fas fa-vial"></i> Trigger Hydrolysis Audit
+                    </button>
+                </div>
+            </div>
+
+            <div class="chemistry-comparison-grid">
+                <div class="chem-item-box">
+                    <h5>Florentine Marbled Endpapers</h5>
+                    <p>Testing flexural folding endurance across natural unbleached cotton rag fibers loaded with alkali mineral coatings.</p>
+                    <div class="resilience-score-bar"><div class="score-fill" style="width: 96%;" id="scoreBar1"></div></div>
+                    <span class="score-readout" id="scoreVal1">96% RESILIENCE</span>
+                </div>
+
+                <div class="chem-item-box">
+                    <h5>Double-Boiled Oxtail Glue</h5>
+                    <p>Evaluating continuous fungal immune resistance and internal humidity plasticizer leaching profiles over multi-year bounds.</p>
+                    <div class="resilience-score-bar"><div class="score-fill" style="width: 89%;" id="scoreBar2"></div></div>
+                    <span class="score-readout" id="scoreVal2">89% RESILIENCE</span>
+                </div>
+
+                <div class="chem-item-box">
+                    <h5>Uncorrected Bridle Hide</h5>
+                    <p>Monitoring ultraviolet ray absorption spectrum decay and real-time cross-sectional tensile elasticity indices.</p>
+                    <div class="resilience-score-bar"><div class="score-fill" style="width: 98%;" id="scoreBar3"></div></div>
+                    <span class="score-readout" id="scoreVal3">98% RESILIENCE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 6: SEASONAL ATELIER REGISTER -->
+    <section>
+        <div class="lab-section-hdr">
+            <span class="lab-tag"><i class="fas fa-calendar-check"></i> Allocation Registry</span>
+            <h2 class="lab-title">Seasonal Atelier Lab Schedule</h2>
+            <p class="lab-desc">Our laboratory allocations close automatically once internal material cutting limits are logged. Review live upcoming lab cycles verified for advanced scholarly participation.</p>
+        </div>
+
+        <div class="allocations-register-container">
+            <span style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Verified Intaglio Staging Cycles</span>
+            
+            <div class="allocations-grid">
+                <div class="allocation-row-item">
+                    <div class="allocation-date">
+                        <span>OCTOBER</span>
+                        <span>18</span>
+                    </div>
+                    <div class="allocation-details">
+                        <h4>Kinetic Tooling &amp; Thermal Gilt Practicum</h4>
+                        <p>Focuses directly on solid brass intaglio block settings and continuous thread tension mapping.</p>
+                    </div>
+                    <div class="allocation-status">
+                        <span class="seat-capsule">2 Workbenches Open</span>
+                    </div>
+                </div>
+
+                <div class="allocation-row-item">
+                    <div class="allocation-date">
+                        <span>NOVEMBER</span>
+                        <span>04</span>
+                    </div>
+                    <div class="allocation-details">
+                        <h4>Archival Substrate Chemistry &amp; Leaf Intercept</h4>
+                        <p>Macro laboratory cross-sectioning examining long-term flexural fatigue on double-waxed core sets.</p>
+                    </div>
+                    <div class="allocation-status">
+                        <span class="seat-capsule">1 Workbench Open</span>
+                    </div>
+                </div>
+
+                <div class="allocation-row-item" style="opacity: 0.75;">
+                    <div class="allocation-date">
+                        <span>DECEMBER</span>
+                        <span>12</span>
+                    </div>
+                    <div class="allocation-details">
+                        <h4>Dynastic Coptic Suture &amp; Exposed Spine Protocol</h4>
+                        <p>Advanced external braiding loops executed strictly across naked unbleached oxblood base bindings.</p>
+                    </div>
+                    <div class="allocation-status">
+                        <span class="seat-capsule locked">Allocation Locked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 7: PRIVATE CONSULAR FELLOWSHIP -->
+    <section>
+        <div class="consular-fellowship-vault">
+            <div class="fellowship-prose">
+                <span style="font-size: 10px; font-weight: 700; color: var(--gold-accent); letter-spacing: 2px; display: block; margin-bottom: 8px;">INSTITUTIONAL RESERVES</span>
+                <h3>Private Consular Fellowships</h3>
+                <p>
+                    We coordinate deeply customized physical residency tracks for global historical trust foundations, high-end fine art restoration houses, and academic bibliophile curators. Custom fellows receive access keys to unlisted antique finishing presses.
+                </p>
+
+                <div style="background: rgba(255,255,255,0.03); padding: 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08);">
+                    <span style="font-size: 11px; color: #9c897a; display: block; margin-bottom: 4px;">Direct Fellowship Communications Gateway:</span>
+                    <span style="font-family: monospace; font-size: 13px; font-weight: 700; color: var(--gold-accent);">fellowships@leatherandquill.com</span>
+                </div>
+            </div>
+
+            <div class="fellowship-visual-stage">
+                <img src="images/artisan_craftsmanship_1778587813723.png" alt="Expert master craftsman performing detailed thread bindings under precise workbench setup">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 8: LIVE WORKBENCH TRANSMISSION FEED -->
+    <section>
+        <div class="lab-section-hdr">
+            <span class="lab-tag"><i class="fas fa-terminal"></i> Direct Access Desk</span>
+            <h2 class="lab-title">Live Workbench Transmission Feed</h2>
+            <p class="lab-desc">Configure your specific lab background profile attributes below to generate an instantaneous cryptographic staging ticket required for passing our physical security threshold.</p>
+        </div>
+
+        <div class="live-transmission-terminal">
+            <div class="terminal-inputs-column">
+                <div>
+                    <label class="terminal-lbl">Candidate Institutional Identity</label>
+                    <input type="text" class="terminal-input" id="termCandidate" placeholder="e.g. Professor Alistair Sterling">
+                </div>
+
+                <div>
+                    <label class="terminal-lbl">Primary Lab Substrate Focus</label>
+                    <select class="terminal-select" id="termFocus">
+                        <option value="Precision Skiving &amp; Beveling">Precision Skiving &amp; Double Rib Beveling</option>
+                        <option value="Heated Intaglio Striking">Heated Intaglio Striking (400&deg;F Curve)</option>
+                        <option value="Substrate Hydrolysis Test">Substrate Hydrolysis Chemical Testing</option>
+                        <option value="Archival Raised Rib Tension">Archival Raised Rib Tensioning</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="terminal-lbl">Target Studio Bay Configuration</label>
+                    <select class="terminal-select" id="termBay">
+                        <option value="Bay 01 // Master Axis">Bay 01 // Master Axis (Sovereign Array)</option>
+                        <option value="Bay 02 // Intaglio Ring">Bay 02 // Intaglio Ring (Thermal Deck)</option>
+                        <option value="Bay 04 // Chemistry Bench">Bay 04 // Chemistry Bench (Hydrolytic Deck)</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn-conservatorium" style="width: 100%; justify-content: center;" onclick="generateCryptoTicket()">
+                    <i class="fas fa-qrcode"></i> Lock Dossier parameters
+                </button>
+            </div>
+
+            <div class="terminal-readout-column">
+                <div>
+                    <span style="font-size: 10px; font-weight: 700; color: var(--gold-accent); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px;">// REAL-TIME OUTPUT DOSSIER</span>
+                    <div class="crypto-ticket-output" id="cryptoTicketOut">Awaiting input stream synchronization... Submit configuration parameters to render unique dynamic cryptographic docket key.</div>
+                </div>
+
+                <div style="border-top: 1px dashed var(--border-subtle); padding-top: 15px; margin-top: 20px;">
+                    <span style="font-size: 10px; color: var(--text-muted); display: block;">VERIFICATION KEYCHAIN CODE:</span>
+                    <span style="font-family: monospace; font-size: 11px; font-weight: 700; color: var(--mahogany-base);" id="cryptoKeychainNode">SECURE-KEY-HOLD</span>
+                    body.dark-mode .terminal-readout-column span:last-child { color: var(--gold-accent); }
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- STANDARD FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <a href="./index.html" class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <div class="footer-logo-text">
+                    <span class="footer-logo-main">LEATHER &amp; QUILL</span>
+                    <span class="footer-logo-sub">HANDCRAFTED JOURNALS</span>
+                </div>
+            </a>
+            <p class="footer-description">Handcrafted leather journals and notebooks made with premium materials and traditional binding techniques. Each piece tells a unique story.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="./index.html" class="footer-link" data-page="home">Home</a></li>
+                <li><a href="./collections.html" class="footer-link" data-page="collections">Collections</a></li>
+                <li><a href="./customization.html" class="footer-link" data-page="customization">Customization</a></li>
+                <li><a href="./craftsmanship.html" class="footer-link" data-page="craftsmanship">Craftsmanship</a></li>
+                <li><a href="./workshops.html" class="footer-link" data-page="workshops">Workshops</a></li>
+                <li><a href="./gallery.html" class="footer-link" data-page="gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">Help Center</a></li>
+                <li><a href="#" class="footer-link">Returns &amp; Exchanges</a></li>
+                <li><a href="#" class="footer-link">Shipping Info</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer-link">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Leather Lane, Artisan District</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@leatherandquill.com</p>
+            </div>
+            <h3 style="margin-top: 20px;">Newsletter</h3>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address" class="newsletter-input">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Leather &amp; Quill Studio. All rights reserved. | <a href="#">Crafted with ❤️</a></p>
+    </div>
+</footer>
+
+
+<script>
+// DOM Selection
+const darkModeToggle = document.getElementById('darkModeToggle');
+const rtlToggle = document.getElementById('rtlToggle');
+const loginBtnDesktop = document.getElementById('loginBtnDesktop');
+const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+const mobileRtlToggle = document.getElementById('mobileRtlToggle');
+const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+const body = document.body;
+const navbar = document.getElementById('navbar');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileNav = document.getElementById('mobileNav');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+// Home links map
+const home1 = document.getElementById('home1');
+const home2 = document.getElementById('home2');
+const mobileHome1 = document.getElementById('mobileHome1');
+const mobileHome2 = document.getElementById('mobileHome2');
+const footerLinks = document.querySelectorAll('.footer-link');
+
+// Section 1 Auditory synthesis triggers
+// We generate a local HTML5 Web Audio synthesis tone based on sample selection
+let audioCtx = null;
+function playSynthesisTone(type) {
+    try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        
+        if (type === 'bone') {
+            osc.type = 'sine'; osc.frequency.setValueAtTime(320, audioCtx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(120, audioCtx.currentTime + 0.3);
+            gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+            osc.start(); osc.stop(audioCtx.currentTime + 0.35);
+        } else if (type === 'awl') {
+            osc.type = 'triangle'; osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.15);
+            osc.start(); osc.stop(audioCtx.currentTime + 0.18);
+        } else if (type === 'thread') {
+            osc.type = 'sawtooth'; osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+            osc.frequency.linearRampToValueAtTime(800, audioCtx.currentTime + 0.2);
+            gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
+            osc.start(); osc.stop(audioCtx.currentTime + 0.28);
+        } else {
+            osc.type = 'square'; osc.frequency.setValueAtTime(90, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+            osc.start(); osc.stop(audioCtx.currentTime + 0.45);
+        }
+    } catch(e) { console.log('AudioContext preview not allowed prior to user interaction.'); }
+}
+
+// Section 2 Topography Blueprint Data Mapping
+const topographyProfiles = {
+    "1": {
+        id: "// ABSOLUTE NODE: QUADRANT I",
+        title: "Precision Skiving Blade Array",
+        desc: "Machined from hardened high-carbon English steel. Each resident candidate is assigned three edge angles customized for variable skin paring. Facilitates seamless flush joints around heavy rib spines without fiber collapse."
+    },
+    "2": {
+        id: "// ABSOLUTE NODE: QUADRANT II",
+        title: "Polished Agate Burnishers",
+        desc: "Hand-selected natural smooth stone implements used to compress raw hide borders without chemical friction heating. Ensures pure structural consolidation before gold leaf setting."
+    },
+    "3": {
+        id: "// ABSOLUTE NODE: QUADRANT III",
+        title: "Raw Hide Tensioning Bars",
+        desc: "Adjustable continuous mechanical iron clamps designed to dry-stretch uncorrected shoulder steerhide blocks directly over structural millboard foundations without fiber warping."
+    },
+    "4": {
+        id: "// ABSOLUTE NODE: QUADRANT IV",
+        title: "Saturated Wax Cords Base",
+        desc: "Saturated triple-wax multi-spool feeding genuine raw unbleached Irish linen core fibers straight into multi-axis binding needles without atmospheric loop friction."
+    }
+};
+
+// Section 3 Kinetic Mechanics Profiles Data
+const kineticProfiles = {
+    thermal: {
+        code: "// IMPRESSION TRACK: THERMAL-400",
+        title: "Intaglio Brass Die Impression",
+        prose: "Master binders position solid heated brass dies carrying classical typographic arrays directly against deep oxblood calfskin. Optimal molecular bond execution occurs at exactly 400 degrees Fahrenheit under rapid 3-second application curves.",
+        stress: "85.4 N/cm²", dwell: "3.2 Seconds"
+    },
+    kinetic: {
+        code: "// IMPRESSION TRACK: PRESS-200",
+        title: "200-lb Kinetic Headband Striking",
+        prose: "Pneumatic drop hammers applying uniform dynamic 200-pound strikes down multi-signature backbones. Sets raw silk headbands straight into cold-press oxtail glue before outer board wrapping execution.",
+        stress: "198.2 N/cm²", dwell: "0.8 Seconds"
+    },
+    skive: {
+        code: "// IMPRESSION TRACK: SKIVE-WELD",
+        title: "Cold-Welded Leather Paring",
+        prose: "Meticulous hand reduction of exterior skin thicknesses down to delicate micron levels. Utilizes razor-sharp English paring blades guided along solid polished Lithographic limestone blocks.",
+        stress: "12.0 N/cm²", dwell: "Manual Flow"
+    }
+};
+
+// Theme controllers
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+    const icon = darkModeToggle?.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+        if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+        if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+            mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        }
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+        if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+            mobileDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        }
+        localStorage.setItem('darkMode', 'disabled');
+    }
+}
+
+darkModeToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleDarkMode(); });
+mobileDarkModeToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleDarkMode(); });
+
+function toggleRTL() {
+    body.classList.toggle('rtl');
+    const icon = rtlToggle?.querySelector('i');
+    if (body.classList.contains('rtl')) {
+        if (icon) { icon.classList.remove('fa-arrow-right'); icon.classList.add('fa-arrow-left'); }
+        if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+            mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+        }
+        localStorage.setItem('rtlMode', 'enabled');
+    } else {
+        if (icon) { icon.classList.remove('fa-arrow-left'); icon.classList.add('fa-arrow-right'); }
+        if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+            mobileRtlToggle.innerHTML = '<i class="fa-solid fa-right-left"></i> RTL Mode';
+        }
+        localStorage.setItem('rtlMode', 'disabled');
+    }
+}
+
+rtlToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleRTL(); });
+mobileRtlToggle?.addEventListener('click', (e) => { e.stopPropagation(); toggleRTL(); });
+
+function handleLogin() { window.location.href = './login.html'; }
+loginBtnDesktop?.addEventListener('click', handleLogin);
+mobileLoginBtn?.addEventListener('click', (e) => { e.stopPropagation(); handleLogin(); });
+
+// Hydrate cached theme
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    if (darkModeToggle) {
+        darkModeToggle.querySelector('i').classList.remove('fa-moon');
+        darkModeToggle.querySelector('i').classList.add('fa-sun');
+    }
+    if (typeof mobileDarkModeToggle !== 'undefined' && mobileDarkModeToggle) {
+        mobileDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    }
+}
+if (localStorage.getItem('rtlMode') === 'enabled') {
+    body.classList.add('rtl');
+    if (rtlToggle) {
+        rtlToggle.querySelector('i').classList.remove('fa-arrow-right');
+        rtlToggle.querySelector('i').classList.add('fa-arrow-left');
+    }
+    if (typeof mobileRtlToggle !== 'undefined' && mobileRtlToggle) {
+        mobileRtlToggle.innerHTML = '<i class="fa-solid fa-arrow-left"></i> LTR Mode';
+    }
+}
+
+// Simple path navigation
+home1?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = './index.html'; });
+home2?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = './home 2.html'; });
+mobileHome1?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = './index.html'; });
+mobileHome2?.addEventListener('click', (e) => { e.preventDefault(); window.location.href = './home 2.html'; });
+
+// Mobile Drawer logic
+const mobileHomeDropdown = document.getElementById('mobileHomeDropdown');
+mobileHomeDropdown?.addEventListener('click', (e) => {
+    if (!e.target.closest('.mobile-dropdown-content')) {
+        mobileHomeDropdown.classList.toggle('active');
+    }
+});
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { navbar?.classList.add('scrolled'); }
+    else { navbar?.classList.remove('scrolled'); }
+});
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileNav?.classList.toggle('open');
+        mobileOverlay?.classList.toggle('open');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) {
+            if (mobileNav?.classList.contains('open')) {
+                icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+                mobileHomeDropdown?.classList.remove('active');
+            }
+        }
+    });
+}
+
+if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+        mobileNav?.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+        mobileHomeDropdown?.classList.remove('active');
+    });
+}
+
+// Global active path tracking
+function highlightActiveNavigation() {
+    const path = window.location.pathname.toLowerCase();
+    let currentPage = 'workshops'; // root matching target
+    if (path.includes('collections.html')) currentPage = 'collections';
+    else if (path.includes('customization.html')) currentPage = 'customization';
+    else if (path.includes('craftsmanship.html')) currentPage = 'craftsmanship';
+    else if (path.includes('workshops.html')) currentPage = 'workshops';
+    else if (path.includes('gallery.html')) currentPage = 'gallery';
+    else if (path.includes('reviews.html')) currentPage = 'reviews';
+    else if (path.includes('about.html')) currentPage = 'about';
+    else if (path.includes('contact.html')) currentPage = 'contact';
+    else if (path.includes('home 2.html') || path.includes('home2.html')) currentPage = 'home';
+
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    document.querySelectorAll('.footer-link').forEach(link => link.classList.remove('active'));
+
+    document.querySelectorAll(`.nav-link[data-page="${currentPage}"]`).forEach(link => link.classList.add('active'));
+    document.querySelectorAll(`.footer-link[data-page="${currentPage}"]`).forEach(link => link.classList.add('active'));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    highlightActiveNavigation();
+
+    // Section 1 Auditory listeners setup
+    const audioSamplePills = document.querySelectorAll('.audio-sample-pill');
+    const activeSoundLabel = document.getElementById('activeSoundLabel');
+    const waveBars = document.querySelectorAll('.wave-bar');
+
+    audioSamplePills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            audioSamplePills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            const soundKey = pill.getAttribute('data-sound');
+            const txtMap = {
+                bone: "Agate Burnisher Friction",
+                awl: "Heavy Awl Puncture",
+                thread: "Waxed Linen Draw",
+                press: "200-lb Kinetic Strike"
+            };
+            if (activeSoundLabel && txtMap[soundKey]) {
+                activeSoundLabel.textContent = `// Playing Synthetic Sample: ${txtMap[soundKey]}`;
+            }
+            
+            // Re-trigger visualizer animation classes
+            waveBars.forEach(b => {
+                b.classList.remove('animated');
+                void b.offsetWidth; // browser reflow
+                b.classList.add('animated');
+            });
+            
+            playSynthesisTone(soundKey);
+        });
+    });
+
+    // Section 2 Topography blueprint pin listeners
+    const blueprintPins = document.querySelectorAll('.blueprint-pin');
+    const inspectionQuadId = document.getElementById('inspectionQuadId');
+    const inspectionTitle = document.getElementById('inspectionTitle');
+    const inspectionDesc = document.getElementById('inspectionDesc');
+
+    blueprintPins.forEach(pin => {
+        pin.addEventListener('click', () => {
+            blueprintPins.forEach(p => p.classList.remove('active'));
+            pin.classList.add('active');
+            const quadVal = pin.getAttribute('data-quad');
+            const profileData = topographyProfiles[quadVal];
+            if (profileData && inspectionTitle) {
+                inspectionQuadId.textContent = profileData.id;
+                inspectionTitle.textContent = profileData.title;
+                inspectionDesc.textContent = profileData.desc;
+            }
+        });
+    });
+
+    // Section 3 Kinetic Mechanics track selectors
+    const tTriggerBtns = document.querySelectorAll('.t-trigger-btn');
+    const kStageCode = document.getElementById('kStageCode');
+    const kStageTitle = document.getElementById('kStageTitle');
+    const kStageProse = document.getElementById('kStageProse');
+    const kStressNode = document.getElementById('kStressNode');
+    const kDwellNode = document.getElementById('kDwellNode');
+
+    tTriggerBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tTriggerBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const mechVal = btn.getAttribute('data-mech');
+            const profile = kineticProfiles[mechVal];
+            if (profile && kStageTitle) {
+                kStageCode.textContent = profile.code;
+                kStageTitle.textContent = profile.title;
+                kStageProse.textContent = profile.prose;
+                kStressNode.textContent = profile.stress;
+                kDwellNode.textContent = profile.dwell;
+            }
+        });
+    });
+
+    // Section 4 Ratio Profile selector logic
+    const ratioCards = document.querySelectorAll('.ratio-profile-card');
+    ratioCards.forEach(card => {
+        card.addEventListener('click', () => {
+            ratioCards.forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+        });
+    });
+});
+
+// Section 5 Laboratory chemistry test action simulator
+function simulateChemTest() {
+    const sBar1 = document.getElementById('scoreBar1');
+    const sBar2 = document.getElementById('scoreBar2');
+    const sBar3 = document.getElementById('scoreBar3');
+    const sVal1 = document.getElementById('scoreVal1');
+    const sVal2 = document.getElementById('scoreVal2');
+    const sVal3 = document.getElementById('scoreVal3');
+
+    if (sBar1 && sVal1) {
+        // Toggle simulated new percentages slightly to feel dynamic
+        const r1 = Math.floor(Math.random() * 6) + 93; // 93-98
+        const r2 = Math.floor(Math.random() * 8) + 85; // 85-92
+        const r3 = Math.floor(Math.random() * 3) + 97; // 97-99
+        
+        sBar1.style.width = `${r1}%`; sVal1.textContent = `${r1}% RESILIENCE`;
+        sBar2.style.width = `${r2}%`; sVal2.textContent = `${r2}% RESILIENCE`;
+        sBar3.style.width = `${r3}%`; sVal3.textContent = `${r3}% RESILIENCE`;
+        
+        alert("🔬 LABORATORY HYDROLYSIS MATRIX EXECUTED:\n\n[Subjecting components to 500 hours continuous saline spray parameters. Re-calculated resilience indices updated successfully.]");
+    }
+}
+
+// Section 8 Terminal Cryptographic Ticket builder
+function generateCryptoTicket() {
+    const name = document.getElementById('termCandidate')?.value.trim();
+    const focus = document.getElementById('termFocus')?.value;
+    const bay = document.getElementById('termBay')?.value;
+    const ticketOut = document.getElementById('cryptoTicketOut');
+    const keyNode = document.getElementById('cryptoKeychainNode');
+
+    if (!name) {
+        alert("⚠️ ATELIER REGISTRATION ABORTED:\n\nPlease enter Candidate Institutional Identity to lock dossier configuration.");
+        return;
+    }
+
+    const stamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
+    const randCode = Math.floor(Math.random() * 899999 + 100000);
+    const dossierStr = `>>> CONSERVATORIUM LAB CLEARANCE LOCKED <<<\n\nResident Identity: ${name.toUpperCase()}\nTarget Stream: ${focus}\nAssigned Hardware: ${bay}\nTimestamp Verify: ${stamp}\n\nStatus Indicator: ACCESS GRANTED [BAY ARMED FOR DEPLOYMENT]`;
+
+    if (ticketOut) ticketOut.textContent = dossierStr;
+    if (keyNode) keyNode.textContent = `DOSSIER-CRYPT-${randCode}`;
+
+    alert(`🎟️ DOSSIER SECURELY TRANSMITTED\n\nCandidate: ${name}\nKey Index: DOSSIER-CRYPT-${randCode}\n\nOur head laboratory scribe has authorized your physical workbench equipment. Presentation of this passkey is required at the outer gates.`);
+}
+
+// Navigation links loop override
+document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const page = link.getAttribute('data-page');
+        const pageMap = {
+            home: './index.html',
+            collections: './collections.html',
+            customization: './customization.html',
+            craftsmanship: './craftsmanship.html',
+            workshops: './workshops.html',
+            gallery: './gallery.html',
+            reviews: './Reviews.html',
+            about: './about.html',
+            contact: './contact.html'
+        };
+        if (pageMap[page]) {
+            const currentPath = window.location.pathname.toLowerCase();
+            const targetFile = pageMap[page].replace('./', '').toLowerCase();
+            if (currentPath.includes(targetFile) || (page === 'workshops' && currentPath.includes('workshops.html'))) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                mobileNav?.classList.remove('open');
+                mobileOverlay?.classList.remove('open');
+                const icon = mobileMenuBtn?.querySelector('i');
+                if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+            } else {
+                window.location.href = pageMap[page];
+                e.preventDefault();
+            }
+        }
+    });
+});
+
+footerLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        const page = link.getAttribute('data-page');
+        if (page) {
+            const pageMap = {
+                home: './index.html',
+                collections: './collections.html',
+                customization: './customization.html',
+                craftsmanship: './craftsmanship.html',
+                workshops: './workshops.html',
+                gallery: './gallery.html',
+                reviews: './Reviews.html',
+                about: './about.html',
+                contact: './contact.html'
+            };
+            if (pageMap[page]) {
+                const currentPath = window.location.pathname.toLowerCase();
+                const targetFile = pageMap[page].replace('./', '').toLowerCase();
+                if (currentPath.includes(targetFile) || (page === 'workshops' && currentPath.includes('workshops.html'))) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    window.location.href = pageMap[page];
+                    e.preventDefault();
+                }
+            }
+        }
+    });
+});
+
+// Newsletter subscription action
+const newsletterBtn = document.querySelector('.newsletter-btn');
+const newsletterInput = document.querySelector('.newsletter-input');
+newsletterBtn?.addEventListener('click', () => {
+    const email = newsletterInput.value.trim();
+    if (email) {
+        alert(`Thank you for subscribing with ${email}!\nYou'll receive updates on future Conservatorium sessions.`);
+        newsletterInput.value = '';
+    } else {
+        alert('Please enter a valid email address.');
+    }
+});
+
+// Auto-retracting mobile menu layout on massive resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1280 && mobileNav?.classList.contains('open')) {
+        mobileNav.classList.remove('open');
+        mobileOverlay?.classList.remove('open');
+        const icon = mobileMenuBtn?.querySelector('i');
+        if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+    }
+});
+</script>
+</body>
+</html>
