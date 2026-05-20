@@ -1554,7 +1554,7 @@ body.dark-mode .footer-bottom { color: #bda4aa; }
     <a href="./craftsmanship.html" class="nav-link" data-page="craftsmanship">Craftsmanship</a>
     <a href="./workshops.html" class="nav-link" data-page="workshops">Workshops</a>
     <a href="./gallery.html" class="nav-link" data-page="gallery">Gallery</a>
-    <a href="./Reviews.html" class="nav-link" data-page="reviews">Reviews</a>
+    <a href="./reviews.html" class="nav-link" data-page="reviews">Reviews</a>
     <a href="./contact.html" class="nav-link" data-page="contact">Contact</a>
     
     <div class="mobile-actions">
@@ -1751,7 +1751,7 @@ body.dark-mode .footer-bottom { color: #bda4aa; }
             </div>
 
             <div class="meridian-visual-pane">
-                <img src="images/contact_dispatch_chest.png" alt="Luxurious leather-bound correspondence chest stacked with material samples inside bindery vault">
+                <img id="meridianMapImg" src="images/map_carriage_gate.png" alt="Vintage hand-drawn map showing Carriage Gate entrance route">
                 <span class="map-coordinate-stamp">LAT. 42.3601&deg; N // LONG. 71.0589&deg; W</span>
             </div>
         </div>
@@ -2197,6 +2197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mTabBtns = document.querySelectorAll('.m-tab-btn');
     const mRouteTitle = document.getElementById('mRouteTitle');
     const mRouteDesc = document.getElementById('mRouteDesc');
+    const meridianMapImg = document.getElementById('meridianMapImg');
 
     mTabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -2207,6 +2208,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mapData && mRouteTitle) {
                 mRouteTitle.textContent = mapData.title;
                 mRouteDesc.textContent = mapData.desc;
+                if (meridianMapImg) {
+                    if (mapKey === 'gate') {
+                        meridianMapImg.src = 'images/map_carriage_gate.png';
+                        meridianMapImg.alt = 'Vintage hand-drawn map showing Carriage Gate entrance route';
+                    } else if (mapKey === 'dock') {
+                        meridianMapImg.src = 'images/map_loading_dock.png';
+                        meridianMapImg.alt = 'Vintage hand-drawn map showing Loading Dock entrance route';
+                    } else if (mapKey === 'door') {
+                        meridianMapImg.src = 'images/map_bastion_entry.png';
+                        meridianMapImg.alt = 'Vintage hand-drawn map showing Bastion Entry pedestrian route';
+                    }
+                }
             }
         });
     });
