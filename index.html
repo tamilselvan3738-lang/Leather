@@ -661,9 +661,18 @@ body.dark-mode .mobile-action-btn i {
     align-items: center;
     text-align: center;
     padding: 120px 5% 60px;
-    background: linear-gradient(135deg, rgba(106, 44, 62, 0.05), rgba(71, 24, 37, 0.02));
+    background: linear-gradient(135deg, rgba(251, 246, 249, 0.85), rgba(251, 246, 249, 0.75)), url('images/hero_collection_journals.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     box-sizing: border-box;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, rgba(26, 17, 26, 0.85), rgba(26, 17, 26, 0.75)), url('images/hero_collection_journals.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero h1 {
@@ -1015,6 +1024,123 @@ body.dark-mode .section-title {
 
 body.dark-mode .section-desc {
     color: #bda4aa;
+}
+
+/* New Arrivals Section */
+.new-arrival-section {
+    background: linear-gradient(135deg, #fdf0e3, #fbf6f9);
+    padding: clamp(60px, 8vw, 100px) 5%;
+}
+
+body.dark-mode .new-arrival-section {
+    background: linear-gradient(135deg, #241a1e, #1a111a);
+}
+
+.new-arrival-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(106, 44, 62, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    border: 1px solid rgba(106, 44, 62, 0.05);
+    transition: transform 0.4s ease;
+}
+
+body.dark-mode .new-arrival-card {
+    background: #1e1518;
+    border-color: rgba(255,255,255,0.05);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+}
+
+.new-arrival-card:hover {
+    transform: translateY(-5px);
+}
+
+.new-arrival-img-box {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-arrival-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.new-arrival-card:hover .new-arrival-img-box img {
+    transform: scale(1.05);
+}
+
+.new-arrival-badge {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: #d4a373;
+    color: #1a111a;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.new-arrival-content {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.new-arrival-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 32px);
+    color: #381420;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .new-arrival-content h3 {
+    color: #fdf0e3;
+}
+
+.new-arrival-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: #d4a373;
+    margin-bottom: 20px;
+}
+
+.new-arrival-content p {
+    color: #7a5260;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+body.dark-mode .new-arrival-content p {
+    color: #bda4aa;
+}
+
+@media (max-width: 900px) {
+    .new-arrival-card {
+        grid-template-columns: 1fr;
+    }
+    .new-arrival-img-box {
+        min-height: 300px;
+    }
+    .new-arrival-content {
+        padding: 30px 20px;
+    }
 }
 
 /* Pillars Section */
@@ -2586,13 +2712,36 @@ body.dark-mode .patina-step p {
     </div>
 </section>
 
+<!-- New Arrivals Section -->
+<section class="new-arrival-section" id="new-arrivals">
+    <div class="section-header">
+        <span class="section-subtitle">JUST IN</span>
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="title-divider"></div>
+        <p class="section-desc">Discover our latest handcrafted masterpieces, fresh from the artisan's bench.</p>
+    </div>
+    
+    <div class="new-arrival-card">
+        <div class="new-arrival-img-box">
+            <span class="new-arrival-badge">New Arrival</span>
+            <img src="images/gallery_celestial_codex.png" alt="Celestial Codex">
+        </div>
+        <div class="new-arrival-content">
+            <h3>The Celestial Codex</h3>
+            <div class="new-arrival-price">$145.00</div>
+            <p>Our newest midnight blue full-grain leather cover features hand-tooled constellations and 200 pages of acid-free cotton rag.</p>
+            <a href="#" class="btn-primary" onclick="triggerNav('collections'); return false;"><i class="fas fa-shopping-bag"></i> Shop Now</a>
+        </div>
+    </div>
+</section>
+
 <!-- Pillars of Craftsmanship Section -->
 <section class="section-container pillars-section">
     <div class="section-header">
         <span class="section-subtitle">THE LEATHER & QUILL DIFFERENCE</span>
         <h2 class="section-title">Rooted in Heritage & Mastery</h2>
         <div class="title-divider"></div>
-        <p class="section-desc">We eschew mass production in favor of ancient bench-made traditions. Every fold, stitch, and cut receives personal focus from a single dedicated artisan.</p>
+        <p class="section-desc">We favor traditional bench-made methods over mass production. Every fold, stitch, and cut is handled by a single dedicated artisan.</p>
     </div>
     <div class="pillars-grid">
         <div class="pillar-card">
@@ -2600,21 +2749,21 @@ body.dark-mode .patina-step p {
                 <i class="fas fa-scroll"></i>
             </div>
             <h3>Master-Grade Leather</h3>
-            <p>Sourced from sustainable family-owned tanneries. The full-grain hide retains natural texturing and develops a profound, personalized patina over decades of daily.</p>
+            <p>Sourced from sustainable family tanneries. The full-grain hide develops a unique patina over decades of daily use.</p>
         </div>
         <div class="pillar-card">
             <div class="pillar-icon">
                 <i class="fas fa-bezier-curve"></i>
             </div>
             <h3>Exquisite Hand-Stitching</h3>
-            <p>Utilizing high-tensile waxed linen thread in traditional Coptic and Kettle stitch arrays, ensuring your notebook lays entirely flat at any opened page for perfect flow.</p>
+            <p>Sewn with high-tensile waxed linen thread using Coptic and Kettle stitches, ensuring your notebook lays entirely flat.</p>
         </div>
         <div class="pillar-card">
             <div class="pillar-icon">
                 <i class="fas fa-stamp"></i>
             </div>
             <h3>Bespoke Impressions</h3>
-            <p>From personalized blind monogramming to embedded metallic crests and custom hardware clasps, your journal becomes a true one-of-a-kind bespoke heirloom.</p>
+            <p>With custom blind monogramming and tailored hardware, your journal becomes a true one-of-a-kind heirloom.</p>
         </div>
     </div>
 </section>
@@ -2635,7 +2784,7 @@ body.dark-mode .patina-step p {
             </div>
             <div class="showcase-content">
                 <h3>The Heirloom Tome</h3>
-                <p>Features a rugged, robust wrap-around leather strap fastened with a custom-cast solid brass buckle. Designed for chroniclers, travelers, and daily journaling enthusiasts.</p>
+                <p>Features a rugged leather wrap and solid brass buckle. Designed for chroniclers and travelers.</p>
                 <div class="showcase-meta">
                     <span><i class="fas fa-layer-group"></i> 240 Pages</span>
                     <span><i class="fas fa-tint"></i> Aged Chestnut</span>
@@ -2651,7 +2800,7 @@ body.dark-mode .patina-step p {
             </div>
             <div class="showcase-content">
                 <h3>Botanical Impressions Series</h3>
-                <p>Buttery-soft supple covers blind-debossed with actual preserved flora leaves. Contains deckle-edged handmade cotton rag paper, perfect for sketching and ink media.</p>
+                <p>Supple covers blind-debossed with actual flora leaves. Includes handmade cotton rag paper, perfect for ink.</p>
                 <div class="showcase-meta">
                     <span><i class="fas fa-layer-group"></i> 180 Pages</span>
                     <span><i class="fas fa-tint"></i> Moss & Flora</span>
@@ -2669,27 +2818,41 @@ body.dark-mode .patina-step p {
             <span class="section-subtitle">METICULOUS DETAILS</span>
             <h2 class="section-title">Anatomy of a Masterpiece</h2>
             <div class="title-divider"></div>
-            <p class="anatomy-desc">True premium quality hides in the subtle tactile intricacies. Explore the elements that make a Leather & Quill journal enduringly timeless.</p>
+            <p class="anatomy-desc">True quality lies in the details. Discover what makes a Leather & Quill journal timeless.</p>
             <div class="anatomy-list">
                 <div class="anatomy-item">
-                    <div class="anatomy-number">01</div>
+                    <div class="anatomy-number"><i class="fas fa-bezier-curve"></i></div>
                     <div>
-                        <h4>Hand-Burnished Edges</h4>
-                        <p>Polished precisely with organic beeswax to prevent long-term fraying and provide a velvety smooth, sealed perimeter.</p>
+                        <h4>Exquisite Stitching</h4>
+                        <p>Hand-sewn with waxed linen thread in a traditional Coptic bind, ensuring a lay-flat experience.</p>
                     </div>
                 </div>
                 <div class="anatomy-item">
-                    <div class="anatomy-number">02</div>
+                    <div class="anatomy-number"><i class="fas fa-scroll"></i></div>
                     <div>
-                        <h4>Dual Silk Ribbons</h4>
-                        <p>Color-coordinated premium satin ribbon page markers allow effortless cross-referencing between separate chronologies.</p>
+                        <h4>Premium Leather Texture</h4>
+                        <p>Sustainably sourced full-grain leather that develops a personalized patina over time.</p>
                     </div>
                 </div>
                 <div class="anatomy-item">
-                    <div class="anatomy-number">03</div>
+                    <div class="anatomy-number"><i class="fas fa-tools"></i></div>
                     <div>
-                        <h4>Expandable Gusset Pocket</h4>
-                        <p>Reinforced rear inner pocket lined with archival bookcloth for collecting loose ephemera, travel stubs, and delicate keepsakes.</p>
+                        <h4>Master Craftsmanship</h4>
+                        <p>Every fold, cut, and polish is executed by a single dedicated artisan.</p>
+                    </div>
+                </div>
+                <div class="anatomy-item">
+                    <div class="anatomy-number"><i class="fas fa-feather-alt"></i></div>
+                    <div>
+                        <h4>Archival Paper Quality</h4>
+                        <p>120 GSM acid-free cotton rag paper designed for fountain pens without bleed-through.</p>
+                    </div>
+                </div>
+                <div class="anatomy-item">
+                    <div class="anatomy-number"><i class="fas fa-stamp"></i></div>
+                    <div>
+                        <h4>Personalization Details</h4>
+                        <p>Custom monogramming and tailored hardware clasps make your journal a unique heirloom.</p>
                     </div>
                 </div>
             </div>
@@ -2716,7 +2879,7 @@ body.dark-mode .patina-step p {
         <div class="workshop-info-area">
             <span class="tag-exclusive">Studio Experience</span>
             <h2>Masterclass Bookbinding Retreats</h2>
-            <p>Step inside our sunlit artisan workshops and master the timeless tactile arts under the personal guidance of certified guild bookbinders. Learn ethical hide sourcing, leather splitting, cover preparation, and complex archival stitching arrays.</p>
+            <p>Join our artisan workshops and learn timeless bookbinding from certified guild masters.</p>
             <ul class="workshop-perks">
                 <li><i class="fas fa-check"></i> All professional-grade raw materials provided</li>
                 <li><i class="fas fa-check"></i> Intimate one-on-one workbench guidance</li>
@@ -2738,7 +2901,7 @@ body.dark-mode .patina-step p {
         <div class="testimonial-card">
             <div>
                 <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                <p class="review-text">"I have carried my Leather & Quill notebook across three continents. The thick cotton rag paper welcomes my wettest fountain pens without a trace of bleed-through. The cover feels like an old companion."</p>
+                <p class="review-text">"I have carried my Leather & Quill notebook across three continents. The cover feels like an old companion."</p>
             </div>
             <div class="review-author">
                 <div class="author-avatar"><i class="fas fa-user-edit"></i></div>
@@ -2754,7 +2917,7 @@ body.dark-mode .patina-step p {
         <div class="testimonial-card">
             <div>
                 <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                <p class="review-text">"The bespoke monogramming and custom closure band surpassed all expectations. It is deeply rare to find an atelier that still practices hand-stitched flat-lay binding with such uncompromising structural integrity."</p>
+                <p class="review-text">"The bespoke monogramming surpassed all expectations. A truly rare find."</p>
             </div>
             <div class="review-author">
                 <div class="author-avatar"><i class="fas fa-paint-brush"></i></div>
@@ -2775,23 +2938,23 @@ body.dark-mode .patina-step p {
     <div class="secrets-header">
         <span class="secrets-subtitle">UNSEEN ARTISANAL PROVISIONS</span>
         <h2 class="secrets-title">The Guild’s Sovereign Secrets</h2>
-        <p class="secrets-desc">Beyond visual splendor lies tactile mystique. Each creation leaving our studio incorporates hidden physical safeguards and aromatic enhancements reserved exclusively for genuine full-grain masterpieces.</p>
+        <p class="secrets-desc">Each creation features hidden physical safeguards and aromatic enhancements reserved for full-grain masterpieces.</p>
     </div>
     <div class="secrets-grid">
         <div class="secret-card">
             <div class="secret-icon"><i class="fas fa-lock"></i></div>
             <h3>Concealed Locket Flaps</h3>
-            <p>Integrated micro-magnetic closures seamlessly embedded directly beneath heavy vegetable-tanned inner endpapers. Perfect for safeguarding confidential personal letters, heirloom keepsakes, or unprinted currency leaves.</p>
+            <p>Hidden micro-magnetic closures embedded beneath inner endpapers, perfect for safeguarding contents.</p>
         </div>
         <div class="secret-card">
             <div class="secret-icon"><i class="fas fa-fingerprint"></i></div>
             <h3>Studio Watermark Seals</h3>
-            <p>Every set of pure cotton rag sheets is lightly pressed with our proprietary transparent invisible crest matrix. Visible only when held up to focused direct luminescence, establishing undeniable studio authenticity make it unique.</p>
+            <p>Our pure cotton rag sheets are pressed with a proprietary invisible crest, establishing undeniable authenticity.</p>
         </div>
         <div class="secret-card">
             <div class="secret-icon"><i class="fas fa-spa"></i></div>
             <h3>Aromatic Infusion Rubs</h3>
-            <p>Prior to wrapping in archival tissue, cover shoulder leathers receive specialized hand-massaged infusions of aged cedarwood oil, sandalwood absolute, and organic beeswax leather balms for unforgettable scent presence.</p>
+            <p>Our leather receives infusions of cedarwood oil and beeswax for an unforgettable scent.</p>
         </div>
     </div>
 </section>
@@ -2802,25 +2965,25 @@ body.dark-mode .patina-step p {
         <span class="section-subtitle">A CHRONICLE OF AGING</span>
         <h2 class="section-title">The Living Patina Timeline</h2>
         <div class="title-divider"></div>
-        <p class="section-desc">True premium grade full-grain hides absorb natural UV exposure, natural palm friction, and environmental atmosphere to transform beautifully. Observe the breathtaking transition.</p>
+        <p class="section-desc">Premium full-grain hides absorb UV exposure and natural friction to transform beautifully over time.</p>
     </div>
     <div class="patina-timeline">
         <div class="patina-step">
             <div class="step-time">Day 01</div>
             <span class="step-label">Fresh Tannery Chestnut</span>
-            <p>Smooth satin hand-feel featuring raw earthy aromatics. Hides possess light porous matte character that responds dynamically to tactile interaction.</p>
+            <p>Smooth satin hand-feel with a light porous matte character.</p>
             <div class="patina-indicator ind-1"></div>
         </div>
         <div class="patina-step">
             <div class="step-time">Year 05</div>
             <span class="step-label">Rich Amber Patina</span>
-            <p>Surfaces compress to reveal profound deep gloss. High-contact stress points along the spine folds take on dramatic warm auburn highlights and custom memory bends.</p>
+            <p>High-contact stress points take on dramatic auburn highlights and custom memory bends.</p>
             <div class="patina-indicator ind-2"></div>
         </div>
         <div class="patina-step">
             <div class="step-time">Year 20+</div>
             <span class="step-label">Heirloom Mahogany</span>
-            <p>An exquisite fully burnished liquid glass finish. The cover carries historical impressions, scuffs, and deep saturation that tells an absolute, highly distinctive lifetime chronicle.</p>
+            <p>An exquisite burnished finish that carries a distinctive lifetime chronicle.</p>
             <div class="patina-indicator ind-3"></div>
         </div>
     </div>
