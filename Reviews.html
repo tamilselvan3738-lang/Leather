@@ -960,50 +960,407 @@ body.dark-mode .footer-bottom { color: #bda4aa; }
 
 
 <!-- SECTION 1: IMPERIAL APPRAISAL GRAND STAGE -->
-<!-- REVIEWS HERO SECTION -->
 <header class="vault-hero-grand-stage">
-    <div class="living-wax-emblem"><i class="fas fa-star"></i></div>
-    <h1>Client Stories</h1>
-    <p>Read what our customers have to say about their Leather &amp; Quill journals.</p>
+    <div class="vault-crest-badge">
+        <i class="fas fa-shield-alt"></i>
+        <span>Imperial Integrity Ledger</span>
+    </div>
+
+    <h1>The Sovereign Archives &amp; Critical Verification Vaults</h1>
+
+    <p>
+        Unvarnished physical scrutiny compiled straight from the private writing libraries of global patrons. We host automated critique verification metrics alongside verified dual-perspective forensic audits examining real-world thread resiliency and ink retention variables.
+    </p>
+
+    <!-- Interactive Critique Verification Simulator HUD -->
+    <div class="verification-simulator-hud">
+        <div class="hud-hdr">
+            <span><i class="fas fa-sliders-h"></i> REAL-TIME STRUCTURAL FATIGUE TRACKER HUD</span>
+            <span style="font-family: monospace; font-size: 11px; color: #94a3b8;" id="tensionReadout">// TENSION SETTING: MEDIUM (65%)</span>
+        </div>
+
+        <div class="hud-controls-deck">
+            <span style="font-size: 11px; color: #cbd5e1; display: block;">Adjust dynamic structural usage slider to cross-examine corresponding fiber retention readouts:</span>
+            <input type="range" class="simulator-range-track" id="tensionSlider" min="10" max="100" value="65" oninput="updateVerificationSim(this.value)">
+        </div>
+
+        <div class="hud-readout-matrix">
+            <div class="matrix-node">
+                <span>Linen Suture Cohesion</span>
+                <span id="sutureScore">99.4% INTEGRITY</span>
+            </div>
+            <div class="matrix-node">
+                <span>Cellulose Elastic Reserve</span>
+                <span id="elasticScore">98.2% INTEGRITY</span>
+            </div>
+            <div class="matrix-node">
+                <span>Foil Compression Matrix</span>
+                <span id="foilScore">99.8% INTEGRITY</span>
+            </div>
+        </div>
+    </div>
 </header>
 
-<!-- MAIN CONTENT -->
-<main class="vault-portal-core" style="padding: 60px 5%; background: var(--bg-secondary, #faf8f5);">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
-        
-        <div style="background: var(--bg-card, #fff); padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-            <div style="color: var(--accent-gold); font-size: 20px; margin-bottom: 15px;">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p style="font-size: 16px; font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"The leather quality is unmatched. I've used my journal every day for a year, and it only looks better with age. Truly a masterpiece of craftsmanship."</p>
-            <h4 style="font-family: 'Playfair Display', serif; color: var(--text-primary);">— Eleanor T.</h4>
+
+<!-- MAIN VAULT PORTAL SYSTEM -->
+<main class="vault-portal-core">
+
+    <!-- SECTION 2: MULTI-SPECTRUM SCRIBE AUDITS -->
+    <section>
+        <div class="vault-section-hdr">
+            <span class="vault-tag"><i class="fas fa-balance-scale"></i> Dual-Perspective Matrix</span>
+            <h2 class="vault-title">Multi-Spectrum Scribe Audits</h2>
+            <p class="vault-desc">We couple every unvarnished subjective patron review with verifiable internal laboratory cross-examinations. Click tab options inside each card below to toggle between patron field feedback and technical micro-auditing observations.</p>
         </div>
 
-        <div style="background: var(--bg-card, #fff); padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-            <div style="color: var(--accent-gold); font-size: 20px; margin-bottom: 15px;">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <div class="audit-cards-suite">
+            <!-- Audit Card 1 -->
+            <div class="audit-review-card">
+                <div>
+                    <div class="audit-card-tabs">
+                        <button type="button" class="a-tab-btn active" onclick="toggleAuditTab(this, 'patron')">Patron Evaluation</button>
+                        <button type="button" class="a-tab-btn" onclick="toggleAuditTab(this, 'tech')">Forensic Audit</button>
+                    </div>
+
+                    <div class="a-view-panel active" style="margin-top: 15px;">
+                        "My archival dipped script requires high flow viscosity. The customized pure cotton rag leaves inside this volume took wet sizing perfectly without catching edge points or exhibiting any backside bleed."
+                    </div>
+                    <div class="a-view-panel technical" style="margin-top: 15px;">
+                        // AUDIT NOTE: Microscopic inspection confirmed absolute cross-fiber saturation with pure alum-rosin barrier complexes. Zero capillary flow dispersion along broad line paths.
+                    </div>
+                </div>
+
+                <div class="audit-author-dock">
+                    <img src="images/review_open_codex.png" alt="Author volume reference capture">
+                    <div class="author-credentials">
+                        <h4>Lady Clara Sterling</h4>
+                        <span>Rare Manuscripts Curator // London</span>
+                    </div>
+                </div>
             </div>
-            <p style="font-size: 16px; font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"From the beautiful packaging to the thick, fountain-pen friendly paper, every detail is perfect. Highly recommended for any serious writer."</p>
-            <h4 style="font-family: 'Playfair Display', serif; color: var(--text-primary);">— James L.</h4>
+
+            <!-- Audit Card 2 -->
+            <div class="audit-review-card">
+                <div>
+                    <div class="audit-card-tabs">
+                        <button type="button" class="a-tab-btn active" onclick="toggleAuditTab(this, 'patron')">Patron Evaluation</button>
+                        <button type="button" class="a-tab-btn" onclick="toggleAuditTab(this, 'tech')">Forensic Audit</button>
+                    </div>
+
+                    <div class="a-view-panel active" style="margin-top: 15px;">
+                        "Endured three seasons packed within tight saddlebags traveling along equatorial riverways. The heavy double hemp bands hold the signatures absolute tight without internal thread shifting."
+                    </div>
+                    <div class="a-view-panel technical" style="margin-top: 15px;">
+                        // AUDIT NOTE: Structural assessment indicates continuous tensile load distribution over five independent locking stitches. Spine cord integrity scored at 99.1% resilience.
+                    </div>
+                </div>
+
+                <div class="audit-author-dock">
+                    <img src="images/review_gold_monogram.png" alt="Author crest reference capture">
+                    <div class="author-credentials">
+                        <h4>Captain Julian Vance</h4>
+                        <span>Botanical Expeditions // Amazon Basin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audit Card 3 -->
+            <div class="audit-review-card">
+                <div>
+                    <div class="audit-card-tabs">
+                        <button type="button" class="a-tab-btn active" onclick="toggleAuditTab(this, 'patron')">Patron Evaluation</button>
+                        <button type="button" class="a-tab-btn" onclick="toggleAuditTab(this, 'tech')">Forensic Audit</button>
+                    </div>
+
+                    <div class="a-view-panel active" style="margin-top: 15px;">
+                        "The hot-struck intaglio monograms ordered for our retiring board executives catch raking natural sunlight beautifully. Razor sharp debossing borders that never gather ambient dust and never show signs of wear."
+                    </div>
+                    <div class="a-view-panel technical" style="margin-top: 15px;">
+                        // AUDIT NOTE: Thermal die impact execution monitored at exactly 400°F. Molecular cross-linking of the exterior calfskin epidermis validated for permanent non-warping relief.
+                    </div>
+                </div>
+
+                <div class="audit-author-dock">
+                    <img src="images/cust_hardware_closures_1778601570438.png" alt="Hardware closure detail reference">
+                    <div class="author-credentials">
+                        <h4>Alistair Beauchamp</h4>
+                        <span>Corporate Heritage Trusts // Geneva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 3: LONGITUDINAL PATINA CHRONOLOGY -->
+    <section>
+        <div class="vault-section-hdr">
+            <span class="vault-tag"><i class="fas fa-history"></i> Real-World Aging Tracking</span>
+            <h2 class="vault-title">Longitudinal Patina Chronology</h2>
+            <p class="vault-desc">Examine how authentic full-grain, bark-tanned binding matrices develop character over extended desk lifecycles. Click specific chronology markers below to inspect structural transition summaries.</p>
         </div>
 
-        <div style="background: var(--bg-card, #fff); padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-            <div style="color: var(--accent-gold); font-size: 20px; margin-bottom: 15px;">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <div class="patina-chronology-container">
+            <div class="chronology-prose-deck">
+                <div class="chronology-timeline-controls">
+                    <button type="button" class="c-node-btn active" onclick="switchPatinaStage(1, this)">Stage I // Staging</button>
+                    <button type="button" class="c-node-btn" onclick="switchPatinaStage(2, this)">Stage II // Year 02</button>
+                    <button type="button" class="c-node-btn" onclick="switchPatinaStage(3, this)">Stage III // Year 05</button>
+                </div>
+
+                <h3 id="patinaTitle">Pristine Workshop Departure</h3>
+                <p id="patinaDesc">
+                    The uncorrected vegetable-tanned shoulder hide presents a pure matte texture displaying clean natural hide growth signatures. Unbleached core threads maintain high internal tension resistance during initial opening sequences.
+                </p>
+
+                <div class="wear-metrics-table">
+                    <div class="wear-stat">
+                        <span>Epidermal Flexibility</span>
+                        <span id="patFlex">Rigid Archival Base</span>
+                    </div>
+                    <div class="wear-stat">
+                        <span>Lustre Reflection</span>
+                        <span id="patLustre">8% Matte Diffusion</span>
+                    </div>
+                </div>
             </div>
-            <p style="font-size: 16px; font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"I bought this as a gift for my husband, and he was completely blown away by the personalized monogram and sturdy binding."</p>
-            <h4 style="font-family: 'Playfair Display', serif; color: var(--text-primary);">— Sarah M.</h4>
+
+            <div class="chronology-visual-stage">
+                <img src="images/review_gold_monogram.png" alt="Macro capture of gold foil monogram debossed deep into midnight-blue grain">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 4: TACTILE TELEMETRY SENSORIUM -->
+    <section>
+        <div class="telemetry-sensorium-board">
+            <span style="font-size: 10px; font-weight: 700; color: var(--vault-gold-bright); letter-spacing: 2px; display: block; margin-bottom: 8px;">// ACOUSTIC RECONSTRUCTION ARRAYS</span>
+            <h2 style="font-family: 'Cinzel', serif; font-size: 28px; font-weight: 800; margin-bottom: 12px;">Tactile Telemetry Sensorium</h2>
+            <p style="font-size: 13px; color: #cbd5e1; max-width: 800px; line-height: 1.7; margin-bottom: 10px;">
+                True physical quality registers through auditory feedback. Click real-time track telemetry channels below to trigger distinct localized frequency simulations mapping out authentic bench dynamics.
+            </p>
+
+            <div class="sensorium-tracks-grid">
+                <div class="telemetry-track-pill active" onclick="triggerTelemetryTrack(this, 'suture')">
+                    <div class="t-pill-hdr">
+                        <span>Track 01 // Suture Tension</span>
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <span style="font-size: 11px; color: #94a3b8;">Captures dynamic string draw tension across dense oak-bark calfskin base layers.</span>
+                    <div class="telemetry-waveform-sim">
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                    </div>
+                </div>
+
+                <div class="telemetry-track-pill" onclick="triggerTelemetryTrack(this, 'thermal')">
+                    <div class="t-pill-hdr">
+                        <span>Track 02 // Intaglio Die Impact</span>
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <span style="font-size: 11px; color: #94a3b8;">Acoustic frequency capture of pneumatic block strikes settling solid brass character lines.</span>
+                    <div class="telemetry-waveform-sim">
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                    </div>
+                </div>
+
+                <div class="telemetry-track-pill" onclick="triggerTelemetryTrack(this, 'sizing')">
+                    <div class="t-pill-hdr">
+                        <span>Track 03 // Leaf Decoupling</span>
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <span style="font-size: 11px; color: #94a3b8;">Measures ambient soundwave profiles of thick unbleached hand-torn pages sweeping open.</span>
+                    <div class="telemetry-waveform-sim">
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 5: INTERCONTINENTAL ROUTING ATLAS -->
+    <section>
+        <div class="vault-section-hdr">
+            <span class="vault-tag"><i class="fas fa-map-marked-alt"></i> Logistics Audit</span>
+            <h2 class="vault-title">Intercontinental Routing Atlas</h2>
+            <p class="vault-desc">Our bound registries cross extreme environmental barriers. Review verification scores detailing custom thermal and moisture insulation performance logged during live diplomatic parcel delivery routes.</p>
         </div>
 
-        <div style="background: var(--bg-card, #fff); padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-            <div style="color: var(--accent-gold); font-size: 20px; margin-bottom: 15px;">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <div class="routing-atlas-suite">
+            <span style="font-size: 11px; font-weight: 700; color: var(--text-vault-muted); text-transform: uppercase; letter-spacing: 1px;">Verified Shipping Security Indices</span>
+            
+            <div class="atlas-grid-rows">
+                <div class="atlas-row-item">
+                    <div class="zone-identity">
+                        <h5>Zone Alpha // Arid Steppe</h5>
+                        <span>Extreme Evaporation</span>
+                    </div>
+                    <div class="zone-performance">
+                        <p>Subjected to sub-20% relative humidity. Double-waxed internal barrier paper protected external hide layers from structural cracking.</p>
+                    </div>
+                    <div class="zone-rating">
+                        <span>100% SECURE</span>
+                        <span>Zero Shrinkage</span>
+                    </div>
+                </div>
+
+                <div class="atlas-row-item">
+                    <div class="zone-identity">
+                        <h5>Zone Beta // Equatorial Damp</h5>
+                        <span>High Atmospheric Saturation</span>
+                    </div>
+                    <div class="zone-performance">
+                        <p>Continuous exposure to ambient marine moisture streams. Cedar-wood insert layers neutralized mold spores before opening.</p>
+                    </div>
+                    <div class="zone-rating">
+                        <span>99.6% SECURE</span>
+                        <span>Zero Delamination</span>
+                    </div>
+                </div>
+
+                <div class="atlas-row-item" style="border-left-color: var(--text-vault-muted);">
+                    <div class="zone-identity">
+                        <h5>Zone Gamma // High Alpine</h5>
+                        <span>Sub-Zero Barometric Stress</span>
+                    </div>
+                    <div class="zone-performance">
+                        <p>Transported through freezing high-altitude cargo corridors. Core unbleached paper deckles maintained complete absolute flat profiles.</p>
+                    </div>
+                    <div class="zone-rating">
+                        <span style="color: var(--text-vault-main);">99.9% SECURE</span>
+                        <span>Zero Condensation</span>
+                    </div>
+                </div>
             </div>
-            <p style="font-size: 16px; font-style: italic; color: var(--text-muted); margin-bottom: 20px;">"The best sketchbook I have ever owned. The paper handles watercolor without buckling, and the lay-flat design is incredible."</p>
-            <h4 style="font-family: 'Playfair Display', serif; color: var(--text-primary);">— Michael R.</h4>
+        </div>
+    </section>
+
+
+    <!-- SECTION 6: EPISTOLARY UNSEALING DECODERS -->
+    <section>
+        <div class="vault-section-hdr">
+            <span class="vault-tag"><i class="fas fa-box-open"></i> Presentation Mechanics</span>
+            <h2 class="vault-title">Epistolary Unsealing Decoders</h2>
+            <p class="vault-desc">Presentation mechanics establish baseline inspiration. Click absolute procedural nodes below to explore our multi-layer secure presentation wrapping arrays designed to prevent preliminary human handling.</p>
         </div>
 
-    </div>
+        <div class="unsealing-decoders-container">
+            <div class="decoder-steps-accordion">
+                <div class="decoder-step-card active" onclick="switchDecoderStep(1, this)">
+                    <span class="decoder-step-num">01</span>
+                    <div class="decoder-step-txt">
+                        <h4>Outer Hand-Laced Linen Wrapper</h4>
+                        <p>Secured using pure unbleached triple-ply structural flax loops.</p>
+                    </div>
+                </div>
+
+                <div class="decoder-step-card" onclick="switchDecoderStep(2, this)">
+                    <span class="decoder-step-num">02</span>
+                    <div class="decoder-step-txt">
+                        <h4>Cold-Pressed Archival Seals</h4>
+                        <p>Solid dense crimson resin stamps verifying bindery output purity.</p>
+                    </div>
+                </div>
+
+                <div class="decoder-step-card" onclick="switchDecoderStep(3, this)">
+                    <span class="decoder-step-num">03</span>
+                    <div class="decoder-step-txt">
+                        <h4>Internal Fragrant Cedar Staging</h4>
+                        <p>Saturated micro-planed wood strips protecting raw leaf edges.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="decoder-visual-stage">
+                <img src="images/review_open_codex.png" alt="Wide view of open high-end custom bound logbook resting on antique mahogany table">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 7: ASSESSMENT SUBMISSION TERMINAL -->
+    <section>
+        <div class="vault-section-hdr">
+            <span class="vault-tag"><i class="fas fa-terminal"></i> Cryptographic Input</span>
+            <h2 class="vault-title">Sovereign Assessment Submission Terminal</h2>
+            <p class="vault-desc">Contribute your personal verification metrics below. Our automated framework generates instant verification checksum tokens required to log reviews directly into our decentralized repository state.</p>
+        </div>
+
+        <div class="assessment-submission-desk">
+            <div class="submission-form-col">
+                <div>
+                    <label class="desk-lbl">Patron Identity // Institutional Alias</label>
+                    <input type="text" class="desk-input" id="termPatron" placeholder="e.g. Master Archivist Julian">
+                </div>
+
+                <div>
+                    <label class="desk-lbl">Target Verification Model</label>
+                    <select class="desk-select" id="termModel">
+                        <option value="Sovereign Quarto Hardbound">Sovereign Quarto Hardbound Array</option>
+                        <option value="Dynastic Raised Rib Calfskin">Dynastic Raised Rib Calfskin Core</option>
+                        <option value="Exposed Suture Coptic Codex">Exposed Suture Coptic Binding</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="desk-lbl">Structural Resilience Grade</label>
+                    <select class="desk-select" id="termGrade">
+                        <option value="Grade // Flawless Absolute">Grade // Flawless Absolute (Zero Deflection)</option>
+                        <option value="Grade // Superb Suture">Grade // Superb Suture (High Tension Hold)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="desk-lbl">Unvarnished Field Narrative</label>
+                    <textarea class="desk-textarea" id="termProse" placeholder="Detail specific page smoothness parameters, thread lacing integrity, or gold leaf visual density characteristics..."></textarea>
+                </div>
+
+                <button type="button" class="btn-vault" style="width: 100%; justify-content: center;" onclick="generateCryptoReview()">
+                    <i class="fas fa-file-contract"></i> Cryptographically Lock Audit Parameters
+                </button>
+            </div>
+
+            <div class="submission-ledger-preview">
+                <div>
+                    <span style="font-size: 10px; font-weight: 700; color: var(--vault-gold); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px;">// PENDING AUDIT DOSSIER</span>
+                    <div class="ledger-preview-box" id="ledgerPreviewOut">Awaiting terminal inputs... Enter patron parameters to generate unique cryptographic validation receipt strings.</div>
+                </div>
+
+                <div style="border-top: 1px dashed var(--border-vault); padding-top: 15px; margin-top: 20px; display: flex; align-items: center; justify-content: space-between;">
+                    <span style="font-size: 10px; color: var(--text-vault-muted);">VALIDATION CRYPT-HASH:</span>
+                    <span style="font-family: monospace; font-size: 11px; font-weight: 700; color: var(--brand-wine);" id="cryptHashOut">PENDING-SEAL-000</span>
+                    body.dark-mode .submission-ledger-preview span:last-child { color: var(--vault-gold-bright); }
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 8: PERPETUAL BINDERY CUSTODY -->
+    <section>
+        <div class="perpetual-custody-guarantee">
+            <div class="custody-prose">
+                <span style="font-size: 10px; font-weight: 700; color: var(--vault-gold); letter-spacing: 2px; display: block; margin-bottom: 6px;">LIFETIME HERITAGE PROGRAM</span>
+                <h3>Perpetual Bindery Custody Protocols</h3>
+                <p>
+                    Commissioning multi-volume collections anchors clients to our perpetual maintenance cycle. Historical studio volumes qualify for complimentary cold spine conditioning, double wax rebuffing, and minor corner vellum consolidation across generation transfers.
+                </p>
+            </div>
+
+            <div class="custody-badge-seal">
+                <i class="fas fa-award"></i>
+                <span>GUARANTEED LIFETIME ATELIER AUDITING</span>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 
