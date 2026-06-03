@@ -959,378 +959,325 @@ body.dark-mode .footer-bottom { color: #bda4aa; }
 <div class="mobile-overlay" id="mobileOverlay"></div>
 
 
-<!-- SECTION 1: IMPERIAL APPRAISAL GRAND STAGE -->
-<header class="vault-hero-grand-stage">
-    <div class="vault-crest-badge">
-        <i class="fas fa-shield-alt"></i>
-        <span>Imperial Integrity Ledger</span>
-    </div>
-
-    <h1>The Sovereign Archives &amp; Critical Verification Vaults</h1>
-
-    <p>
-        Unvarnished physical scrutiny compiled straight from the private writing libraries of global patrons. We host automated critique verification metrics alongside verified dual-perspective forensic audits examining real-world thread resiliency and ink retention variables.
-    </p>
-
-    <!-- Interactive Critique Verification Simulator HUD -->
-    <div class="verification-simulator-hud">
-        <div class="hud-hdr">
-            <span><i class="fas fa-sliders-h"></i> REAL-TIME STRUCTURAL FATIGUE TRACKER HUD</span>
-            <span style="font-family: monospace; font-size: 11px; color: #94a3b8;" id="tensionReadout">// TENSION SETTING: MEDIUM (65%)</span>
-        </div>
-
-        <div class="hud-controls-deck">
-            <span style="font-size: 11px; color: #cbd5e1; display: block;">Adjust dynamic structural usage slider to cross-examine corresponding fiber retention readouts:</span>
-            <input type="range" class="simulator-range-track" id="tensionSlider" min="10" max="100" value="65" oninput="updateVerificationSim(this.value)">
-        </div>
-
-        <div class="hud-readout-matrix">
-            <div class="matrix-node">
-                <span>Linen Suture Cohesion</span>
-                <span id="sutureScore">99.4% INTEGRITY</span>
-            </div>
-            <div class="matrix-node">
-                <span>Cellulose Elastic Reserve</span>
-                <span id="elasticScore">98.2% INTEGRITY</span>
-            </div>
-            <div class="matrix-node">
-                <span>Foil Compression Matrix</span>
-                <span id="foilScore">99.8% INTEGRITY</span>
-            </div>
-        </div>
-    </div>
+<!-- SIMPLE ELEGANT HERO SECTION -->
+<header style="padding: 140px 5% 60px; background: var(--bg-gallery); text-align: center;">
+    <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: var(--text-primary); margin-bottom: 20px;">Client <em>Testimonials</em></h1>
+    <p style="font-size: 15px; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.8;">Read what our patrons have to say about the enduring quality, meticulous craftsmanship, and timeless beauty of our handmade leather journals.</p>
 </header>
 
+<!-- CLEAN REVIEWS MAIN SECTION -->
+<main style="padding: 60px 5% 120px; max-width: 1200px; margin: 0 auto;">
+    <style>
+        .clean-reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .clean-review-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .clean-review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .quote-icon {
+            font-size: 24px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        .review-text {
+            font-size: 15px;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            padding-top: 20px;
+        }
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .reviewer-details h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 4px 0;
+        }
+        .reviewer-details span {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .star-rating {
+            color: var(--accent-gold);
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+    </style>
 
-<!-- MAIN VAULT PORTAL SYSTEM -->
-<main class="vault-portal-core">
-
-    <!-- SECTION 2: MULTI-SPECTRUM SCRIBE AUDITS -->
-    <section>
-        <div class="vault-section-hdr">
-            <span class="vault-tag"><i class="fas fa-balance-scale"></i> Dual-Perspective Matrix</span>
-            <h2 class="vault-title">Multi-Spectrum Scribe Audits</h2>
-            <p class="vault-desc">We couple every unvarnished subjective patron review with verifiable internal laboratory cross-examinations. Click tab options inside each card below to toggle between patron field feedback and technical micro-auditing observations.</p>
-        </div>
-
-        <div class="audit-cards-suite">
-            <!-- Audit Card 1 -->
-            <div class="audit-review-card">
-                <div class="a-view-panel active" style="font-size: 14px; font-style: italic; line-height: 1.6;">
-                    "The customized pure cotton rag leaves took wet sizing perfectly without catching edge points or bleeding."
+    <div class="clean-reviews-grid">
+        <!-- Review 1 -->
+        <div class="clean-review-card">
+            <div>
+                <i class="fas fa-quote-left quote-icon"></i>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-
-                <div class="audit-author-dock" style="border-top: none; padding-top: 0; margin-top: 15px;">
-                    <img src="images/review_open_codex.png" alt="Author volume reference capture">
-                    <div class="author-credentials">
-                        <h4>Lady Clara Sterling</h4>
-                        <span>Rare Manuscripts Curator // London</span>
-                    </div>
-                </div>
+                <p class="review-text">"The pure cotton rag leaves take wet ink perfectly without bleeding. A masterpiece."</p>
             </div>
-
-            <!-- Audit Card 2 -->
-            <div class="audit-review-card">
-                <div class="a-view-panel active" style="font-size: 14px; font-style: italic; line-height: 1.6;">
-                    "Endured tough travel. The heavy double hemp bands hold the signatures absolutely tight without shifting."
-                </div>
-
-                <div class="audit-author-dock" style="border-top: none; padding-top: 0; margin-top: 15px;">
-                    <img src="images/review_gold_monogram.png" alt="Author crest reference capture">
-                    <div class="author-credentials">
-                        <h4>Captain Julian Vance</h4>
-                        <span>Botanical Expeditions // Amazon Basin</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Audit Card 3 -->
-            <div class="audit-review-card">
-                <div class="a-view-panel active" style="font-size: 14px; font-style: italic; line-height: 1.6;">
-                    "The intaglio monograms catch sunlight beautifully, with razor-sharp debossing borders that show no signs of wear."
-                </div>
-
-                <div class="audit-author-dock" style="border-top: none; padding-top: 0; margin-top: 15px;">
-                    <img src="images/cust_hardware_closures_1778601570438.png" alt="Hardware closure detail reference">
-                    <div class="author-credentials">
-                        <h4>Alistair Beauchamp</h4>
-                        <span>Corporate Heritage Trusts // Geneva</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SECTION 3: LONGITUDINAL PATINA CHRONOLOGY -->
-    <section>
-        <div class="vault-section-hdr">
-            <span class="vault-tag"><i class="fas fa-history"></i> Real-World Aging Tracking</span>
-            <h2 class="vault-title">Longitudinal Patina Chronology</h2>
-            <p class="vault-desc">Examine how authentic full-grain, bark-tanned binding matrices develop character over extended desk lifecycles. Click specific chronology markers below to inspect structural transition summaries.</p>
-        </div>
-
-        <div class="patina-chronology-container">
-            <div class="chronology-prose-deck">
-                <div class="chronology-timeline-controls">
-                    <button type="button" class="c-node-btn active" onclick="switchPatinaStage(1, this)">Stage I // Staging</button>
-                    <button type="button" class="c-node-btn" onclick="switchPatinaStage(2, this)">Stage II // Year 02</button>
-                    <button type="button" class="c-node-btn" onclick="switchPatinaStage(3, this)">Stage III // Year 05</button>
-                </div>
-
-                <h3 id="patinaTitle">Pristine Workshop Departure</h3>
-                <p id="patinaDesc">
-                    The uncorrected vegetable-tanned shoulder hide presents a pure matte texture displaying clean natural hide growth signatures. Unbleached core threads maintain high internal tension resistance during initial opening sequences.
-                </p>
-
-                <div class="wear-metrics-table">
-                    <div class="wear-stat">
-                        <span>Epidermal Flexibility</span>
-                        <span id="patFlex">Rigid Archival Base</span>
-                    </div>
-                    <div class="wear-stat">
-                        <span>Lustre Reflection</span>
-                        <span id="patLustre">8% Matte Diffusion</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="chronology-visual-stage">
-                <img src="images/review_gold_monogram.png" alt="Macro capture of gold foil monogram debossed deep into midnight-blue grain">
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SECTION 4: TACTILE TELEMETRY SENSORIUM -->
-    <section>
-        <div class="telemetry-sensorium-board">
-            <span style="font-size: 10px; font-weight: 700; color: var(--vault-gold-bright); letter-spacing: 2px; display: block; margin-bottom: 8px;">// ACOUSTIC RECONSTRUCTION ARRAYS</span>
-            <h2 style="font-family: 'Cinzel', serif; font-size: 28px; font-weight: 800; margin-bottom: 12px;">Tactile Telemetry Sensorium</h2>
-            <p style="font-size: 13px; color: #cbd5e1; max-width: 800px; line-height: 1.7; margin-bottom: 10px;">
-                True physical quality registers through auditory feedback. Click real-time track telemetry channels below to trigger distinct localized frequency simulations mapping out authentic bench dynamics.
-            </p>
-
-            <div class="sensorium-tracks-grid">
-                <div class="telemetry-track-pill active" onclick="triggerTelemetryTrack(this, 'suture')">
-                    <div class="t-pill-hdr">
-                        <span>Track 01 // Suture Tension</span>
-                        <i class="fas fa-broadcast-tower"></i>
-                    </div>
-                    <span style="font-size: 11px; color: #94a3b8;">Captures dynamic string draw tension across dense oak-bark calfskin base layers.</span>
-                    <div class="telemetry-waveform-sim">
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                    </div>
-                </div>
-
-                <div class="telemetry-track-pill" onclick="triggerTelemetryTrack(this, 'thermal')">
-                    <div class="t-pill-hdr">
-                        <span>Track 02 // Intaglio Die Impact</span>
-                        <i class="fas fa-broadcast-tower"></i>
-                    </div>
-                    <span style="font-size: 11px; color: #94a3b8;">Acoustic frequency capture of pneumatic block strikes settling solid brass character lines.</span>
-                    <div class="telemetry-waveform-sim">
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                    </div>
-                </div>
-
-                <div class="telemetry-track-pill" onclick="triggerTelemetryTrack(this, 'sizing')">
-                    <div class="t-pill-hdr">
-                        <span>Track 03 // Leaf Decoupling</span>
-                        <i class="fas fa-broadcast-tower"></i>
-                    </div>
-                    <span style="font-size: 11px; color: #94a3b8;">Measures ambient soundwave profiles of thick unbleached hand-torn pages sweeping open.</span>
-                    <div class="telemetry-waveform-sim">
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                        <div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div><div class="sim-bar"></div>
-                    </div>
+            <div class="reviewer-info">
+                <img src="images/review_open_codex.png" alt="Author volume reference" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <h4>Lady Clara Sterling</h4>
+                    <span>Curator // London</span>
                 </div>
             </div>
         </div>
-    </section>
 
-
-    <!-- SECTION 5: INTERCONTINENTAL ROUTING ATLAS -->
-    <section>
-        <div class="vault-section-hdr">
-            <span class="vault-tag"><i class="fas fa-map-marked-alt"></i> Logistics Audit</span>
-            <h2 class="vault-title">Intercontinental Routing Atlas</h2>
-            <p class="vault-desc">Our bound registries cross extreme environmental barriers. Review verification scores detailing custom thermal and moisture insulation performance logged during live diplomatic parcel delivery routes.</p>
-        </div>
-
-        <div class="routing-atlas-suite">
-            <span style="font-size: 11px; font-weight: 700; color: var(--text-vault-muted); text-transform: uppercase; letter-spacing: 1px;">Verified Shipping Security Indices</span>
-            
-            <div class="atlas-grid-rows">
-                <div class="atlas-row-item">
-                    <div class="zone-identity">
-                        <h5>Zone Alpha // Arid Steppe</h5>
-                        <span>Extreme Evaporation</span>
-                    </div>
-                    <div class="zone-performance">
-                        <p>Subjected to sub-20% relative humidity. Double-waxed internal barrier paper protected external hide layers from structural cracking.</p>
-                    </div>
-                    <div class="zone-rating">
-                        <span>100% SECURE</span>
-                        <span>Zero Shrinkage</span>
-                    </div>
+        <!-- Review 2 -->
+        <div class="clean-review-card">
+            <div>
+                <i class="fas fa-quote-left quote-icon"></i>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-
-                <div class="atlas-row-item">
-                    <div class="zone-identity">
-                        <h5>Zone Beta // Equatorial Damp</h5>
-                        <span>High Atmospheric Saturation</span>
-                    </div>
-                    <div class="zone-performance">
-                        <p>Continuous exposure to ambient marine moisture streams. Cedar-wood insert layers neutralized mold spores before opening.</p>
-                    </div>
-                    <div class="zone-rating">
-                        <span>99.6% SECURE</span>
-                        <span>Zero Delamination</span>
-                    </div>
-                </div>
-
-                <div class="atlas-row-item" style="border-left-color: var(--text-vault-muted);">
-                    <div class="zone-identity">
-                        <h5>Zone Gamma // High Alpine</h5>
-                        <span>Sub-Zero Barometric Stress</span>
-                    </div>
-                    <div class="zone-performance">
-                        <p>Transported through freezing high-altitude cargo corridors. Core unbleached paper deckles maintained complete absolute flat profiles.</p>
-                    </div>
-                    <div class="zone-rating">
-                        <span style="color: var(--text-vault-main);">99.9% SECURE</span>
-                        <span>Zero Condensation</span>
-                    </div>
+                <p class="review-text">"Endured tough travel. The heavy double hemp bands hold the signatures absolutely tight."</p>
+            </div>
+            <div class="reviewer-info">
+                <img src="images/review_gold_monogram.png" alt="Author crest reference" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <h4>Capt. Julian Vance</h4>
+                    <span>Botanist // Amazon Basin</span>
                 </div>
             </div>
         </div>
-    </section>
 
-
-    <!-- SECTION 6: EPISTOLARY UNSEALING DECODERS -->
-    <section>
-        <div class="vault-section-hdr">
-            <span class="vault-tag"><i class="fas fa-box-open"></i> Presentation Mechanics</span>
-            <h2 class="vault-title">Epistolary Unsealing Decoders</h2>
-            <p class="vault-desc">Presentation mechanics establish baseline inspiration. Click absolute procedural nodes below to explore our multi-layer secure presentation wrapping arrays designed to prevent preliminary human handling.</p>
-        </div>
-
-        <div class="unsealing-decoders-container">
-            <div class="decoder-steps-accordion">
-                <div class="decoder-step-card active" onclick="switchDecoderStep(1, this)">
-                    <span class="decoder-step-num">01</span>
-                    <div class="decoder-step-txt">
-                        <h4>Outer Hand-Laced Linen Wrapper</h4>
-                        <p>Secured using pure unbleached triple-ply structural flax loops.</p>
-                    </div>
+        <!-- Review 3 -->
+        <div class="clean-review-card">
+            <div>
+                <i class="fas fa-quote-left quote-icon"></i>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-
-                <div class="decoder-step-card" onclick="switchDecoderStep(2, this)">
-                    <span class="decoder-step-num">02</span>
-                    <div class="decoder-step-txt">
-                        <h4>Cold-Pressed Archival Seals</h4>
-                        <p>Solid dense crimson resin stamps verifying bindery output purity.</p>
-                    </div>
-                </div>
-
-                <div class="decoder-step-card" onclick="switchDecoderStep(3, this)">
-                    <span class="decoder-step-num">03</span>
-                    <div class="decoder-step-txt">
-                        <h4>Internal Fragrant Cedar Staging</h4>
-                        <p>Saturated micro-planed wood strips protecting raw leaf edges.</p>
-                    </div>
-                </div>
+                <p class="review-text">"Razor-sharp debossing borders. The monograms catch sunlight beautifully without wear."</p>
             </div>
-
-            <div class="decoder-visual-stage">
-                <img src="images/review_open_codex.png" alt="Wide view of open high-end custom bound logbook resting on antique mahogany table">
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SECTION 7: ASSESSMENT SUBMISSION TERMINAL -->
-    <section>
-        <div class="vault-section-hdr">
-            <span class="vault-tag"><i class="fas fa-terminal"></i> Cryptographic Input</span>
-            <h2 class="vault-title">Sovereign Assessment Submission Terminal</h2>
-            <p class="vault-desc">Contribute your personal verification metrics below. Our automated framework generates instant verification checksum tokens required to log reviews directly into our decentralized repository state.</p>
-        </div>
-
-        <div class="assessment-submission-desk">
-            <div class="submission-form-col">
-                <div>
-                    <label class="desk-lbl">Patron Identity // Institutional Alias</label>
-                    <input type="text" class="desk-input" id="termPatron" placeholder="e.g. Master Archivist Julian">
-                </div>
-
-                <div>
-                    <label class="desk-lbl">Target Verification Model</label>
-                    <select class="desk-select" id="termModel">
-                        <option value="Sovereign Quarto Hardbound">Sovereign Quarto Hardbound Array</option>
-                        <option value="Dynastic Raised Rib Calfskin">Dynastic Raised Rib Calfskin Core</option>
-                        <option value="Exposed Suture Coptic Codex">Exposed Suture Coptic Binding</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="desk-lbl">Structural Resilience Grade</label>
-                    <select class="desk-select" id="termGrade">
-                        <option value="Grade // Flawless Absolute">Grade // Flawless Absolute (Zero Deflection)</option>
-                        <option value="Grade // Superb Suture">Grade // Superb Suture (High Tension Hold)</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="desk-lbl">Unvarnished Field Narrative</label>
-                    <textarea class="desk-textarea" id="termProse" placeholder="Detail specific page smoothness parameters, thread lacing integrity, or gold leaf visual density characteristics..."></textarea>
-                </div>
-
-                <button type="button" class="btn-vault" style="width: 100%; justify-content: center;" onclick="generateCryptoReview()">
-                    <i class="fas fa-file-contract"></i> Cryptographically Lock Audit Parameters
-                </button>
-            </div>
-
-            <div class="submission-ledger-preview">
-                <div>
-                    <span style="font-size: 10px; font-weight: 700; color: var(--vault-gold); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px;">// PENDING AUDIT DOSSIER</span>
-                    <div class="ledger-preview-box" id="ledgerPreviewOut">Awaiting terminal inputs... Enter patron parameters to generate unique cryptographic validation receipt strings.</div>
-                </div>
-
-                <div style="border-top: 1px dashed var(--border-vault); padding-top: 15px; margin-top: 20px; display: flex; align-items: center; justify-content: space-between;">
-                    <span style="font-size: 10px; color: var(--text-vault-muted);">VALIDATION CRYPT-HASH:</span>
-                    <span style="font-family: monospace; font-size: 11px; font-weight: 700; color: var(--brand-wine);" id="cryptHashOut">PENDING-SEAL-000</span>
-                    body.dark-mode .submission-ledger-preview span:last-child { color: var(--vault-gold-bright); }
+            <div class="reviewer-info">
+                <img src="images/cust_hardware_closures_1778601570438.png" alt="Hardware reference" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <h4>Alistair Beauchamp</h4>
+                    <span>Heritage Trusts // Geneva</span>
                 </div>
             </div>
         </div>
-    </section>
-
-
-    <!-- SECTION 8: PERPETUAL BINDERY CUSTODY -->
-    <section>
-        <div class="perpetual-custody-guarantee">
-            <div class="custody-prose">
-                <span style="font-size: 10px; font-weight: 700; color: var(--vault-gold); letter-spacing: 2px; display: block; margin-bottom: 6px;">LIFETIME HERITAGE PROGRAM</span>
-                <h3>Perpetual Bindery Custody Protocols</h3>
-                <p>
-                    Commissioning multi-volume collections anchors clients to our perpetual maintenance cycle. Historical studio volumes qualify for complimentary cold spine conditioning, double wax rebuffing, and minor corner vellum consolidation across generation transfers.
-                </p>
+        
+        <!-- Review 4 -->
+        <div class="clean-review-card">
+            <div>
+                <i class="fas fa-quote-left quote-icon"></i>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"The scent of cedar and leather is intoxicating. It truly feels like an artifact from another era."</p>
             </div>
-
-            <div class="custody-badge-seal">
-                <i class="fas fa-award"></i>
-                <span>GUARANTEED LIFETIME ATELIER AUDITING</span>
+            <div class="reviewer-info">
+                <img src="images/hero_journal_premium_1778587744514.png" alt="Journal reference" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <h4>Eleanor Vance</h4>
+                    <span>Author // New York</span>
+                </div>
             </div>
         </div>
-    </section>
 
+        <!-- Review 5 -->
+        <div class="clean-review-card">
+            <div>
+                <i class="fas fa-quote-left quote-icon"></i>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"Exceptional craftsmanship. The burnished edges are perfectly smooth and the binding is rock solid."</p>
+            </div>
+            <div class="reviewer-info">
+                <img src="images/col_limited_editions_1778590226093.png" alt="Journal reference" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <h4>Marcus Thorne</h4>
+                    <span>Architect // Berlin</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="clean-review-card">
+            <div>
+                <i class="fas fa-quote-left quote-icon"></i>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"After three years of daily use, the patina on the leather has only made it more beautiful."</p>
+            </div>
+            <div class="reviewer-info">
+                <img src="images/col_travel_diaries_1778590173575.png" alt="Journal reference" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <h4>Sarah Jenkins</h4>
+                    <span>Journalist // Paris</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- THEMATIC LEATHER REVIEW SECTIONS -->
+    <style>
+        .leather-review-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 80px 0;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+        .leather-review-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .lr-content {
+            flex: 1;
+        }
+        .lr-image {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .lr-image img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+        .lr-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .lr-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 25px;
+        }
+        .lr-quote {
+            font-size: 18px;
+            font-style: italic;
+            line-height: 1.8;
+            color: var(--text-primary);
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        .lr-author {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 900px) {
+            .leather-review-section, .leather-review-section:nth-child(even) {
+                flex-direction: column;
+                padding: 50px 0;
+            }
+        }
+    </style>
+
+    <div class="leather-review-section" style="margin-top: 80px;">
+        <div class="lr-content">
+            <span class="lr-tag"><i class="fas fa-hourglass-half"></i> The Patina Journey</span>
+            <h2 class="lr-heading">Aging with Grace</h2>
+            <div class="lr-quote">
+                "When I first received my journal, the leather was a stiff, pristine chestnut. Over the past four years, it has traveled with me to sixteen countries. The vegetable-tanned hide has darkened beautifully, absorbing the oils from my hands and the tropical sun. It is no longer just a book; it is a map of where I have been. The leather hasn't degraded—it has evolved."
+            </div>
+            <div class="lr-author">— Dr. Julian Vance, Archaeologist</div>
+        </div>
+        <div class="lr-image">
+            <img src="images/col_travel_diaries_1778590173575.png" alt="Leather Patina over time">
+        </div>
+    </div>
+
+    <div class="leather-review-section">
+        <div class="lr-content">
+            <span class="lr-tag"><i class="fas fa-hand-paper"></i> Tactile Brilliance</span>
+            <h2 class="lr-heading">The Uncorrected Grain</h2>
+            <div class="lr-quote">
+                "I am notoriously picky about leather textures, often finding modern bindings too synthetic or sanded down. The moment I ran my hand over this cover, I could feel the absolute purity of the full-grain shoulder hide. The natural pores, the slight variations in density, the incredibly smooth burnished edges—it screams authenticity. It demands to be touched."
+            </div>
+            <div class="lr-author">— Eleanor Shaw, Material Sourcing Specialist</div>
+        </div>
+        <div class="lr-image">
+            <img src="images/hero_journal_premium_1778587744514.png" alt="Premium uncorrected grain leather">
+        </div>
+    </div>
+
+    <div class="leather-review-section">
+        <div class="lr-content">
+            <span class="lr-tag"><i class="fas fa-wind"></i> The Olfactory Signature</span>
+            <h2 class="lr-heading">The Scent of the Archive</h2>
+            <div class="lr-quote">
+                "No one talks about the smell, but it is the first thing that hits you when you unbox it. It doesn't smell like chemicals or factory glue. It smells like an ancient, quiet library. A heavy, rich aroma of oak bark tannins, natural beeswax, and a faint hint of cedarwood. Sitting at my desk and opening this journal instantly transports my mind into a state of deep focus."
+            </div>
+            <div class="lr-author">— Marcus Thorne, Novelist</div>
+        </div>
+        <div class="lr-image">
+            <img src="images/gallery_celestial_codex.png" alt="Scented leather codex">
+        </div>
+    </div>
+
+    <div class="leather-review-section">
+        <div class="lr-content">
+            <span class="lr-tag"><i class="fas fa-shield-alt"></i> Enduring Armor</span>
+            <h2 class="lr-heading">Structural Integrity</h2>
+            <div class="lr-quote">
+                "I use my logbook in the field, exposing it to freezing mist and crushing backpack loads. The sheer density of this leather is staggering. It acts as true armor for the delicate cotton rag pages inside. Even after being dropped on sharp rocks, the leather simply took a character mark, completely protecting the structural spine and the pages within."
+            </div>
+            <div class="lr-author">— Capt. Alistair Beauchamp, Expedition Leader</div>
+        </div>
+        <div class="lr-image">
+            <img src="images/review_gold_monogram.png" alt="Durable leather armor">
+        </div>
+    </div>
+
+    <!-- CALL TO ACTION -->
+    <div style="margin-top: 80px; padding: 60px 40px; background: rgba(212, 163, 115, 0.05); border-radius: 16px; text-align: center; border: 1px solid rgba(212, 163, 115, 0.2);">
+        <i class="fas fa-feather-alt" style="font-size: 32px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--text-primary); margin-bottom: 15px;">Leave Your Mark</h2>
+        <p style="font-size: 15px; color: var(--text-secondary); max-width: 500px; margin: 0 auto 30px; line-height: 1.7;">Have you commissioned a piece from our atelier? We would love to hear how your journal is weathering the journey. Submit your own review to be featured in our archives.</p>
+        <button style="background: var(--text-primary); color: #fff; border: none; padding: 15px 35px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--accent-gold)'" onmouseout="this.style.background='var(--text-primary)'">Submit a Review</button>
+    </div>
 </main>
 
 
