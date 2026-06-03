@@ -1660,258 +1660,205 @@ body.dark-mode .footer-bottom { color: #bda4aa; }
 <div class="mobile-overlay" id="mobileOverlay"></div>
 
 
-<!-- UNIQUE HERO SECTION: THE CHRONO-PRISM VAULT -->
-<header class="prism-hero-arena">
-    <div class="gallery-elite-tag">
-        <i class="fas fa-cube"></i> Infinite Horizon Core // Active Registry
-    </div>
-    <h1>The Infinite Horizon Immersive <em>Master-Gallery</em> Array</h1>
-    <p>Step past simple catalog photography into our living archival repository. Review unedited museum installation pieces, experimental multi-substrate integrations, and highly restricted private university restorations preserved inside our secure atelier framework.</p>
-    
-    <div class="prism-node-row">
-        <div class="prism-node-card active" data-exhibit-trigger="1">
-            <span class="node-code">PRISM // ALPHA</span>
-            <span class="node-title">Celestial Ledgers</span>
-        </div>
-        <div class="prism-node-card" data-exhibit-trigger="2">
-            <span class="node-code">PRISM // BETA</span>
-            <span class="node-title">Obsidian Relics</span>
-        </div>
-        <div class="prism-node-card" data-exhibit-trigger="3">
-            <span class="node-code">PRISM // GAMMA</span>
-            <span class="node-title">Mixed-Media Folders</span>
-        </div>
-    </div>
+<!-- SIMPLE & ELEGANT HERO SECTION -->
+<header style="padding: 140px 5% 60px; background: var(--bg-gallery); text-align: center;">
+    <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: var(--text-primary); margin-bottom: 20px;">Our Masterwork <em>Gallery</em></h1>
+    <p style="font-size: 15px; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.8;">Explore our collection of handcrafted leather journals, notebooks, and bespoke bindery creations. Each piece reflects our commitment to timeless craftsmanship.</p>
 </header>
 
+<!-- SIMPLE ELEGANT GALLERY WITH LEATHER SECTIONS -->
+<main style="max-width: 1400px; margin: 0 auto; padding-bottom: 100px;">
+    <style>
+        .leather-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 80px 5%;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .leather-section:nth-child(even) {
+            flex-direction: row-reverse;
+            background: rgba(212, 163, 115, 0.03);
+        }
+        .leather-section-content {
+            flex: 1;
+        }
+        .leather-section-image {
+            flex: 1;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .leather-section-image img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .leather-section-image:hover img {
+            transform: scale(1.05);
+        }
+        .leather-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 3vw, 36px);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+        .leather-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .leather-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 900px) {
+            .leather-section, .leather-section:nth-child(even) {
+                flex-direction: column;
+                padding: 50px 5%;
+            }
+        }
+    </style>
 
-<!-- MAIN IMMERSIVE MASTER-GALLERY CORE -->
-<main class="gallery-exhibition-core">
-
-    <!-- MODULE 1: THE PARALLAX SOVEREIGN ARC -->
-    <section class="gallery-section-block">
-        <div class="gallery-section-title-box">
-            <span class="section-sub-badge"><i class="fas fa-map-marker-alt"></i> Focal Installation Arrays</span>
-            <h2 class="section-main-heading">The Parallax Sovereign Arc</h2>
-            <p class="section-desc-para">Review our three defining public anchor installations. Click the active triggers on the console drawer to cycle cinematic lenses across physical historical reconstructions.</p>
+    <!-- Section 1 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-leaf"></i> Sourcing & Selection</span>
+            <h2 class="leather-heading">The Origin of Grain</h2>
+            <p class="leather-text">Every masterwork begins with the uncompromising selection of full-grain hides. We source exclusively from boutique European tanneries where leather retains its outermost layer, complete with the natural markings, scars, and grain patterns that tell the animal's unique story. This uncorrected surface guarantees maximum fiber strength and breathability.</p>
         </div>
-
-        <div class="parallax-arc-container">
-            <div class="parallax-arc-grid">
-                <!-- Parallax Staging Canvas -->
-                <div class="arc-canvas-stage">
-                    <img src="images/col_leather_journals_1778590127521.png" alt="Featured Masterwork Exhibit Render" id="arcCanvasImg">
-                    <div class="canvas-shadow-mask"></div>
-                    <span class="arc-watermark" id="arcWatermarkTxt">EXHIBIT 01</span>
-                </div>
-
-                <!-- Console Control Drawer -->
-                <div class="arc-console-drawer">
-                    <div class="console-top-info">
-                        <span class="active-exhibit-meta" id="arcMetaLbl">EXHIBIT ALPHA // CARTOGRAPHY</span>
-                        <h3 class="active-exhibit-title" id="arcTitleLbl">The Celestial Cartography Codex</h3>
-                        <p class="active-exhibit-desc" id="arcDescLbl">Commissioned for a permanent installation inside an elite private astronomical observatory. Features fully articulated pure 24K gold foil star charts debossed precisely over thick oak-bark tanned uncorrected steerhide.</p>
-                    </div>
-
-                    <!-- Switcher Array -->
-                    <div class="arc-switcher-array">
-                        <button class="arc-trigger-btn selected" data-arc-target="1">
-                            <span>01. Celestial Cartography</span>
-                            <i class="fas fa-circle" style="font-size: 6px;"></i>
-                        </button>
-                        <button class="arc-trigger-btn" data-arc-target="2">
-                            <span>02. The Obsidian Tome</span>
-                            <i class="fas fa-circle" style="font-size: 6px;"></i>
-                        </button>
-                        <button class="arc-trigger-btn" data-arc-target="3">
-                            <span>03. Chrono-Mechanism Rig</span>
-                            <i class="fas fa-circle" style="font-size: 6px;"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- MODULE 2: INTERACTIVE FOCAL MATRIX -->
-    <section class="gallery-section-block">
-        <div class="gallery-section-title-box">
-            <span class="section-sub-badge"><i class="fas fa-microscope"></i> Micro-Anatomical Highlights</span>
-            <h2 class="section-main-heading">Interactive Focal Lightbox</h2>
-            <p class="section-desc-para">Explore individual tactile binding nodes. Select an artisanal component below to dynamically load its corresponding feature review pane onto the staging layout.</p>
-        </div>
-
-        <div class="focal-stage-split">
-            <!-- Selector Interface -->
-            <div class="focal-interactive-grid">
-                <div class="focal-node-item active" data-focal-key="bezel">
-                    <div class="focal-icon-box"><i class="fas fa-lock"></i></div>
-                    <div>
-                        <h4>Gilded Bezel Locks</h4>
-                        <span>Secure brass closures</span>
-                    </div>
-                </div>
-                <div class="focal-node-item" data-focal-key="intaglio">
-                    <div class="focal-icon-box"><i class="fas fa-stamp"></i></div>
-                    <div>
-                        <h4>Intaglio Monograms</h4>
-                        <span>Deep character relief</span>
-                    </div>
-                </div>
-                <div class="focal-node-item" data-focal-key="sinew">
-                    <div class="focal-icon-box"><i class="fas fa-slash"></i></div>
-                    <div>
-                        <h4>Braided Sinew Seams</h4>
-                        <span>Irish linen ligatures</span>
-                    </div>
-                </div>
-                <div class="focal-node-item" data-focal-key="emblem">
-                    <div class="focal-icon-box"><i class="fas fa-certificate"></i></div>
-                    <div>
-                        <h4>Blind Pressed Seals</h4>
-                        <span>Heated base matrices</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Lightbox Live Viewport -->
-            <div class="focal-render-viewport">
-                <img src="images/col_limited_editions_1778590226093.png" alt="Vault Rare Spines Showcase">
-                <div class="viewport-info-strip">
-                    <span class="strip-lbl" id="focalStripLbl">FOCAL NODE // GILDED BEZEL LOCKS</span>
-                    <p class="strip-desc" id="focalStripDesc">Machined from raw high-density solid brass components. Each locking unit features internal spring dampeners to accommodate seasonal natural hide swelling without stressing delicate outer margin wraps.</p>
-                </div>
-            </div>
+        <div class="leather-section-image">
+            <img src="images/hero_journal_premium_1778587744514.png" alt="Premium Full Grain Leather">
         </div>
     </section>
 
-
-    <!-- MODULE 3: EPHEMERAL MIXED-MEDIA ARRAY -->
-    <section class="gallery-section-block">
-        <div class="gallery-section-title-box">
-            <span class="section-sub-badge"><i class="fas fa-vials"></i> Structural Experimentations</span>
-            <h2 class="section-main-heading">Ephemeral Mixed-Media Fusions</h2>
-            <p class="section-desc-para">We constantly stretch traditional guild definitions by integrating unconventional robust materials. Review our primary proprietary material pairings developed exclusively inside the vault studio.</p>
+    <!-- Section 2 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-flask"></i> The Bark & Extract</span>
+            <h2 class="leather-heading">The Alchemy of Tanning</h2>
+            <p class="leather-text">Rejecting harsh modern chemicals, our leathers undergo a traditional vegetable tanning process lasting up to sixty days. Submerged in wooden vats filled with oak bark, chestnut, and natural tannins, the raw hide undergoes a slow, organic alchemy. This ancient method yields leather that smells of earth and wood, boasting incredible durability and an eco-friendly footprint.</p>
         </div>
-
-        <div class="mixed-media-compare-box">
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">Comparative Structural Matrices</h3>
-            <p style="font-size: 13px; color: var(--text-secondary);">Evaluated under multi-year simulated UV and kinetic flex loads.</p>
-            
-            <div class="media-fusion-grid">
-                <div class="fusion-card">
-                    <div>
-                        <div class="fusion-hdr">
-                            <div class="fusion-icon"><i class="fas fa-shield-alt"></i></div>
-                            <h4>Shagreen &amp; Steerhide</h4>
-                        </div>
-                        <p>Combining thick vegetable-tanned outer frames with striking inset panels of genuine pearl-polished stingray shagreen. Generates unprecedented external scratch armor while maintaining exceptional tactile.</p>
-                    </div>
-                    <div class="fusion-stats">
-                        <div class="stat-line"><span class="lbl">Abrasive Resilience</span><span class="val">9.8 / 10 Max</span></div>
-                        <div class="stat-line"><span class="lbl">Tactile Contrast</span><span class="val">Extreme Proximity</span></div>
-                    </div>
-                </div>
-
-                <div class="fusion-card">
-                    <div>
-                        <div class="fusion-hdr">
-                            <div class="fusion-icon"><i class="fas fa-cogs"></i></div>
-                            <h4>Gunmetal Spacers</h4>
-                        </div>
-                        <p>We inset hand-lathed gunmetal spine columns between gathering groups. This mechanical distribution prevents wide text blocks from warping out of alignment over continuous.</p>
-                    </div>
-                    <div class="fusion-stats">
-                        <div class="stat-line"><span class="lbl">Spine Warp Deflection</span><span class="val">100% Corrected</span></div>
-                        <div class="stat-line"><span class="lbl">Kinetic Weight</span><span class="val">+ 2.4 oz Baseline</span></div>
-                    </div>
-                </div>
-
-                <div class="fusion-card">
-                    <div>
-                        <div class="fusion-hdr">
-                            <div class="fusion-icon"><i class="fas fa-leaf"></i></div>
-                            <h4>Botanical Carnauba Seals</h4>
-                        </div>
-                        <p>Pure double-boiled extract of wild palm waxes infused with concentrated lavender agents. Applied thermally to seal open page end-cuts against ambient moisture absorption.</p>
-                    </div>
-                    <div class="fusion-stats">
-                        <div class="stat-line"><span class="lbl">Hydrophobic Defense</span><span class="val">Zero Wet Soak</span></div>
-                        <div class="stat-line"><span class="lbl">Aromatic Lifecycle</span><span class="val">Guaranteed Decades</span></div>
-                    </div>
-                </div>
-            </div>
+        <div class="leather-section-image">
+            <img src="images/cust_leather_colors_1778590532668.png" alt="Vegetable Tanned Leather Colors">
         </div>
     </section>
 
-
-    <!-- MODULE 4: COLLECTOR PROVENANCE & REGISTRATION -->
-    <section class="gallery-section-block">
-        <div class="provenance-vault-banner">
-            <div class="provenance-row">
-                <div class="prov-info">
-                    <h3>Cryptographic Provenance Seals</h3>
-                    <p>Every single masterwork volume leaving our workshop is secured with a physical lead-matrix seal tucked discreetly behind the rear lower ends. This permanent internal stamp contains our custom guild signature alongside a localized registration matrix mapped to our master offline registry.</p>
-                </div>
-                <div class="prov-badge-box">
-                    <span style="font-size: 10px; font-weight: 700; color: var(--accent-gold); letter-spacing: 2px;">AUTHENTICATION PROTOCOLS</span>
-                    <div class="prov-key-line"><i class="fas fa-check"></i> Perpetual Cross-Generation Tracking</div>
-                    <div class="prov-key-line"><i class="fas fa-check"></i> Absolute Private Anonymity Vowed</div>
-                    <div class="prov-key-line"><i class="fas fa-check"></i> Non-Destructive Serial Extraction</div>
-                </div>
-            </div>
+    <!-- Section 3 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-cut"></i> Precision & Form</span>
+            <h2 class="leather-heading">The Master's Cut</h2>
+            <p class="leather-text">Leather is a living material, requiring a master's eye to read its tension and stretch. Our artisans map out each pattern by hand, positioning structural elements along the hide's strongest axes. The cut is made with a razor-sharp half-moon knife, slicing cleanly through dense fibers to create the pristine raw edges that define our journals.</p>
+        </div>
+        <div class="leather-section-image">
+            <img src="images/home2_apprentice_workbench.jpg" alt="Artisan Cutting Leather at Workbench">
         </div>
     </section>
 
-
-    <!-- MODULE 5: THE CHIMERICAL FUSION MATRIX -->
-    <section class="gallery-section-block">
-        <div class="gallery-section-title-box">
-            <span class="section-sub-badge"><i class="fas fa-meteor"></i> Avant-Garde Collector Studies</span>
-            <h2 class="section-main-heading">Chimerical Fusion Matrix</h2>
-            <p class="section-desc-para">Commissioned exclusively by high-net-worth estate syndicates. Explore radical material orbital integrations where deep uncorrected natural steerhide envelopes rare non-terrestrial and subterranean geological inclusions.</p>
+    <!-- Section 4 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-slash"></i> Heritage Binding</span>
+            <h2 class="leather-heading">Stitching the Spine</h2>
+            <p class="leather-text">A journal is only as enduring as its spine. We employ the traditional saddler’s stitch, using two needles and heavy-gauge waxed linen thread. Unlike machine lock-stitching, which can unravel entirely if a single loop breaks, our hand-tensioned saddle stitch ensures that even if severed, the structural integrity of the binding holds fast for generations.</p>
         </div>
+        <div class="leather-section-image">
+            <img src="images/cust_artisanal_stitching_1778601544672.png" alt="Artisanal Hand Stitching">
+        </div>
+    </section>
 
-        <div class="chimerical-orbital-arena">
-            <div class="chimerical-display-core">
-                <img src="images/col_refillable_notebooks_1778590149549.png" alt="Bespoke luxury journal with meteorite ink intaglio and crimson wax seals">
-                
-                <div class="chimerical-info-plaque">
-                    <span class="chimerical-id" id="chimeIdLbl">COMMISSION ORBITAL // 01</span>
-                    <h3 class="chimerical-title" id="chimeTitleLbl">Meteorite Dust Intaglio Additives</h3>
-                    <p class="chimerical-desc" id="chimeDescLbl">Finely milled pallasite meteorite fragments suspended inside warm organic walnut carrier oils. Applied directly to custom etched brass monograms to sear an everlasting micro-crystalline sheen permanently into deep debossed cover channels.</p>
-                </div>
-            </div>
+    <!-- Section 5 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-magic"></i> Friction & Heat</span>
+            <h2 class="leather-heading">The Art of Burnishing</h2>
+            <p class="leather-text">Raw, cut edges are meticulously transformed through the labor-intensive art of burnishing. We apply natural gum tragacanth and beeswax, then use wooden slickers to generate intense friction and heat. This process binds the loose fibers together, sealing the edge against moisture and producing a smooth, glass-like finish that is irresistible to the touch.</p>
+        </div>
+        <div class="leather-section-image">
+            <img src="images/col_leather_journals_1778590127521.png" alt="Burnished Leather Journals">
+        </div>
+    </section>
 
-            <div class="chimerical-docking-row">
-                <div class="orbital-node-card active" data-chime-key="1">
-                    <div class="orbital-hdr">
-                        <span class="orbital-num">ORBIT // 01</span>
-                        <i class="fas fa-ring" style="color: var(--accent-gold); font-size: 12px;"></i>
-                    </div>
-                    <h4>Meteorite Intaglio</h4>
-                    <span>Pallasite crystal integration</span>
-                </div>
+    <!-- Section 6 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-stamp"></i> Personalized Identity</span>
+            <h2 class="leather-heading">Bespoke Embossing</h2>
+            <p class="leather-text">To finalize a piece, we offer hot-foil and blind embossing. Solid brass intaglio dies are heated to precise temperatures and pressed deep into the leather's surface with a manual fly press. The heat permanently reorganizes the cellular structure of the hide, leaving a sharp, indelible mark of ownership that will never fade or flatten.</p>
+        </div>
+        <div class="leather-section-image">
+            <img src="images/cust_name_embossing_1778590490538.png" alt="Custom Embossed Name">
+        </div>
+    </section>
 
-                <div class="orbital-node-card" data-chime-key="2">
-                    <div class="orbital-hdr">
-                        <span class="orbital-num">ORBIT // 02</span>
-                        <i class="fas fa-water" style="color: #64748b; font-size: 12px;"></i>
-                    </div>
-                    <h4>Volcanic Basalt Tooling</h4>
-                    <span>Sub-marine extreme compression</span>
-                </div>
+    <!-- Section 7 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-hourglass-half"></i> The Final Author</span>
+            <h2 class="leather-heading">Patina & Time</h2>
+            <p class="leather-text">We craft the journal, but you finish it. Premium vegetable-tanned leather is highly porous and reactive. As it accompanies you through life, it absorbs the natural oils from your hands, sunlight, and the elements. This creates a rich, darkening patina—a visual diary of your travels and experiences, ensuring no two journals ever age the same way.</p>
+        </div>
+        <div class="leather-section-image">
+            <img src="images/col_travel_diaries_1778590173575.png" alt="Travel Diaries with Patina">
+        </div>
+    </section>
 
-                <div class="orbital-node-card" data-chime-key="3">
-                    <div class="orbital-hdr">
-                        <span class="orbital-num">ORBIT // 03</span>
-                        <i class="fas fa-anchor" style="color: #64748b; font-size: 12px;"></i>
-                    </div>
-                    <h4>Reclaimed Timber Plinths</h4>
-                    <span>Centuries-aged galleon framing</span>
-                </div>
-            </div>
+    <!-- Section 8 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-user-secret"></i> Discretion Engineered</span>
+            <h2 class="leather-heading">The Hidden Architecture</h2>
+            <p class="leather-text">Beyond the visible pages lies a labyrinth of discretion. For our most private clients, we engineer false spines and invisible envelope pockets seamlessly integrated into the back covers. These hidden compartments offer a secure haven for sensitive documents, legacy letters, and flat keepsakes, entirely invisible to the untrained eye.</p>
+        </div>
+        <div class="leather-section-image">
+            <img src="images/gallery_vault_spines.png" alt="Architectural Vault Spines">
+        </div>
+    </section>
+
+    <!-- Section 9 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-lock"></i> Master-Crafted Security</span>
+            <h2 class="leather-heading">Forging the Clasps</h2>
+            <p class="leather-text">A masterwork demands a guardian. Our locking mechanisms and structural bezels are not off-the-shelf components; they are hand-lathed from raw, high-density solid brass and gunmetal. Engineered with internal spring dampeners, these architectural clasps accommodate the natural seasonal swelling of the leather, ensuring the volume remains sealed under any climate conditions.</p>
+        </div>
+        <div class="leather-section-image">
+            <img src="images/cust_hardware_closures_1778601570438.png" alt="Brass Hardware Closures">
+        </div>
+    </section>
+
+    <!-- Section 10 -->
+    <section class="leather-section">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-meteor"></i> The Rarest Mediums</span>
+            <h2 class="leather-heading">Celestial Pigments</h2>
+            <p class="leather-text">Pushing the boundaries of traditional binding, our atelier experiments with terrestrial and celestial inclusions. We mill genuine pallasite meteorite fragments and lapis lazuli into fine dust, suspending them within warm walnut carrier oils. When pressed into the leather's debossed channels, these rare pigments leave a subtle, eternal crystalline sheen.</p>
+        </div>
+        <div class="leather-section-image">
+            <img src="images/col_calligraphy_inks_1778590824160.png" alt="Celestial Inks and Pigments">
+        </div>
+    </section>
+
+    <!-- Section 11 -->
+    <section class="leather-section" style="border-bottom: none;">
+        <div class="leather-section-content">
+            <span class="leather-tag"><i class="fas fa-wind"></i> The Scent of the Archive</span>
+            <h2 class="leather-heading">The Olfactory Signature</h2>
+            <p class="leather-text">A true artisanal journal engages every sense. Before a volume leaves our workshop, its end-papers are lightly misted with a proprietary archival essence—a delicate balance of double-boiled carnauba wax, dried lavender, and cedarwood. This olfactory signature evokes the atmosphere of ancient, sunlit libraries, grounding your writing experience the moment you turn the cover.</p>
+        </div>
+        <div class="leather-section-image">
+            <img src="images/gallery_celestial_codex.png" alt="Scented Leather Codex">
         </div>
     </section>
 
